@@ -1,3 +1,6 @@
-This is a clean install of Wordpress which is the base of the Studios site. 
 
-Downloaded from wordpress.org Version 3.2.1
+Fluid Studios is a space to incubate new ideas, projects, and collaborations dedicated to improving usability and accessibility.
+
+This site is based on Wordpress v3.2.1, downloaded from http://wordpress.org.
+
+The theme for the site is based on Johnny Taylor's FSSFive: https://github.com/abledaccess/FSSFive
