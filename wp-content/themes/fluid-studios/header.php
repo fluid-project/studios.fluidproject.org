@@ -91,20 +91,3 @@
 	</script>
 
 	<div id="wrapper" class="fl-container fl-centered">
-
-		<header class="banner fl-container-flex" role="banner">
-			<section id="branding">
-				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
-
-				<<?php echo $heading_tag; ?> id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?> &mdash; Home" rel="home"><?php bloginfo( 'name' ); ?></a></<?php echo $heading_tag; ?>>
-				<p id="site-description"><?php bloginfo('description'); ?></p>
-			</section><!-- /#branding -->
-
-			<nav id="access" class="fl-container-flex fl-clearfix" role="navigation">
-				<?php wp_nav_menu(array(
-					"container" => "ul", 
-					"menu_class" => "fl-tabs fl-tabs-left", 
-					"theme_location" => "main_nav" )); ?>
-
-			</nav><!-- /#access -->
-		</header><!-- /.banner -->

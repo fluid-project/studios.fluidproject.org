@@ -5,6 +5,16 @@ if( !is_admin()){
 	wp_deregister_script('jquery');
 }
 
+if ( ! defined("NUM_OF_CHARS_IN_SUMMARY") ) define("NUM_OF_CHARS_IN_SUMMARY", 100);
+if ( ! defined("THUMBNAIL_WIDTH") ) define("THUMBNAIL_WIDTH", 250);
+if ( ! defined("THUMBNAIL_HEIGHT") ) define("THUMBNAIL_HEIGHT", 250);
+
+// Enable Post Thumbnail selection UI
+if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( THUMBNAIL_WIDTH, THUMBNAIL_HEIGHT, true ); // 50 pixels wide by 50 pixels tall, hard crop mode
+}
+
 // Custom comments
 if ( ! function_exists( 'Studios_comment' ) ) :
 function Studios_comment( $comment, $args, $depth ) {
