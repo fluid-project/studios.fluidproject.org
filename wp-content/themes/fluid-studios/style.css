@@ -3,101 +3,18 @@ Theme Name:Fluid Studios
 Author: The Fluid Project
 */
 
-/* CSS browser "restart", c/o Harry Roberts; https://github.com/csswizardry/vanilla
---------------------------------------------------------------------------- */
-html,body,div,span,applet,object,iframe,
-h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,
-a,abbr,address,cite,code,
-del,dfn,em,img,ins,kbd,q,s,samp,
-small,strong,sub,sup,tt,var,
-b,u,i,
-dl,dt,dd,ol,ul,li,
-fieldset,form,label,legend,
-table,caption,tbody,tfoot,thead,tr,th,td,
-article,aside,canvas,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section,summary,
-time,mark,audio,video{
-	margin:0;
-	padding:0;
-}
-article,aside,details,figcaption,figure,footer,
-header,hgroup,menu,nav,section{
-	display:block;
-}
-h1,h2,h3,h4,h5,h6{
-	font-size:100%;
-}
-table{
-	border-collapse:collapse;
-	border-spacing:0;
-}
-strong,b,mark{
-	font-weight:bold;
-	font-style:inherit;
-}
-em,i,cite,q,address,var{
-	font-style:italic;
-	font-weight:inherit;
-}
-abbr[title],dfn[title]{
-	border-bottom:1px dotted;
-	cursor:help;
-}
-ins{
-	border-bottom:1px solid;
-}
-a,u,ins{
-	border-bottom:1px solid;
-	text-decoration:none;
-}
-a:active{
-	outline:none 0;
-}
-a:focus{
-	border:0;
-	outline:2px solid #f00;
-	text-decoration:none;
-}
-a>abbr,a>ins{
-	padding-bottom:0.2em;
-}
-del,s{
-	text-decoration:line-through;
-}
-code,samp,kbd{
-	font-family:monospace;
-}
-small{
-	font-size:0.75em;
-}
-img{
-	border:none;
-	font-style:italic;
-}
-input,select,textarea{
-	-webkit-border-radius:0;
-	-moz-border-radius:0;
-	border-radius:0;
-	font:inherit;
-}
-sup,sub{
-	font-size:75%;
-	vertical-align:top;
-}
-sub{
-	vertical-align:bottom;
-}
-
 /* Global Fluid Studios theme specific container and body styles
 --------------------------------------------------------------------------- */
 body{
 	background:#fff;
 	line-height:1.4;
-	font-family:Georgia, serif;
+	font-family: "Times New Roman", Times, serif;
 }
 #wrapper {
-	max-width:58.5em;
+/*
+	max-width:80%;
 	padding:0 3.5%;
+*/
 }
 
 /* Global Fluid Studios text styles
@@ -111,7 +28,10 @@ h1,h2,h3,h4,h5,h6{
 p,ul,ol,blockquote,figure{
 	margin-bottom: 1em;
 }
-
+a {
+    text-decoration: none;
+    color: #0099CC;
+}
 /* Header branding styles
 --------------------------------------------------------------------------- */
 .banner{
@@ -173,8 +93,15 @@ input[type="submit"]:active {
 body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,body.search h2.entry-title,body.archive h2.entry-title{
 	margin-bottom:0;
 }
-.entry-title a{
-	border:0;
+.entry-title {
+    color: #CCCC00;
+    font-family: Arial, sans-serif;
+    border:0;
+}
+.entry-meta {
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    border-bottom: 1px solid #666666; 
 }
 blockquote{
 	border-left:5px solid #eee;
@@ -317,6 +244,8 @@ input#s{
 --------------------------------------------------------------------------- */
 #sidebar {
 	padding-bottom:1.25em;
+    background-image: url('images/bg.jpg');
+    background-repeat: repeat;
 }
 #sidebar>ul{
 	list-style:none;

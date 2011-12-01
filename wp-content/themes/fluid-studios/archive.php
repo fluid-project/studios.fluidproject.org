@@ -2,6 +2,8 @@
 
 		<div id="content-container" class="fl-clearfix fl-container fl-container-flex fl-push">
 
+<?php get_sidebar(); ?>
+
 			<section id="nav:content" class="fl-clearfix fl-col fl-container-flex75" role="main">
 
 			<?php if (have_posts()) : ?>
@@ -76,6 +78,6 @@
 
 			</section><!-- /#nav:content -->
 
-<?php get_sidebar(); ?>
+        </div><!-- /#content-container -->
 
 <?php get_footer(); ?>

@@ -1,4 +1,5 @@
 			<aside id="sidebar" class="fl-clearfix fl-col fl-container-flex25" role="complementary">
+
 				<ul>
 				<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
 
@@ -32,5 +33,3 @@
 				<?php endif; ?>
 				</ul>
 			</aside><!-- /#sidebar -->
-
-		</div><!-- /#content-container -->
