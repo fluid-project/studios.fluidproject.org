@@ -4,6 +4,6 @@
 				</div>
 				
 				<div id="fs-fluid-logo">
-					<img alt="Fluid Studio Logo" src="<?php echo get_template_directory_uri(); ?>/images/fluid-logo.png" />
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img alt="Fluid Studio Logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-fluidSTUDIOS.png" /></a>
 				</div>
 			</aside><!-- /#sidebar -->

@@ -243,7 +243,7 @@ input#s{
 /* Sidebar styles
 --------------------------------------------------------------------------- */
 #sidebar {
-	padding-bottom:1.25em;
+	padding-bottom:100%;
     background-image: url('images/bg.jpg');
     background-repeat: repeat;
 }
@@ -288,6 +288,25 @@ input#s{
     width: 250px;
     height: auto;
     padding: 0 30px;
+}
+
+/* Wordpress alignment styles
+--------------------------------------------------------------------------- */
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.625em;
+}
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.625em;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* uiOptions fat panel specific styles
