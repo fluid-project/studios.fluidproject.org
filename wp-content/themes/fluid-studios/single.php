@@ -2,7 +2,7 @@
 
 		<div id="content-container" class="fl-clearfix fl-container fl-container-flex fl-push">
 
-<?php get_sidebar(); ?>
+<?php get_sidebar("single"); ?>
 
 			<section id="nav:content" class="fl-clearfix fl-col fl-container-flex75" role="main">
 
