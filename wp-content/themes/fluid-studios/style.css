@@ -282,6 +282,14 @@ input#s{
 	content:"";
 }
 
+/* Styles for the title page grid
+--------------------------------------------------------------------------- */
+.fl-grid li {
+    width: 250px;
+    height: auto;
+    padding: 0 30px;
+}
+
 /* uiOptions fat panel specific styles
 --------------------------------------------------------------------------- */
 .fl-uiOptions-fatPanel .fl-panelBar{
