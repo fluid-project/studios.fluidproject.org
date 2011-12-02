@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-		<div id="content-container" class="fl-clearfix fl-container fl-container-flex fl-push">
+		<div id="content-container" class="fl-clearfix fl-col-mixed2 fl-push">
 
 <?php get_sidebar(); ?>
 
-			<section id="nav:content" class="fl-clearfix fl-col fl-container-flex75" role="main">
+			<section id="nav:content" class="fl-clearfix fl-col-main" role="main">
 
 			<?php if (have_posts()) : ?>
 

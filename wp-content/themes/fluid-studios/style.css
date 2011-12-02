@@ -32,6 +32,16 @@ a {
     text-decoration: none;
     color: #0099CC;
 }
+
+/* FSS Column style overrides
+--------------------------------------------------------------------------- */
+.fl-col-mixed2 .fl-col-side {
+    width: 20%;
+    min-width: 200px;
+}
+.fl-col-mixed2 .fl-col-main {
+    margin-left: 20%;
+}
 /* Header branding styles
 --------------------------------------------------------------------------- */
 .banner{
@@ -89,6 +99,7 @@ input[type="submit"]:active {
 .type-post,.type-page{
 	margin-right:0.25em;
 	padding-bottom:1.25em;
+	margin-left: 5%;
 }
 body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,body.search h2.entry-title,body.archive h2.entry-title{
 	margin-bottom:0;
@@ -266,13 +277,19 @@ input#s{
     background-image: url("images/icon-login.png");
     background-position: 5px center;
     background-repeat: no-repeat;
-    padding-left: 25px;
-    width: 5em;
+    text-align: right;
+    margin-right: 10%;
+    width: 6em;
 }
 .fs-loginout-link a {
     color: #FFFFFF;
     font-family: Arial,sans-serif;
     text-transform: uppercase;
+}
+.fs-fluid-logo {
+    text-align: right;
+    margin-right: 10%;
+    margin-top: 100px;
 }
 /* Colophon footer styles
 --------------------------------------------------------------------------- */
@@ -297,10 +314,12 @@ input#s{
 	content:"";
 }
 
-/* Styles for the title page grid
+/* Styles for the title page grid (Overriding FSS styles)
 --------------------------------------------------------------------------- */
 .fl-grid li {
-    width: 250px;
+    width: 20%;
+    min-width: 150px;
+    max-width: 300px;
     height: auto;
     padding: 0 30px;
 }
