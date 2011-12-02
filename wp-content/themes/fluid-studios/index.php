@@ -8,12 +8,6 @@
 				if (have_posts()) : 
 					while (have_posts()) : 
 						the_post();
-				
-						// Calculate the part of the content to show in the front page summary
-						$title = the_title('', '', false);
-						$content = get_the_content(null, true);
-						$num_of_chars_in_content = NUM_OF_CHARS_IN_SUMMARY-strlen($title);
-						$content_to_show = substr($content, 0, $num_of_chars_in_content);
 				?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -29,10 +23,10 @@
 							}
 							?></a>
 						</div>
-						<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Direct Link to <?php the_title_attribute(); ?>"><?php echo $title; ?></a></h2>
+						<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Direct Link to <?php the_title_attribute(); ?>"><?php echo the_title('', '', false); ?></a></h2>
 					</header>
 					<section class="entry-content">
-						<?php echo $content_to_show; ?>&nbsp;(<a href="<?php the_permalink() ?>" rel="bookmark" title="Direct Link to <?php the_title_attribute(); ?>">more ...</a>)
+						<?php echo the_excerpt(); ?>
 					</section><!-- /.entry-content -->
 					<footer class="entry-utility">
 						<div class="fs-tags"><?php the_tags("", ", "); ?></div> 
