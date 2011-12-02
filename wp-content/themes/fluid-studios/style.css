@@ -3,101 +3,19 @@ Theme Name:Fluid Studios
 Author: The Fluid Project
 */
 
-/* CSS browser "restart", c/o Harry Roberts; https://github.com/csswizardry/vanilla
---------------------------------------------------------------------------- */
-html,body,div,span,applet,object,iframe,
-h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,
-a,abbr,address,cite,code,
-del,dfn,em,img,ins,kbd,q,s,samp,
-small,strong,sub,sup,tt,var,
-b,u,i,
-dl,dt,dd,ol,ul,li,
-fieldset,form,label,legend,
-table,caption,tbody,tfoot,thead,tr,th,td,
-article,aside,canvas,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section,summary,
-time,mark,audio,video{
-	margin:0;
-	padding:0;
-}
-article,aside,details,figcaption,figure,footer,
-header,hgroup,menu,nav,section{
-	display:block;
-}
-h1,h2,h3,h4,h5,h6{
-	font-size:100%;
-}
-table{
-	border-collapse:collapse;
-	border-spacing:0;
-}
-strong,b,mark{
-	font-weight:bold;
-	font-style:inherit;
-}
-em,i,cite,q,address,var{
-	font-style:italic;
-	font-weight:inherit;
-}
-abbr[title],dfn[title]{
-	border-bottom:1px dotted;
-	cursor:help;
-}
-ins{
-	border-bottom:1px solid;
-}
-a,u,ins{
-	border-bottom:1px solid;
-	text-decoration:none;
-}
-a:active{
-	outline:none 0;
-}
-a:focus{
-	border:0;
-	outline:2px solid #f00;
-	text-decoration:none;
-}
-a>abbr,a>ins{
-	padding-bottom:0.2em;
-}
-del,s{
-	text-decoration:line-through;
-}
-code,samp,kbd{
-	font-family:monospace;
-}
-small{
-	font-size:0.75em;
-}
-img{
-	border:none;
-	font-style:italic;
-}
-input,select,textarea{
-	-webkit-border-radius:0;
-	-moz-border-radius:0;
-	border-radius:0;
-	font:inherit;
-}
-sup,sub{
-	font-size:75%;
-	vertical-align:top;
-}
-sub{
-	vertical-align:bottom;
-}
-
 /* Global Fluid Studios theme specific container and body styles
 --------------------------------------------------------------------------- */
 body{
 	background:#fff;
 	line-height:1.4;
-	font-family:Georgia, serif;
+	font-family: "Times New Roman", Times, serif;
+	max-width: 1280px;
 }
 #wrapper {
-	max-width:58.5em;
+/*
+	max-width:80%;
 	padding:0 3.5%;
+*/
 }
 
 /* Global Fluid Studios text styles
@@ -111,7 +29,20 @@ h1,h2,h3,h4,h5,h6{
 p,ul,ol,blockquote,figure{
 	margin-bottom: 1em;
 }
+a {
+	text-decoration: none;
+	color: #0099CC;
+}
 
+/* FSS Column style overrides
+--------------------------------------------------------------------------- */
+.fl-col-mixed2 .fl-col-side {
+	width: 20%;
+	min-width: 8.125em; /* 130 / 16 */
+}
+.fl-col-mixed2 .fl-col-main {
+	margin-left: 20%;
+}
 /* Header branding styles
 --------------------------------------------------------------------------- */
 .banner{
@@ -169,12 +100,20 @@ input[type="submit"]:active {
 .type-post,.type-page{
 	margin-right:0.25em;
 	padding-bottom:1.25em;
+	margin-left: 5%;
 }
 body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,body.search h2.entry-title,body.archive h2.entry-title{
 	margin-bottom:0;
 }
-.entry-title a{
+.entry-title {
+	color: #CCCC00;
+	font-family: Arial, sans-serif;
 	border:0;
+}
+.entry-meta {
+	font-family: Arial, sans-serif;
+	text-transform: uppercase;
+	border-bottom: 1px solid #666666; 
 }
 blockquote{
 	border-left:5px solid #eee;
@@ -196,6 +135,9 @@ ol#search-results li p{
 	font-style:italic;
 	list-style:inside disc;
 	margin-left:0.2%;
+}
+.fs-tags, a[rel="tag"] {
+	font-style: italic;
 }
 #search-results .entry-utility ul li{
 	font-weight:normal;
@@ -316,7 +258,9 @@ input#s{
 /* Sidebar styles
 --------------------------------------------------------------------------- */
 #sidebar {
-	padding-bottom:1.25em;
+	padding-bottom:100%;
+	background-image: url('images/bg.jpg');
+	background-repeat: repeat;
 }
 #sidebar>ul{
 	list-style:none;
@@ -329,7 +273,27 @@ input#s{
 #sidebar ul li ul li{
 	list-style:inside disc;
 }
-
+.fs-loginout-link {
+	background-color: gray;
+	background-image: url("images/icon-login.png");
+	background-position: 0.3125em center;  /* 5 / 16 */
+	background-repeat: no-repeat;
+	text-align: right;
+	margin-right: 10%;
+	float: right;
+	padding-left: 1.5625em; /* 25 / 16 */
+	padding-right: 0.3125em;  /* 5 / 16 */
+}
+.fs-loginout-link a {
+	color: #FFFFFF;
+	font-family: Arial,sans-serif;
+	text-transform: uppercase;
+}
+.fs-fluid-logo {
+	text-align: right;
+	margin-right: 10%;
+	margin-top: 6.25em;  /* 100 / 16 */
+}
 /* Colophon footer styles
 --------------------------------------------------------------------------- */
 .contentinfo{
@@ -351,6 +315,34 @@ input#s{
 }
 #colophon ul li:first-child:before{
 	content:"";
+}
+
+/* Styles for the title page grid (Overriding FSS styles)
+--------------------------------------------------------------------------- */
+.fl-grid li {
+	width: 15em; /* 240 / 16 */
+	height: 34.375em; /* 550 / 16 */
+	height: auto;
+	padding: 0 1.875em;  /* 30 / 16 */
+}
+
+/* Wordpress alignment styles
+--------------------------------------------------------------------------- */
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.625em;
+}
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.625em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* uiOptions fat panel specific styles
