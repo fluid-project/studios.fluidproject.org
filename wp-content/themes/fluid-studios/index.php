@@ -1,39 +1,44 @@
 <?php get_header(); ?>
 
-		<div id="content-container" class="fl-clearfix fl-container fl-container-flex fl-push">
+		<div id="content-container" class="fl-clearfix fl-col-mixed2 fl-push">
 
-			<section id="nav:content" class="fl-clearfix fl-col fl-container-flex75" role="main">
+<?php get_sidebar(); ?>
 
-				<?php 
-				if (have_posts()) : 
-					while (have_posts()) : 
-						the_post();
-				?>
+            <section id="nav:content" class="fl-clearfix fl-col-main" role="main">
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header>
-						<div class="fs-post-thumbnail">
-							<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php 
-							if ( has_post_thumbnail() ) {
-								// the current post has a thumbnail
-								the_post_thumbnail();
-							} else {
-								// the current post lacks a thumbnail, display the default picture
-								echo '<img alt="Featured image is missing" src="' . get_template_directory_uri() .'/images/default-feature-image.png" width="' . THUMBNAIL_WIDTH . '" />';
-							}
-							?></a>
-						</div>
-						<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Direct Link to <?php the_title_attribute(); ?>"><?php echo the_title('', '', false); ?></a></h2>
-					</header>
-					<section class="entry-content">
-						<?php echo the_excerpt(); ?>
-					</section><!-- /.entry-content -->
-					<footer class="entry-utility">
-						<div class="fs-tags"><?php the_tags("", ", "); ?></div> 
-					</footer><!-- /.entry-utility -->
-				</article><!-- /#post-<?php the_ID(); ?> -->
-
-				<?php endwhile; ?>
+                <ul class="fl-grid">
+    				<?php 
+    				if (have_posts()) : 
+    					while (have_posts()) : 
+    						the_post();
+    				?>
+    
+                    <li>
+                        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                            <header>
+                                <div class="fs-post-thumbnail">
+                                    <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php 
+                                    if ( has_post_thumbnail() ) {
+                                        // the current post has a thumbnail
+                                        the_post_thumbnail();
+                                    } else {
+                                        // the current post lacks a thumbnail, display the default picture
+                                        echo '<img alt="Featured image is missing" src="' . get_template_directory_uri() .'/images/placeholder.jpg" width="' . THUMBNAIL_WIDTH . '" />';
+                                    }
+                                    ?></a>
+                                </div>
+                                <h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Direct Link to <?php the_title_attribute(); ?>"><?php echo the_title('', '', false); ?></a></h2>
+                            </header>
+                            <section class="entry-content">
+                                <?php echo the_excerpt(); ?>
+                            </section><!-- /.entry-content -->
+                            <footer class="entry-utility">
+                                <div class="fs-tags"><?php the_tags("", ", "); ?></div> 
+                            </footer><!-- /.entry-utility -->
+                        </article><!-- /#post-<?php the_ID(); ?> -->
+                    </li>
+    				<?php endwhile; ?>
+                </ul>
 
 				<?php 
 				$next_posts = get_next_posts_link('&laquo; Older articles');
@@ -56,6 +61,6 @@
 
 			</section><!-- /#nav:content -->
 
-<?php get_sidebar(); ?>
+        </div><!-- /#content-container -->
 
 <?php get_footer(); ?>
