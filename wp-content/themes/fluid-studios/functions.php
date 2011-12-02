@@ -5,7 +5,11 @@ if( !is_admin()){
 	wp_deregister_script('jquery');
 }
 
-if ( ! defined("NUM_OF_CHARS_IN_SUMMARY") ) define("NUM_OF_CHARS_IN_SUMMARY", 100);
+// The constant definitions
+// The number of characters for content excerpt on the index page 
+if ( ! defined("NUM_OF_CHARS_IN_SUMMARY") ) define("NUM_OF_CHARS_IN_SUMMARY_CONTENT", 20);
+
+// The size of the featured image on the index page
 if ( ! defined("THUMBNAIL_WIDTH") ) define("THUMBNAIL_WIDTH", 250);
 if ( ! defined("THUMBNAIL_HEIGHT") ) define("THUMBNAIL_HEIGHT", 250);
 
@@ -14,6 +18,19 @@ if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( THUMBNAIL_WIDTH, THUMBNAIL_HEIGHT, true ); // 50 pixels wide by 50 pixels tall, hard crop mode
 }
+
+// Customize the excerpt length
+function new_excerpt_length($length) {
+	return NUM_OF_CHARS_IN_SUMMARY_CONTENT;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+// Define the excerpt "more" string
+function new_excerpt_more($more) {
+	global $post;
+	return '&nbsp;<a href="'. get_permalink($post->ID) . '" rel="bookmark" title="Continue reading ' . the_title('', '', false) . '">(More...)</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 // Custom comments
 if ( ! function_exists( 'Studios_comment' ) ) :
