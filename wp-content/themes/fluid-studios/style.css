@@ -30,18 +30,18 @@ p,ul,ol,blockquote,figure{
 	margin-bottom: 1em;
 }
 a {
-    text-decoration: none;
-    color: #0099CC;
+	text-decoration: none;
+	color: #0099CC;
 }
 
 /* FSS Column style overrides
 --------------------------------------------------------------------------- */
 .fl-col-mixed2 .fl-col-side {
-    width: 20%;
-    min-width: 8.125em; /* 130 / 16 */
+	width: 20%;
+	min-width: 8.125em; /* 130 / 16 */
 }
 .fl-col-mixed2 .fl-col-main {
-    margin-left: 20%;
+	margin-left: 20%;
 }
 /* Header branding styles
 --------------------------------------------------------------------------- */
@@ -106,14 +106,14 @@ body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,bod
 	margin-bottom:0;
 }
 .entry-title {
-    color: #CCCC00;
-    font-family: Arial, sans-serif;
-    border:0;
+	color: #CCCC00;
+	font-family: Arial, sans-serif;
+	border:0;
 }
 .entry-meta {
-    font-family: Arial, sans-serif;
-    text-transform: uppercase;
-    border-bottom: 1px solid #666666; 
+	font-family: Arial, sans-serif;
+	text-transform: uppercase;
+	border-bottom: 1px solid #666666; 
 }
 blockquote{
 	border-left:5px solid #eee;
@@ -137,7 +137,7 @@ ol#search-results li p{
 	margin-left:0.2%;
 }
 .fs-tags, a[rel="tag"] {
-    font-style: italic;
+	font-style: italic;
 }
 #search-results .entry-utility ul li{
 	font-weight:normal;
@@ -259,8 +259,8 @@ input#s{
 --------------------------------------------------------------------------- */
 #sidebar {
 	padding-bottom:100%;
-    background-image: url('images/bg.jpg');
-    background-repeat: repeat;
+	background-image: url('images/bg.jpg');
+	background-repeat: repeat;
 }
 #sidebar>ul{
 	list-style:none;
@@ -274,25 +274,25 @@ input#s{
 	list-style:inside disc;
 }
 .fs-loginout-link {
-    background-color: gray;
-    background-image: url("images/icon-login.png");
-    background-position: 0.3125em center;  /* 5 / 16 */
-    background-repeat: no-repeat;
-    text-align: right;
-    margin-right: 10%;
-    float: right;
-    padding-left: 1.5625em; /* 25 / 16 */
-    padding-right: 0.3125em;  /* 5 / 16 */
+	background-color: gray;
+	background-image: url("images/icon-login.png");
+	background-position: 0.3125em center;  /* 5 / 16 */
+	background-repeat: no-repeat;
+	text-align: right;
+	margin-right: 10%;
+	float: right;
+	padding-left: 1.5625em; /* 25 / 16 */
+	padding-right: 0.3125em;  /* 5 / 16 */
 }
 .fs-loginout-link a {
-    color: #FFFFFF;
-    font-family: Arial,sans-serif;
-    text-transform: uppercase;
+	color: #FFFFFF;
+	font-family: Arial,sans-serif;
+	text-transform: uppercase;
 }
 .fs-fluid-logo {
-    text-align: right;
-    margin-right: 10%;
-    margin-top: 6.25em;  /* 100 / 16 */
+	text-align: right;
+	margin-right: 10%;
+	margin-top: 6.25em;  /* 100 / 16 */
 }
 /* Colophon footer styles
 --------------------------------------------------------------------------- */
@@ -320,29 +320,29 @@ input#s{
 /* Styles for the title page grid (Overriding FSS styles)
 --------------------------------------------------------------------------- */
 .fl-grid li {
-    width: 15em; /* 240 / 16 */
-    height: 34.375em; /* 550 / 16 */
-    height: auto;
-    padding: 0 1.875em;  /* 30 / 16 */
+	width: 15em; /* 240 / 16 */
+	height: 34.375em; /* 550 / 16 */
+	height: auto;
+	padding: 0 1.875em;  /* 30 / 16 */
 }
 
 /* Wordpress alignment styles
 --------------------------------------------------------------------------- */
 .alignright {
-    display: inline;
-    float: right;
-    margin-left: 1.625em;
+	display: inline;
+	float: right;
+	margin-left: 1.625em;
 }
 .alignleft {
-    display: inline;
-    float: left;
-    margin-right: 1.625em;
+	display: inline;
+	float: left;
+	margin-right: 1.625em;
 }
 .aligncenter {
-    clear: both;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* uiOptions fat panel specific styles
