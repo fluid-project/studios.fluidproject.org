@@ -124,6 +124,9 @@ ol#search-results li p{
 	list-style:inside disc;
 	margin-left:0.2%;
 }
+.fs-tags, a[rel="tag"] {
+    font-style: italic;
+}
 #search-results .entry-utility ul li{
 	font-weight:normal;
 	list-style:inside disc;
@@ -258,7 +261,19 @@ input#s{
 #sidebar ul li ul li{
 	list-style:inside disc;
 }
-
+.fs-loginout-link {
+    background-color: gray;
+    background-image: url("images/icon-login.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    width: 5em;
+}
+.fs-loginout-link a {
+    color: #FFFFFF;
+    font-family: Arial,sans-serif;
+    text-transform: uppercase;
+}
 /* Colophon footer styles
 --------------------------------------------------------------------------- */
 .contentinfo{

@@ -1,1 +1,6 @@
-<div id="fs-loginout-link"><?php wp_loginout(); ?></div><div id="fs-fluid-logo"><img alt="Fluid Studio Logo" src="<?php echo get_template_directory_uri(); ?>/images/fluid-logo.png" /></div>
+<div class="fs-loginout-link fl-centered">
+    <?php wp_loginout(); ?>
+</div>
+<div id="fs-fluid-logo">
+    <a href="<?php echo esc_url(get_home_url()); ?>"><img alt="Fluid Studio Logo" src="<?php echo get_template_directory_uri(); ?>/images/logo-fluidSTUDIOS.png" /></a>
+</div>

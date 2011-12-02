@@ -29,7 +29,7 @@
         								the_post_thumbnail();
         							} else {
         								// the current post lacks a thumbnail, display the default picture
-        								echo '<img alt="Featured image is missing" src="' . get_template_directory_uri() .'/images/default-feature-image.png" width="' . THUMBNAIL_WIDTH . '" />';
+        								echo '<img alt="Featured image is missing" src="' . get_template_directory_uri() .'/images/placeholder.jpg" width="' . THUMBNAIL_WIDTH . '" />';
         							}
         							?></a>
         						</div>
