@@ -113,7 +113,6 @@ body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,bod
 }
 .entry-meta {
 	font-family: Arial, sans-serif;
-	text-transform: uppercase;
 	border-bottom: 1px solid #666666; 
 }
 blockquote{
@@ -307,7 +306,7 @@ input#s{
     border-bottom-left-radius: 5px;
 	padding: 0.3125em;  /* 5 / 16 */
 	padding-left: 1.5625em; /* 25 / 16 */
-	margin-top: 7em;
+	margin-top: 12em;
 	width: 3em;
 	float: right;
 }
@@ -323,7 +322,7 @@ input#s{
 	text-align: right;
 	margin-right: 15%;
 	float: right;
-	margin-top: 6.25em;  /* 100 / 16 */
+	margin-top: 8em;  /* 128 / 16 */
 }
 .fs-fluidstudio-logo a {
     display:block;

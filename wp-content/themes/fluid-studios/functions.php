@@ -10,8 +10,8 @@ if( !is_admin()){
 if ( ! defined("NUM_OF_CHARS_IN_SUMMARY") ) define("NUM_OF_CHARS_IN_SUMMARY_CONTENT", 20);
 
 // The size of the featured image on the index page
-if ( ! defined("THUMBNAIL_WIDTH") ) define("THUMBNAIL_WIDTH", 250);
-if ( ! defined("THUMBNAIL_HEIGHT") ) define("THUMBNAIL_HEIGHT", 250);
+if ( ! defined("THUMBNAIL_WIDTH") ) define("THUMBNAIL_WIDTH", 240);
+if ( ! defined("THUMBNAIL_HEIGHT") ) define("THUMBNAIL_HEIGHT", 160);
 
 // Enable Post Thumbnail selection UI
 if ( function_exists( 'add_theme_support' ) ) {
