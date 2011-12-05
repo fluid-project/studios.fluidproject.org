@@ -79,7 +79,7 @@
 	        tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html",
 	        classnameMap: {
 	            theme: {
-	                "default": "uio-demo-theme"
+	                "default": "fluid-studios-theme"
 	            }
 	        }
 	    });

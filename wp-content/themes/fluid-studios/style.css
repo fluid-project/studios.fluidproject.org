@@ -5,11 +5,11 @@ Author: The Fluid Project
 
 /* Global Fluid Studios theme specific container and body styles
 --------------------------------------------------------------------------- */
-body{
-	background:#fff;
+body {
 	line-height:1.4;
 	font-family: "Times New Roman", Times, serif;
 	max-width: 1280px;
+	background:#fff;
 }
 #wrapper {
 /*
@@ -106,9 +106,9 @@ body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,bod
 	margin-bottom:0;
 }
 .entry-title {
-	color: #CCCC00;
 	font-family: Arial, sans-serif;
 	border:0;
+	color: #CCCC00;
 }
 .entry-meta {
 	font-family: Arial, sans-serif;
@@ -259,6 +259,8 @@ input#s{
 --------------------------------------------------------------------------- */
 #sidebar {
 	padding-bottom:100%;
+}
+.fluid-studios-theme #sidebar {
 	background-image: url('images/bg.jpg');
 	background-repeat: repeat;
 }
@@ -274,8 +276,6 @@ input#s{
 	list-style:inside disc;
 }
 .fs-loginout-link {
-	background-color: gray;
-	background-image: url("images/icon-login.png");
 	background-position: 0.3125em center;  /* 5 / 16 */
 	background-repeat: no-repeat;
 	text-align: right;
@@ -283,17 +283,34 @@ input#s{
 	float: right;
 	padding-left: 1.5625em; /* 25 / 16 */
 	padding-right: 0.3125em;  /* 5 / 16 */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.fluid-studios-theme  .fs-loginout-link {
+	background-image: url("images/icon-login.png");
+	background-color: gray;
 }
 .fs-loginout-link a {
-	color: #FFFFFF;
 	font-family: Arial,sans-serif;
 	text-transform: uppercase;
 }
+.fluid-studios-theme .fs-loginout-link a {
+	color: #FFFFFF;
+}
 .fs-fluid-logo {
-	text-align: right;
-	margin-right: 10%;
+	margin-left: 40%;
 	margin-top: 6.25em;  /* 100 / 16 */
 }
+.fs-fluid-logo a {
+    display:block;
+    height:95px;
+    width:99px;
+	background-repeat: no-repeat;
+}
+.fluid-studios-theme .fs-fluid-logo a {
+	background-image: url("images/logo-fluidSTUDIOS.png");
+}
+
 /* Colophon footer styles
 --------------------------------------------------------------------------- */
 .contentinfo{
@@ -402,7 +419,23 @@ a.fl-text-underline>abbr{
 .fl-theme-uio-bw a.fl-text-underline{
 	background:transparent !important;
 }
-
+.fl-theme-uio-bw  .fs-loginout-link, .fl-theme-uio-bw  .fs-loginout-link a,
+.fl-theme-uio-bw  .fs-back-link, .fl-theme-uio-bw  .fs-back-link a {
+	background-color: #000000 !important;
+}
+.fl-theme-uio-bw  .fs-loginout-link {
+	background-image: url("images/icon-login.png");
+}
+.fl-theme-uio-bw  .fs-back-link {
+	background-image: url("images/icon-back-white.png");
+}
+.fl-theme-uio-bw  .fs-loginout-link a,
+.fl-theme-uio-bw  .fs-back-link a {
+		color: #FFFFFF !important;
+}
+.fl-theme-uio-bw .fs-fluid-logo a {
+	background-image: url("images/logo-fluidSTUDIOS-black.png");
+}
 /* uiOptions white on black theme specific styles
 --------------------------------------------------------------------------- */
 .fl-theme-uio-wb abbr{
@@ -427,6 +460,23 @@ a.fl-text-underline>abbr{
 }
 .fl-theme-uio-wb a.fl-text-underline{
 	background:transparent !important;
+}
+.fl-theme-uio-wb  .fs-loginout-link, .fl-theme-uio-wb  .fs-loginout-link a,
+.fl-theme-uio-wb  .fs-back-link, .fl-theme-uio-wb  .fs-back-link a {
+	background-color: #FFFFFF !important;
+}
+.fl-theme-uio-wb  .fs-loginout-link {
+	background-image: url("images/icon-login-black.png");
+}
+.fl-theme-uio-wb  .fs-back-link {
+	background-image: url("images/icon-back-black.png");
+}
+.fl-theme-uio-wb  .fs-loginout-link a,
+.fl-theme-uio-wb  .fs-back-link a {
+		color: #000000 !important;
+}
+.fl-theme-uio-wb .fs-fluid-logo a {
+	background-image: url("images/logo-fluidSTUDIOS-white.png");
 }
 
 /* uiOptions black on yellow theme specific styles
@@ -454,6 +504,23 @@ a.fl-text-underline>abbr{
 .fl-theme-uio-by a.fl-text-underline{
 	background:transparent !important;
 }
+.fl-theme-uio-by  .fs-loginout-link, .fl-theme-uio-by  .fs-loginout-link a,
+.fl-theme-uio-by  .fs-back-link, .fl-theme-uio-by  .fs-back-link a {
+	background-color: #000000 !important;
+}
+.fl-theme-uio-by  .fs-loginout-link {
+	background-image: url("images/icon-login-yellow.png");
+}
+.fl-theme-uio-by  .fs-back-link {
+	background-image: url("images/icon-back-yellow.png");
+}
+.fl-theme-uio-by  .fs-loginout-link a,
+.fl-theme-uio-by  .fs-back-link a {
+		color: #FFFF00 !important;
+}
+.fl-theme-uio-by .fs-fluid-logo a {
+	background-image: url("images/logo-fluidSTUDIOS-black.png");
+}
 
 /* uiOptions yellow on black theme specific styles
 --------------------------------------------------------------------------- */
@@ -479,6 +546,23 @@ a.fl-text-underline>abbr{
 }
 .fl-theme-uio-yb a.fl-text-underline{
 	background:transparent !important;
+}
+.fl-theme-uio-yb  .fs-loginout-link, .fl-theme-uio-yb  .fs-loginout-link a,
+.fl-theme-uio-yb  .fs-back-link, .fl-theme-uio-yb  .fs-back-link a {
+	background-color: #FFFF00 !important;
+}
+.fl-theme-uio-yb  .fs-loginout-link {
+	background-image: url("images/icon-login-black.png");
+}
+.fl-theme-uio-yb  .fs-back-link {
+	background-image: url("images/icon-back-black.png");
+}
+.fl-theme-uio-yb  .fs-loginout-link a,
+.fl-theme-uio-yb  .fs-back-link a {
+		color: #000000 !important;
+}
+.fl-theme-uio-yb .fs-fluid-logo a {
+	background-image: url("images/logo-fluidSTUDIOS-yellow.png");
 }
 
 /* Responsive screen styles for viewports from 320px (small screen) and exceeding 1024px (desktop and beyond)
