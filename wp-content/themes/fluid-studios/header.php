@@ -76,7 +76,12 @@
 	<script type="text/javascript">
 	    // Instantiate the UI Enhancer component, specifying the table of contents' template URL
 	    fluid.pageEnhancer({
-	        tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html"
+	        tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html",
+	        classnameMap: {
+	            theme: {
+	                "default": "fluid-studios-theme"
+	            }
+	        }
 	    });
     
 	    // Start up UI Options
