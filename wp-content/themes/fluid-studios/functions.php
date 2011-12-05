@@ -13,6 +13,9 @@ if ( ! defined("NUM_OF_CHARS_IN_SUMMARY") ) define("NUM_OF_CHARS_IN_SUMMARY_CONT
 if ( ! defined("THUMBNAIL_WIDTH") ) define("THUMBNAIL_WIDTH", 240);
 if ( ! defined("THUMBNAIL_HEIGHT") ) define("THUMBNAIL_HEIGHT", 160);
 
+// The maximum number of characters in the "new post" page, "title" field
+if ( ! defined("MAX_CHARS_IN_POST_TITLE") ) define("MAX_CHARS_IN_POST_TITLE", 7);
+
 // Enable Post Thumbnail selection UI
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
