@@ -122,7 +122,7 @@ add_filter('login_errors',create_function('$a', "return null;"));
 
 // Credit
 	function custom_admin_footer() {
-		echo 'Studios is developed by <a href="http://abledaccess.com/">Abledaccess</a> in partnership with <a href="http://fluidproject.org/">The Fluid Project</a>.';
+		echo 'Fluid Studios is developed by <a href="http://fluidproject.org/">The Fluid Project</a>.';
 	} 
 	add_filter('admin_footer_text', 'custom_admin_footer');
 
