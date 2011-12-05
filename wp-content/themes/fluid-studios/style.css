@@ -108,12 +108,19 @@ body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,bod
 	border:0;
 	color: #CCCC00;
 }
+h1.entry-title {
+    font-size: 2em;
+    padding-bottom: .5em;
+}
 h2.entry-title {
     font-size: 1.1em;
 }
 .entry-meta {
 	font-family: Arial, sans-serif;
 	border-bottom: 1px solid #666666; 
+}
+.single .entry-content {
+    padding-top: 1em;
 }
 blockquote{
 	border-left:5px solid #eee;
