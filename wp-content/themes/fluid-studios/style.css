@@ -676,4 +676,30 @@ input#s{
 		margin:0;
 		width:50%;
 	}
+
+	#sidebar {
+		padding-bottom: inherit;
+	}
+	.fl-col-mixed2 .fl-col-side {
+		float: none;
+		width: auto;
+		height: 150px;
+	}
+	.fs-fluidstudio-logo {
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+		float: none;
+		width: 100px;
+		margin-top: .5em;
+	}
+	.fl-col-mixed2 .fl-col-main {
+		margin: 0;
+	}
+	.fl-grid li {
+		float: none;
+	}
+	.type-post, .type-page {
+		margin: 0;
+	}
 }
