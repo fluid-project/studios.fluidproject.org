@@ -108,6 +108,7 @@ body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,bod
 }
 .entry-title {
 	font-family: Arial, sans-serif;
+	font-size: 1em;
 	border:0;
 	color: #CCCC00;
 }
@@ -299,7 +300,7 @@ input#s{
 	color: #FFFFFF;
 }
 .fs-back-link {
-	background-position: 7px center;
+	background-position: 0.4375em center;  /* 7 / 16 */
 	background-repeat: no-repeat;
 	background-color: white;
     border-top-left-radius: 5px;
