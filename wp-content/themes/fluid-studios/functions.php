@@ -13,6 +13,9 @@ if ( ! defined("NUM_OF_CHARS_IN_SUMMARY") ) define("NUM_OF_CHARS_IN_SUMMARY_CONT
 if ( ! defined("THUMBNAIL_WIDTH") ) define("THUMBNAIL_WIDTH", 240);
 if ( ! defined("THUMBNAIL_HEIGHT") ) define("THUMBNAIL_HEIGHT", 160);
 
+// The maximum number of characters in the "new post" page, "title" field
+if ( ! defined("MAX_CHARS_IN_POST_TITLE") ) define("MAX_CHARS_IN_POST_TITLE", 100);
+
 // Enable Post Thumbnail selection UI
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
@@ -24,6 +27,17 @@ function new_excerpt_length($length) {
 	return NUM_OF_CHARS_IN_SUMMARY_CONTENT;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
+
+function max_chars_in_post_title($title){
+	global $post;
+	$title = $post->post_title;
+
+	//set the maximum number of words
+	if (strlen($title) > MAX_CHARS_IN_POST_TITLE ) {
+		wp_die( __('Error: Your post title has exceeded the maximum length limit - ' . MAX_CHARS_IN_POST_TITLE . '.') );
+	}
+}
+add_action('publish_post', 'max_chars_in_post_title');
 
 // Define the excerpt "more" string
 function new_excerpt_more($more) {
