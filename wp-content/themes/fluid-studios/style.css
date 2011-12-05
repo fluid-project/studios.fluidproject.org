@@ -43,6 +43,7 @@ a {
 }
 .fl-col-mixed2 .fl-col-main {
 	margin-left: 20%;
+	padding-top: 2.5em; /* 40 / 16 */
 }
 /* Header branding styles
 --------------------------------------------------------------------------- */
@@ -404,7 +405,9 @@ input#s{
 	font-size:0.8em;
 	margin-top:0;
 	padding:0.35em 0.55em;
-	position:relative;
+	position:absolute;
+	right: 0;
+	float: none;
 }
 .fl-uiOptions-fatPanel .fl-toggleButton:focus{
 	border:2px solid #f00;
