@@ -105,9 +105,11 @@ body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,bod
 }
 .entry-title {
 	font-family: Arial, sans-serif;
-	font-size: 1em;
 	border:0;
 	color: #CCCC00;
+}
+h2.entry-title {
+    font-size: 1.1em;
 }
 .entry-meta {
 	font-family: Arial, sans-serif;
