@@ -32,8 +32,10 @@
 
 				<?php endif; ?>
 
+                <?php get_footer(); ?>
+
 			</section><!-- /#nav:content -->
 
         </div><!-- /#content-container -->
 
-<?php get_footer(); ?>
+    </div><!-- /#wrapper -->
