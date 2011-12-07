@@ -48,6 +48,7 @@ a {
 .fl-col-mixed2 .fl-col-main {
 	margin-left: 20%;
 	padding-top: 2.5em; /* 40 / 16 */
+	padding-bottom: 4em;
 	height: 100%;
 }
 /* Header branding styles
@@ -364,14 +365,13 @@ input#s{
 
 /* Colophon footer styles
 --------------------------------------------------------------------------- */
-.contentinfo{
-	height:4em;
-	padding-bottom:2em;
-	position:relative;
+.footer{
+    position: absolute;
+    bottom: 0;
+	margin-left: 25%;
 }
 #colophon{
 	margin:0 auto;
-	max-width:58.5em;
 	padding:0 3.5%;
 }
 #colophon ul li{

@@ -33,8 +33,8 @@
 
 				<?php endif; ?>
 
-                <?php get_footer(); ?>
-
 			</section><!-- /#nav:content -->
+
+                <?php get_footer(); ?>
 
 		</div><!-- /#content-container -->

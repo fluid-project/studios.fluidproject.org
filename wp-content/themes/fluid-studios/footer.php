@@ -1,6 +1,6 @@
 
 	
-	<footer class="contentinfo fl-clearfix" role="contentinfo">
+	<footer class="footer" role="contentinfo">
 		<section id="colophon">
 			<ul>
 				<li>&copy; <?= date('Y'); ?> <?php bloginfo('name'); ?></li>
