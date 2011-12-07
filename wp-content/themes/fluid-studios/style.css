@@ -16,10 +16,10 @@ body {
 	height: 100%;
 }
 #wrapper {
-	height: auto;
+	height: 100%;
 }
 #content-container {
-    height: inherit;
+    height: 100%;
     min-height: 100%;
     width: 100%;
     position: relative;
@@ -287,8 +287,6 @@ input#s{
 .fluid-studios-theme .sidebarback {
 	background-image: url("images/bg.jpg");
 	background-repeat: repeat;
-	height: auto;
-	min-height: 100%;
 	position: absolute;
 	bottom: 0;
 	top: 0;
