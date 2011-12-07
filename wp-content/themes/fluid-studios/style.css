@@ -436,6 +436,7 @@ input#s{
 	right: 0;
 	float: none;
 	margin-right: 0;
+	z-index: 999999;
 }
 .fl-uiOptions-fatPanel .fl-toggleButton:focus{
 	border:2px solid #f00;
