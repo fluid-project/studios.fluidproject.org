@@ -58,8 +58,7 @@
 
 </head>
 
-<body id="nav:page-top" <?php body_class(); ?>>
-<div class="fl-fix">
+<body id="nav:page-top" <?php body_class('fl-fix'); ?>>
 
   <div class="flc-uiOptions-fatPanel fl-uiOptions-fatPanel">
       <!-- This is the div that will contain the UI Options component -->

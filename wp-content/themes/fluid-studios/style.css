@@ -16,10 +16,13 @@ body {
 	height: 100%;
 }
 #wrapper {
-	height: 100%;
+	height: auto;
 }
 #content-container {
-	height: 100%;
+    height: inherit;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
 }
 /* Global Fluid Studios text styles
 --------------------------------------------------------------------------- */
@@ -47,6 +50,7 @@ a {
 .fl-col-mixed2 .fl-col-main {
 	margin-left: 20%;
 	padding-top: 2.5em; /* 40 / 16 */
+	height: 100%;
 }
 /* Header branding styles
 --------------------------------------------------------------------------- */
@@ -281,16 +285,17 @@ input#s{
 	height: 100%;
 }
 .fluid-studios-theme .sidebarback {
-	background-image: url('images/bg.jpg');
-	background-repeat: repeat;	
+	background-image: url("images/bg.jpg");
+	background-repeat: repeat;
+	height: auto;
+	min-height: 100%;
 	position: absolute;
 	bottom: 0;
 	top: 0;
 	z-index: -1;
-    min-width: 8.125em;
-    padding-right: 0;
-    width: 20%;
-	height: 100%;
+	min-width: 8.125em;
+	padding-right: 0;
+	width: 20%;
 }
 #sidebar>ul{
 	list-style:none;
@@ -313,7 +318,6 @@ input#s{
 	padding-left: 1.5625em; /* 25 / 16 */
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-/* cindy	width: 5em; */
 }
 .fluid-studios-theme  .fs-loginout-link {
 	background-image: url("images/icon-login.png");
