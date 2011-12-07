@@ -91,7 +91,7 @@
                options: {
                    strings: {
                        showText: "Show Display Preferences",
-                       hideText: "Show Display Preferences"
+                       hideText: "Hide Display Preferences"
                    }
                }
            }
