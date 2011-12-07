@@ -5,19 +5,24 @@ Author: The Fluid Project
 
 /* Global Fluid Studios theme specific container and body styles
 --------------------------------------------------------------------------- */
+html {
+	height: 100%;
+}
 body {
 	line-height:1.4;
 	font-family: "Times New Roman", Times, serif;
 	max-width: 1280px;
 	background:#fff;
+	height: 100%;
+	position: relative;
 }
-#wrapper {
-/*
-	max-width:80%;
-	padding:0 3.5%;
-*/
+#content-container {
+	height: auto;
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: visible;
 }
-
 /* Global Fluid Studios text styles
 --------------------------------------------------------------------------- */
 h1,h2,h3,h4,h5,h6{
@@ -27,7 +32,7 @@ h1,h2,h3,h4,h5,h6{
 	margin-bottom:0.75em;
 }
 p,ul,ol,blockquote,figure {
-    margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 a {
 	text-decoration: none;
@@ -43,6 +48,9 @@ a {
 }
 .fl-col-mixed2 .fl-col-main {
 	margin-left: 20%;
+	padding-top: 2.5em; /* 40 / 16 */
+	padding-bottom: 4em;
+	height: 100%;
 }
 /* Header branding styles
 --------------------------------------------------------------------------- */
@@ -112,24 +120,24 @@ body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,bod
 	color: #CCCC00;
 }
 h1.entry-title {
-    font-size: 2em;
-    padding-bottom: .5em;
+	font-size: 2em;
+	padding-bottom: .5em;
 }
 h2.entry-title {
-    font-size: 1.1em;
+	font-size: 1.1em;
 }
 p.entry-meta {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 .entry-meta {
 	font-family: Arial, sans-serif;
 	border-bottom: 1px solid #666666;
 }
 .single .entry-content {
-    padding-top: 1em;
+	padding-top: 1em;
 }
 .home .entry-content p {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 blockquote{
 	border-left:5px solid #eee;
@@ -274,11 +282,18 @@ input#s{
 /* Sidebar styles
 --------------------------------------------------------------------------- */
 #sidebar {
-	padding-bottom:100%;
+	height: 100%;
 }
-.fluid-studios-theme #sidebar {
-	background-image: url('images/bg.jpg');
+.fluid-studios-theme .sidebarback {
+	background-image: url("images/bg.jpg");
 	background-repeat: repeat;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	z-index: -1;
+	min-width: 8.125em;
+	padding-right: 0;
+	width: 20%;
 }
 #sidebar>ul{
 	list-style:none;
@@ -292,24 +307,27 @@ input#s{
 	list-style:inside disc;
 }
 .fs-loginout-link {
-	background-position: 0.3125em center;  /* 5 / 16 */
-	background-repeat: no-repeat;
-	text-align: right;
-	margin-right: 15%;
-	float: right;
+    background-position: 0.3125em center;
+    background-repeat: no-repeat;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    font-family: Arial,sans-serif;
+    margin-right: 0;
 	padding: 0.3125em;  /* 5 / 16 */
+	padding-top: 0.15em;
 	padding-left: 1.5625em; /* 25 / 16 */
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-/* cindy	width: 5em; */
+    position: absolute;
+    right: 14em;
+    text-transform: lowercase;
+    z-index: 999999;
 }
 .fluid-studios-theme  .fs-loginout-link {
 	background-image: url("images/icon-login.png");
-	background-color: gray;
+	background-color: #0099CC;
 }
 .fs-loginout-link a {
 	font-family: Arial,sans-serif;
-	text-transform: uppercase;
+	text-transform: lowercase;
 }
 .fluid-studios-theme .fs-loginout-link a {
 	color: #FFFFFF;
@@ -318,8 +336,8 @@ input#s{
 	background-position: 0.4375em center;  /* 7 / 16 */
 	background-repeat: no-repeat;
 	background-color: white;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 	padding: 0.3125em;  /* 5 / 16 */
 	padding-left: 1.5625em; /* 25 / 16 */
 	margin-top: 12em;
@@ -341,9 +359,9 @@ input#s{
 	margin-top: 8em;  /* 128 / 16 */
 }
 .fs-fluidstudio-logo a {
-    display:block;
-    height:95px;
-    width:99px;
+	display:block;
+	height:95px;
+	width:99px;
 	background-repeat: no-repeat;
 }
 .fluid-studios-theme .fs-fluidstudio-logo a {
@@ -352,14 +370,13 @@ input#s{
 
 /* Colophon footer styles
 --------------------------------------------------------------------------- */
-.contentinfo{
-	height:4em;
-	padding-bottom:2em;
-	position:relative;
+.footer{
+	position: absolute;
+	bottom: 0;
+	margin-left: 25%;
 }
 #colophon{
 	margin:0 auto;
-	max-width:58.5em;
 	padding:0 3.5%;
 }
 #colophon ul li{
@@ -406,20 +423,31 @@ input#s{
 .fl-uiOptions-fatPanel .fl-panelBar{
 	background-color:#000;
 	border:0;
-	height: 0.5em;
+	height: 0;
+	position: relative;
 }
 .fl-uiOptions-fatPanel .fl-toggleButton{
-	border:2px solid;
-	border-top-width:0;
-	-webkit-border-radius:0;
-	-moz-border-radius:0;
-	border-radius:0;
-	cursor:pointer;
-	font-family:Georgia, serif;
-	font-size:0.8em;
-	margin-top:0;
-	padding:0.35em 0.55em;
-	position:relative;
+	background-position: 0.3125em center;  /* 5 / 16 */
+	background-repeat: no-repeat;
+	padding: 0.3125em;  /* 5 / 16 */
+	padding-left: 1.5625em; /* 25 / 16 */
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-family: Arial,sans-serif;
+	font-weight: normal;
+	text-transform: lowercase;
+	position:absolute;
+	right: 0;
+	margin-right: 0;
+	cursor: pointer;
+	z-index: 999999;
+}
+.fluid-studios-theme  .fl-uiOptions-fatPanel .fl-toggleButton {
+	background-image: url("images/icon-uio.png");
+	background-color: #0099CC;
+	color: #FFFFFF;
 }
 .fl-uiOptions-fatPanel .fl-toggleButton:focus{
 	border:2px solid #f00;
@@ -431,6 +459,9 @@ input#s{
 }
 a.fl-text-underline>abbr{
 	padding:0;
+}
+.fs-uiOptions-panel {
+	border: 2px solid #0099CC;	
 }
 
 /* uiOptions black on white theme specific styles
@@ -458,9 +489,16 @@ a.fl-text-underline>abbr{
 .fl-theme-uio-bw a.fl-text-underline{
 	background:transparent !important;
 }
+
 .fl-theme-uio-bw  .fs-loginout-link, .fl-theme-uio-bw  .fs-loginout-link a,
-.fl-theme-uio-bw  .fs-back-link, .fl-theme-uio-bw  .fs-back-link a {
+.fl-theme-uio-bw  .fs-back-link, .fl-theme-uio-bw  .fs-back-link a,
+.fl-theme-uio-bw .fl-toggleButton {
 	background-color: #000000 !important;
+}
+.fl-theme-uio-bw  .fs-loginout-link a,
+.fl-theme-uio-bw  .fs-back-link a,
+.fl-theme-uio-bw .fl-toggleButton {
+		color: #FFFFFF !important;
 }
 .fl-theme-uio-bw  .fs-loginout-link {
 	background-image: url("images/icon-login.png");
@@ -468,9 +506,8 @@ a.fl-text-underline>abbr{
 .fl-theme-uio-bw  .fs-back-link {
 	background-image: url("images/icon-back-white.png");
 }
-.fl-theme-uio-bw  .fs-loginout-link a,
-.fl-theme-uio-bw  .fs-back-link a {
-		color: #FFFFFF !important;
+.fl-theme-uio-bw  .fl-toggleButton {
+	background-image: url("images/icon-uio.png");
 }
 .fl-theme-uio-bw .fs-fluidstudio-logo a {
 	background-image: url("images/logo-fluidSTUDIOS-black.png");
@@ -501,8 +538,14 @@ a.fl-text-underline>abbr{
 	background:transparent !important;
 }
 .fl-theme-uio-wb  .fs-loginout-link, .fl-theme-uio-wb  .fs-loginout-link a,
-.fl-theme-uio-wb  .fs-back-link, .fl-theme-uio-wb  .fs-back-link a {
+.fl-theme-uio-wb  .fs-back-link, .fl-theme-uio-wb  .fs-back-link a,
+.fl-theme-uio-wb .fl-toggleButton {
 	background-color: #FFFFFF !important;
+}
+.fl-theme-uio-wb  .fs-loginout-link a,
+.fl-theme-uio-wb  .fs-back-link a,
+.fl-theme-uio-wb .fl-toggleButton {
+		color: #000000 !important;
 }
 .fl-theme-uio-wb  .fs-loginout-link {
 	background-image: url("images/icon-login-black.png");
@@ -510,9 +553,8 @@ a.fl-text-underline>abbr{
 .fl-theme-uio-wb  .fs-back-link {
 	background-image: url("images/icon-back-black.png");
 }
-.fl-theme-uio-wb  .fs-loginout-link a,
-.fl-theme-uio-wb  .fs-back-link a {
-		color: #000000 !important;
+.fl-theme-uio-wb  .fl-toggleButton {
+	background-image: url("images/icon-uio-black.png");
 }
 .fl-theme-uio-wb .fs-fluidstudio-logo a {
 	background-image: url("images/logo-fluidSTUDIOS-white.png");
@@ -544,8 +586,14 @@ a.fl-text-underline>abbr{
 	background:transparent !important;
 }
 .fl-theme-uio-by  .fs-loginout-link, .fl-theme-uio-by  .fs-loginout-link a,
-.fl-theme-uio-by  .fs-back-link, .fl-theme-uio-by  .fs-back-link a {
+.fl-theme-uio-by  .fs-back-link, .fl-theme-uio-by  .fs-back-link a,
+.fl-theme-uio-by  .fl-toggleButton {
 	background-color: #000000 !important;
+}
+.fl-theme-uio-by  .fs-loginout-link a,
+.fl-theme-uio-by  .fs-back-link a,
+.fl-theme-uio-by  .fl-toggleButton {
+		color: #FFFF00 !important;
 }
 .fl-theme-uio-by  .fs-loginout-link {
 	background-image: url("images/icon-login-yellow.png");
@@ -553,9 +601,8 @@ a.fl-text-underline>abbr{
 .fl-theme-uio-by  .fs-back-link {
 	background-image: url("images/icon-back-yellow.png");
 }
-.fl-theme-uio-by  .fs-loginout-link a,
-.fl-theme-uio-by  .fs-back-link a {
-		color: #FFFF00 !important;
+.fl-theme-uio-by  .fl-toggleButton {
+	background-image: url("images/icon-uio-yellow.png");
 }
 .fl-theme-uio-by .fs-fluidstudio-logo a {
 	background-image: url("images/logo-fluidSTUDIOS-black.png");
@@ -587,8 +634,14 @@ a.fl-text-underline>abbr{
 	background:transparent !important;
 }
 .fl-theme-uio-yb  .fs-loginout-link, .fl-theme-uio-yb  .fs-loginout-link a,
-.fl-theme-uio-yb  .fs-back-link, .fl-theme-uio-yb  .fs-back-link a {
+.fl-theme-uio-yb  .fs-back-link, .fl-theme-uio-yb  .fs-back-link a,
+.fl-theme-uio-yb  .fl-toggleButton {
 	background-color: #FFFF00 !important;
+}
+.fl-theme-uio-yb  .fs-loginout-link a,
+.fl-theme-uio-yb  .fs-back-link a,
+.fl-theme-uio-yb  .fl-toggleButton {
+		color: #000000 !important;
 }
 .fl-theme-uio-yb  .fs-loginout-link {
 	background-image: url("images/icon-login-black.png");
@@ -596,9 +649,8 @@ a.fl-text-underline>abbr{
 .fl-theme-uio-yb  .fs-back-link {
 	background-image: url("images/icon-back-black.png");
 }
-.fl-theme-uio-yb  .fs-loginout-link a,
-.fl-theme-uio-yb  .fs-back-link a {
-		color: #000000 !important;
+.fl-theme-uio-yb  .fl-toggleButton {
+	background-image: url("images/icon-uio-black.png");
 }
 .fl-theme-uio-yb .fs-fluidstudio-logo a {
 	background-image: url("images/logo-fluidSTUDIOS-yellow.png");
