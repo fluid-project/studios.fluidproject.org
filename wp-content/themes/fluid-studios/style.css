@@ -15,14 +15,12 @@ body {
 	background:#fff;
 	height: 100%;
 }
-#wrapper {
-	height: 100%;
-}
 #content-container {
     height: 100%;
     min-height: 100%;
     width: 100%;
     position: relative;
+    overflow: visible;
 }
 /* Global Fluid Studios text styles
 --------------------------------------------------------------------------- */

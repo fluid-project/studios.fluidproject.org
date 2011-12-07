@@ -89,5 +89,3 @@
 	        prefix: "<?php bloginfo('template_url'); ?>/infusion/components/uiOptions/html/"
 	    });
 	</script>
-
-	<div id="wrapper" class="fl-container fl-centered">
