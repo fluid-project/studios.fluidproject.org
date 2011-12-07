@@ -5,19 +5,22 @@ Author: The Fluid Project
 
 /* Global Fluid Studios theme specific container and body styles
 --------------------------------------------------------------------------- */
+html {
+	height: 100%;
+}
 body {
 	line-height:1.4;
 	font-family: "Times New Roman", Times, serif;
 	max-width: 1280px;
 	background:#fff;
+	height: 100%;
 }
 #wrapper {
-/*
-	max-width:80%;
-	padding:0 3.5%;
-*/
+	height: 100%;
 }
-
+#content-container {
+	height: 100%;
+}
 /* Global Fluid Studios text styles
 --------------------------------------------------------------------------- */
 h1,h2,h3,h4,h5,h6{
@@ -275,11 +278,19 @@ input#s{
 /* Sidebar styles
 --------------------------------------------------------------------------- */
 #sidebar {
-	padding-bottom:100%;
+	height: 100%;
 }
-.fluid-studios-theme #sidebar {
+.fluid-studios-theme .sidebarback {
 	background-image: url('images/bg.jpg');
-	background-repeat: repeat;
+	background-repeat: repeat;	
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	z-index: -1;
+    min-width: 8.125em;
+    padding-right: 0;
+    width: 20%;
+	height: 100%;
 }
 #sidebar>ul{
 	list-style:none;
@@ -408,6 +419,7 @@ input#s{
 	background-color:#000;
 	border:0;
 	height: 0.5em;
+	position: relative;
 }
 .fl-uiOptions-fatPanel .fl-toggleButton{
 	border:2px solid;
@@ -423,6 +435,7 @@ input#s{
 	position:absolute;
 	right: 0;
 	float: none;
+	margin-right: 0;
 }
 .fl-uiOptions-fatPanel .fl-toggleButton:focus{
 	border:2px solid #f00;

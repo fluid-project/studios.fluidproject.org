@@ -59,6 +59,7 @@
 </head>
 
 <body id="nav:page-top" <?php body_class(); ?>>
+<div class="fl-fix">
 
   <div class="flc-uiOptions-fatPanel fl-uiOptions-fatPanel">
       <!-- This is the div that will contain the UI Options component -->
@@ -66,7 +67,7 @@
 
       <!-- This div is for the sliding panel that shows and hides the UI Options controls -->
   	<div class="fl-panelBar">
-  		<button class="flc-slidingPanel-toggleButton fl-toggleButton">Show display preferences</button>
+  		<button class="flc-slidingPanel-toggleButton fl-toggleButton fl-force-right">Show display preferences</button>
   	</div>
   </div>	
 

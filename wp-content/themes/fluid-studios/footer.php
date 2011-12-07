@@ -12,6 +12,7 @@
 
 	</footer><!-- /#contentinfo -->
 
+</div> <!-- fl-fix -->
 </body>
 
 </html>
