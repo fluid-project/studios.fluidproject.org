@@ -151,7 +151,7 @@ add_filter('login_errors',create_function('$a', "return null;"));
 
 
 // build an HTML string for a tag
-	function Studios_build_html($aTag) {
+	function build_link_for_tag($aTag) {
 		$tag_link = get_tag_link($aTag->term_id);
 		$html .= "<a href='{$tag_link}' title='{$aTag->name} Tag' class='{$aTag->slug}'>";
 		$html .= "{$aTag->name}</a>";
@@ -165,14 +165,14 @@ add_filter('login_errors',create_function('$a', "return null;"));
 			$html = '<div class="fs-tags post_tags">';
 			// always display at least the first tag
 			$firsttag = array_shift($tagList);
-			$html .= Studios_build_html($firsttag);
+			$html .= build_link_for_tag($firsttag);
 			$display = "{$firsttag->name}";
 			foreach($tagList as $tag) {
 				$newlen = strlen($display) + strlen($tag->name);
 				// only add next tag if it fits within the limit
 				if ($newlen < MAX_CHARS_IN_SUMMARY_TAG_LIST) {
 					$display .= ", {$tag->name}";
-					$html .= ", ".Studios_build_html($tag);
+					$html .= ", ".build_link_for_tag($tag);
 				} else {
 					// if there are undisplay tags, show ellipses
 					$html .= "...";
