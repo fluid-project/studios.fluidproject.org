@@ -151,13 +151,37 @@ add_filter('login_errors',create_function('$a', "return null;"));
 
 
 // build an HTML string for a tag
-    function Studios_build_html($aTag) {
-        $tag_link = get_tag_link($aTag->term_id);
-        $html .= "<a href='{$tag_link}' title='{$aTag->name} Tag' class='{$aTag->slug}'>";
-        $html .= "{$aTag->name}</a>";
-        return $html;
-    }
+	function Studios_build_html($aTag) {
+		$tag_link = get_tag_link($aTag->term_id);
+		$html .= "<a href='{$tag_link}' title='{$aTag->name} Tag' class='{$aTag->slug}'>";
+		$html .= "{$aTag->name}</a>";
+		return $html;
+	}
 
-
+// Build a list of post tags limited to a maximum character length
+	function get_tags_summary($tagList) {
+		$html = '';
+		if ($tagList) {
+			$html = '<div class="fs-tags post_tags">';
+			// always display at least the first tag
+			$firsttag = array_shift($tagList);
+			$html .= Studios_build_html($firsttag);
+			$display = "{$firsttag->name}";
+			foreach($tagList as $tag) {
+				$newlen = strlen($display) + strlen($tag->name);
+				// only add next tag if it fits within the limit
+				if ($newlen < MAX_CHARS_IN_SUMMARY_TAG_LIST) {
+					$display .= ", {$tag->name}";
+					$html .= ", ".Studios_build_html($tag);
+				} else {
+					// if there are undisplay tags, show ellipses
+					$html .= "...";
+					break;
+				}
+			}
+			$html .= '</div>';
+		}
+		return $html;
+	}
 
 ?>
