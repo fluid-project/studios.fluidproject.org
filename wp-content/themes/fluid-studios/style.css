@@ -1,5 +1,3 @@
-@import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
-
 /*
 Theme Name:Fluid Studios
 Author: The Fluid Project
@@ -7,6 +5,8 @@ Author: The Fluid Project
 
 /* Global Fluid Studios theme specific container and body styles
 --------------------------------------------------------------------------- */
+@import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
+
 html {
 	height: 100%;
 }
