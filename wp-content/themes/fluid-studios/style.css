@@ -38,7 +38,9 @@ a {
 	text-decoration: none;
 	color: #0099CC;
 }
-
+a:hover {
+	color: #CCCC00;
+}
 /* FSS Column style overrides
 --------------------------------------------------------------------------- */
 .fl-col-mixed2 .fl-col-side {
@@ -325,6 +327,9 @@ input#s{
 	background-image: url("images/icon-login.png");
 	background-color: #0099CC;
 }
+.fluid-studios-theme  .fs-loginout-link:hover {
+	background-color: #CCCC00;
+}
 .fs-loginout-link a {
 	font-family: Arial,sans-serif;
 	text-transform: lowercase;
@@ -348,9 +353,15 @@ input#s{
 	font-family: Arial,sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
+	color: inherit;
 }
 .fluid-studios-theme .fs-back-link {
 	background-image: url("images/icon-back.png");
+	color: #0099CC;
+}
+.fluid-studios-theme .fs-back-link:hover {
+	background-image: url("images/icon-back-green.png");
+	color: #CCCC00;
 }
 .fs-fluidstudio-logo {
 	text-align: right;
@@ -366,6 +377,9 @@ input#s{
 }
 .fluid-studios-theme .fs-fluidstudio-logo a {
 	background-image: url("images/logo-fluidSTUDIOS.png");
+}
+.fluid-studios-theme .fs-fluidstudio-logo a:hover {
+	background-image: url("images/logo-fluidSTUDIOS-green.png");
 }
 
 /* Colophon footer styles
@@ -449,6 +463,9 @@ input#s{
 	background-image: url("images/icon-uio.png");
 	background-color: #0099CC;
 	color: #FFFFFF;
+}
+.fluid-studios-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover {
+	background-color: #CCCC00;
 }
 .fl-uiOptions-fatPanel .fl-toggleButton:focus{
 	border:2px solid #f00;
