@@ -17,7 +17,7 @@
 								<?php echo the_excerpt(); ?>
 							</section><!-- /.entry-content -->
 							<footer class="entry-utility">
-								<div class="fs-tags"><?php the_tags("", ", "); ?></div> 
+								<?php echo get_tags_summary(get_the_tags()); ?>
 							</footer><!-- /.entry-utility -->
 						</article><!-- /#post-<?php the_ID(); ?> -->
 				
