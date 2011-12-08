@@ -35,6 +35,6 @@
 
 			</section><!-- /#nav:content -->
 
-		</div><!-- /#content-container -->
+                <?php get_footer(); ?>
 
-<?php get_footer(); ?>
+		</div><!-- /#content-container -->
