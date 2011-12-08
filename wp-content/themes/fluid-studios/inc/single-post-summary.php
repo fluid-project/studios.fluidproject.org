@@ -17,7 +17,30 @@
 								<?php echo the_excerpt(); ?>
 							</section><!-- /.entry-content -->
 							<footer class="entry-utility">
-								<div class="fs-tags"><?php the_tags("", ", "); ?></div> 
+                                <?php
+                                $tags = get_the_tags();
+                                if ($tags) {
+                                    $html = '<div class="fs-tags post_tags">';
+                                    // always display at least the first tag
+                                    $firsttag = array_shift($tags);
+                                    $html .= Studios_build_html($firsttag);
+                                    $display = "{$firsttag->name}";
+                                    foreach($tags as $tag) {
+                                        $newlen = strlen($display) + strlen($tag->name);
+                                        // only add next tag if it fits within the limit
+                                        if ($newlen < MAX_CHARS_IN_SUMMARY_TAG_LIST) {
+                                            $display .= ", {$tag->name}";
+                                            $html .= ", ".Studios_build_html($tag);
+                                        } else {
+                                            // if there are undisplay tags, show ellipses
+                                            $html .= "...";
+                                            break;
+                                        }
+                                    }
+                                    $html .= '</div>';
+                                    echo $html;
+                                }
+                                ?>
 							</footer><!-- /.entry-utility -->
 						</article><!-- /#post-<?php the_ID(); ?> -->
 				

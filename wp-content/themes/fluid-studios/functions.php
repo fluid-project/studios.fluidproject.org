@@ -14,7 +14,10 @@ if ( ! defined("THUMBNAIL_WIDTH") ) define("THUMBNAIL_WIDTH", 240);
 if ( ! defined("THUMBNAIL_HEIGHT") ) define("THUMBNAIL_HEIGHT", 160);
 
 // The maximum number of characters in the "new post" page, "title" field
-if ( ! defined("MAX_CHARS_IN_POST_TITLE") ) define("MAX_CHARS_IN_POST_TITLE", 100);
+if ( ! defined("MAX_CHARS_IN_POST_TITLE") ) define("MAX_CHARS_IN_POST_TITLE", 80);
+
+// Max num of chars in tag list on summary pages
+if ( ! defined("MAX_CHARS_IN_SUMMARY_TAG_LIST") ) define("MAX_CHARS_IN_SUMMARY_TAG_LIST", 50);
 
 // Enable Post Thumbnail selection UI
 if ( function_exists( 'add_theme_support' ) ) {
@@ -31,7 +34,7 @@ add_filter('excerpt_length', 'new_excerpt_length');
 // Define the excerpt "more" string
 function new_excerpt_more($more) {
 	global $post;
-	return '&nbsp;<a href="'. get_permalink($post->ID) . '" rel="bookmark" title="Continue reading ' . the_title('', '', false) . '">(More...)</a>';
+	return '&nbsp;<a href="'. get_permalink($post->ID) . '" rel="bookmark" title="Continue reading ' . the_title('', '', false) . '">(...more)</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
@@ -145,5 +148,16 @@ add_filter('login_errors',create_function('$a', "return null;"));
 			}
 	}
 	add_action('get_header', 'enable_threaded_comments');
+
+
+// build an HTML string for a tag
+    function Studios_build_html($aTag) {
+        $tag_link = get_tag_link($aTag->term_id);
+        $html .= "<a href='{$tag_link}' title='{$aTag->name} Tag' class='{$aTag->slug}'>";
+        $html .= "{$aTag->name}</a>";
+        return $html;
+    }
+
+
 
 ?>
