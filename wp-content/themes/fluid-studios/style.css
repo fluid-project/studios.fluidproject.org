@@ -1,3 +1,5 @@
+@import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
+
 /*
 Theme Name:Fluid Studios
 Author: The Fluid Project
@@ -11,6 +13,7 @@ html {
 body {
 	line-height:1.4;
 	font-family: "Neuton", "Times New Roman", Times, serif;
+	font-weight: 300;
 	max-width: 1280px;
 	background:#fff;
 	height: 100%;
