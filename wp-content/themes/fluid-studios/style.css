@@ -395,6 +395,7 @@ input#s{
 	position: absolute;
 	bottom: 0;
 	margin-left: 25%;
+	min-width: 50em;
 }
 #colophon{
 	margin:0 auto;
@@ -416,7 +417,7 @@ input#s{
 .fl-grid li {
 	width: 15em; /* 240 / 16 */
 	height: 34.375em; /* 550 / 16 */
-	height: auto;
+	height: 26em;
 	padding: 0 1.875em;  /* 30 / 16 */
 }
 

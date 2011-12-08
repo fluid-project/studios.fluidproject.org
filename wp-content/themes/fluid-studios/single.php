@@ -29,6 +29,6 @@
 
 			</section><!-- /#nav:content -->
 
-                <?php get_footer(); ?>
+				<?php get_footer(); ?>
 
-        </div><!-- /#content-container -->
+		</div><!-- /#content-container -->
