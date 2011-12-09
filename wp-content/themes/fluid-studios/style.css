@@ -5,6 +5,8 @@ Author: The Fluid Project
 
 /* Global Fluid Studios theme specific container and body styles
 --------------------------------------------------------------------------- */
+@import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
+
 html {
 	height: 100%;
 }
@@ -13,7 +15,8 @@ html {
 }
 body {
 	line-height:1.4;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Neuton", "Times New Roman", Times, serif;
+	font-weight: 300;
 	max-width: 1280px;
 	background:#fff;
 	height: 100%;
