@@ -153,7 +153,7 @@ add_filter('login_errors',create_function('$a', "return null;"));
 // build an HTML string for a tag
 	function build_link_for_tag($aTag) {
 		$tag_link = get_tag_link($aTag->term_id);
-		$html .= "<a href='{$tag_link}' title='{$aTag->name} Tag' class='{$aTag->slug}'>";
+		$html .= "<a rel='tag' href='{$tag_link}' title='{$aTag->name} Tag' class='{$aTag->slug}'>";
 		$html .= "{$aTag->name}</a>";
 		return $html;
 	}
