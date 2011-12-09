@@ -62,6 +62,7 @@ p,ul,ol,blockquote,figure {
 	margin-left: 20%;
 	padding-top: 2.5em; /* 40 / 16 */
 	padding-bottom: 4em;
+	padding-left: 3%;
 	height: 100%;
 }
 /* Header branding styles
@@ -121,7 +122,6 @@ input[type="submit"]:active {
 .type-post,.type-page{
 	margin-right:0.25em;
 	padding-bottom:1.25em;
-	margin-left: 5%;
 }
 body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,body.search h2.entry-title,body.archive h2.entry-title{
 	margin-bottom:0;
@@ -394,12 +394,9 @@ input#s{
 .footer{
 	position: absolute;
 	bottom: 0;
-	margin-left: 25%;
+	margin-left: 20%;
 	min-width: 50em;
-}
-#colophon{
-	margin:0 auto;
-	padding:0 3.5%;
+	padding-left: 3%;
 }
 #colophon ul li{
 	display:inline;
@@ -418,7 +415,8 @@ input#s{
 	width: 15em; /* 240 / 16 */
 	height: 34.375em; /* 550 / 16 */
 	height: 26em;
-	padding: 0 1.875em;  /* 30 / 16 */
+	margin: 0;
+	margin-right: 3%
 }
 
 /* Wordpress alignment styles
