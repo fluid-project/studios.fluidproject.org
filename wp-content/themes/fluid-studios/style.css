@@ -5,12 +5,15 @@ Author: The Fluid Project
 
 /* Global Fluid Studios theme specific container and body styles
 --------------------------------------------------------------------------- */
+@import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
+
 html {
 	height: 100%;
 }
 body {
 	line-height:1.4;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Neuton", "Times New Roman", Times, serif;
+	font-weight: 300;
 	max-width: 1280px;
 	background:#fff;
 	height: 100%;
@@ -38,7 +41,9 @@ a {
 	text-decoration: none;
 	color: #0099CC;
 }
-
+a:hover {
+	color: #CCCC00;
+}
 /* FSS Column style overrides
 --------------------------------------------------------------------------- */
 .fl-col-mixed2 .fl-col-side {
@@ -325,6 +330,9 @@ input#s{
 	background-image: url("images/icon-login.png");
 	background-color: #0099CC;
 }
+.fluid-studios-theme  .fs-loginout-link:hover {
+	background-color: #CCCC00;
+}
 .fs-loginout-link a {
 	font-family: Arial,sans-serif;
 	text-transform: lowercase;
@@ -348,9 +356,15 @@ input#s{
 	font-family: Arial,sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
+	color: inherit;
 }
 .fluid-studios-theme .fs-back-link {
 	background-image: url("images/icon-back.png");
+	color: #0099CC;
+}
+.fluid-studios-theme .fs-back-link:hover {
+	background-image: url("images/icon-back-green.png");
+	color: #CCCC00;
 }
 .fs-fluidstudio-logo {
 	text-align: right;
@@ -367,6 +381,9 @@ input#s{
 .fluid-studios-theme .fs-fluidstudio-logo a {
 	background-image: url("images/logo-fluidSTUDIOS.png");
 }
+.fluid-studios-theme .fs-fluidstudio-logo a:hover {
+	background-image: url("images/logo-fluidSTUDIOS-green.png");
+}
 
 /* Colophon footer styles
 --------------------------------------------------------------------------- */
@@ -374,6 +391,7 @@ input#s{
 	position: absolute;
 	bottom: 0;
 	margin-left: 25%;
+	min-width: 50em;
 }
 #colophon{
 	margin:0 auto;
@@ -395,7 +413,7 @@ input#s{
 .fl-grid li {
 	width: 15em; /* 240 / 16 */
 	height: 34.375em; /* 550 / 16 */
-	height: auto;
+	height: 26em;
 	padding: 0 1.875em;  /* 30 / 16 */
 }
 
@@ -448,6 +466,9 @@ input#s{
 	background-image: url("images/icon-uio.png");
 	background-color: #0099CC;
 	color: #FFFFFF;
+}
+.fluid-studios-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover {
+	background-color: #CCCC00;
 }
 .fl-uiOptions-fatPanel .fl-toggleButton:focus{
 	border:2px solid #f00;
