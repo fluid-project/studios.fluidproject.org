@@ -44,11 +44,11 @@ h1,h2,h3,h4,h5,h6{
 p,ul,ol,blockquote,figure {
 	margin-bottom: 1em;
 }
-a {
+.fluid-studios-theme a {
 	text-decoration: none;
 	color: #0099CC;
 }
-a:hover {
+.fluid-studios-theme a:hover {
 	color: #CCCC00;
 }
 /* FSS Column style overrides
@@ -172,8 +172,8 @@ ol#search-results li p{
 	list-style:inside disc;
 	margin-left:0.2%;
 }
-.fs-tags, a[rel="tag"] {
-	font-style: italic;
+.fluid-studios-theme .fs-tags {
+	font-style: italic;	
 	color: #0099CC;
 }
 #search-results .entry-utility ul li{
@@ -356,7 +356,7 @@ input#s{
 	padding: 0.3125em;  /* 5 / 16 */
 	padding-left: 1.5625em; /* 25 / 16 */
 	margin-top: 12em;
-	width: 3em;
+	width: 4em;
 	float: right;
 }
 .fs-back-link a {
