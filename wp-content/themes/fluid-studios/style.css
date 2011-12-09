@@ -118,7 +118,7 @@ input[type="submit"]:active {
 
 /* Main content styles
 --------------------------------------------------------------------------- */
-.type-post,.type-page{
+.type-post, .type-page, [id="404"]{
 	margin-right:0.25em;
 	padding-bottom:1.25em;
 	margin-left: 5%;
@@ -126,7 +126,7 @@ input[type="submit"]:active {
 body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,body.search h2.entry-title,body.archive h2.entry-title{
 	margin-bottom:0;
 }
-.entry-title {
+.entry-title, [id="404"] h1 {
 	font-family: Arial, sans-serif;
 	border:0;
 	color: #CCCC00;
