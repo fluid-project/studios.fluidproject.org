@@ -319,8 +319,10 @@ input#s{
     font-family: Arial,sans-serif;
     margin-right: 0;
 	padding: 0.3125em;  /* 5 / 16 */
-	padding-top: 0.15em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
 	padding-left: 1.5625em; /* 25 / 16 */
+	line-height: 150%;
     position: absolute;
     right: 14em;
     text-transform: lowercase;
@@ -453,6 +455,7 @@ input#s{
 	border-top-right-radius: 0;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	border: 0;
 	font-family: Arial,sans-serif;
 	font-weight: normal;
 	text-transform: lowercase;
