@@ -138,7 +138,7 @@ h1.entry-title {
 h2.entry-title {
 	font-size: 1.1em;
 }
-p.entry-meta {
+p.entry-meta, .home .entry-content p, .archive .entry-content p {
 	margin-bottom: 0;
 }
 .entry-meta {
@@ -147,9 +147,6 @@ p.entry-meta {
 }
 .single .entry-content {
 	padding-top: 1em;
-}
-.home .entry-content p {
-	margin-bottom: 0;
 }
 blockquote{
 	border-left:5px solid #eee;
