@@ -51,6 +51,9 @@ p,ul,ol,blockquote,figure {
 .fluid-studios-theme a:hover {
 	color: #CCCC00;
 }
+.fluid-studios-theme li {
+	list-style-type: disc;
+}
 /* FSS Column style overrides
 --------------------------------------------------------------------------- */
 .fl-col-mixed2 .fl-col-side {
