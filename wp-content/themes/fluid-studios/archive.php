@@ -35,7 +35,7 @@
 				<h1>Blog Archives</h1>
 
 			<?php } ?>
-			<?php query_posts($query_string . '&posts_per_page=1'); ?>
+			<?php query_posts($query_string); ?>
 				<ul class="fl-grid">
 			<?php while (have_posts()) : the_post(); ?>
 
@@ -63,8 +63,9 @@
 
 				<?php endif; ?>
 
+				<?php get_footer(); ?>
+
 			</section><!-- /#nav:content -->
 
-        </div><!-- /#content-container -->
+		</div><!-- /#content-container -->
 
-<?php get_footer(); ?>

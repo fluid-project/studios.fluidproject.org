@@ -20,6 +20,10 @@
 
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
+<!--
+	<link href='http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic' rel='stylesheet' type='text/css'>
+-->
+
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/infusion/framework/fss/css/fss-reset-global.css" media="all" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/infusion/framework/fss/css/fss-layout.css" media="all" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/infusion/framework/fss/css/fss-text.css" media="all" />
@@ -58,13 +62,13 @@
 
 </head>
 
-<body id="nav:page-top" <?php body_class(); ?>>
+<body id="nav:page-top" <?php body_class('fl-fix'); ?>>
 
   <div class="flc-uiOptions-fatPanel fl-uiOptions-fatPanel">
-      <!-- This is the div that will contain the UI Options component -->
-  	<div id="myUIOptions" class="flc-slidingPanel-panel flc-uiOptions-iframe"></div>     
+	  <!-- This is the div that will contain the UI Options component -->
+  	<div id="myUIOptions" class="flc-slidingPanel-panel flc-uiOptions-iframe fs-uiOptions-panel"></div>	 
 
-      <!-- This div is for the sliding panel that shows and hides the UI Options controls -->
+	  <!-- This div is for the sliding panel that shows and hides the UI Options controls -->
   	<div class="fl-panelBar">
   		<button class="flc-slidingPanel-toggleButton fl-toggleButton">Show display preferences</button>
   	</div>
@@ -74,20 +78,30 @@
   <div class="flc-toc-tocContainer toc"> </div>
 
 	<script type="text/javascript">
-	    // Instantiate the UI Enhancer component, specifying the table of contents' template URL
-	    fluid.pageEnhancer({
-	        tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html",
-	        classnameMap: {
-	            theme: {
-	                "default": "fluid-studios-theme"
-	            }
-	        }
-	    });
-    
-	    // Start up UI Options
-	    fluid.uiOptions.fatPanel(".flc-uiOptions-fatPanel", {
-	        prefix: "<?php bloginfo('template_url'); ?>/infusion/components/uiOptions/html/"
-	    });
+		// Instantiate the UI Enhancer component, specifying the table of contents' template URL
+		fluid.pageEnhancer({
+			tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html",
+			classnameMap: {
+				theme: {
+					"default": "fluid-studios-theme"
+				}
+			}
+		});
+	
+		// Start up UI Options
+		fluid.uiOptions.fatPanel(".flc-uiOptions-fatPanel", {
+			prefix: "<?php bloginfo('template_url'); ?>/infusion/components/uiOptions/html/",
+		   slidingPanel: {
+			   options: {
+				   strings: {
+					   showText: "Show Display Preferences",
+					   hideText: "Hide Display Preferences"
+				   }
+			   }
+		   }
+		});
 	</script>
 
-	<div id="wrapper" class="fl-container fl-centered">
+<div class="fs-loginout-link">
+	<?php wp_loginout(); ?>
+</div>

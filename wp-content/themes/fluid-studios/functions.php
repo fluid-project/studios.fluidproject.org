@@ -13,6 +13,12 @@ if ( ! defined("NUM_OF_CHARS_IN_SUMMARY") ) define("NUM_OF_CHARS_IN_SUMMARY_CONT
 if ( ! defined("THUMBNAIL_WIDTH") ) define("THUMBNAIL_WIDTH", 240);
 if ( ! defined("THUMBNAIL_HEIGHT") ) define("THUMBNAIL_HEIGHT", 160);
 
+// The maximum number of characters in the "new post" page, "title" field
+if ( ! defined("MAX_CHARS_IN_POST_TITLE") ) define("MAX_CHARS_IN_POST_TITLE", 80);
+
+// Max num of chars in tag list on summary pages
+if ( ! defined("MAX_CHARS_IN_SUMMARY_TAG_LIST") ) define("MAX_CHARS_IN_SUMMARY_TAG_LIST", 50);
+
 // Enable Post Thumbnail selection UI
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
@@ -28,7 +34,7 @@ add_filter('excerpt_length', 'new_excerpt_length');
 // Define the excerpt "more" string
 function new_excerpt_more($more) {
 	global $post;
-	return '&nbsp;<a href="'. get_permalink($post->ID) . '" rel="bookmark" title="Continue reading ' . the_title('', '', false) . '">(More...)</a>';
+	return '&nbsp;<a href="'. get_permalink($post->ID) . '" rel="bookmark" title="Continue reading ' . the_title('', '', false) . '">(...more)</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
@@ -142,5 +148,40 @@ add_filter('login_errors',create_function('$a', "return null;"));
 			}
 	}
 	add_action('get_header', 'enable_threaded_comments');
+
+
+// build an HTML string for a tag
+	function build_link_for_tag($aTag) {
+		$tag_link = get_tag_link($aTag->term_id);
+		$html .= "<a rel='tag' href='{$tag_link}' title='{$aTag->name} Tag' class='{$aTag->slug}'>";
+		$html .= "{$aTag->name}</a>";
+		return $html;
+	}
+
+// Build a list of post tags limited to a maximum character length
+	function get_tags_summary($tagList) {
+		$html = '';
+		if ($tagList) {
+			$html = '<div class="fs-tags post_tags">';
+			// always display at least the first tag
+			$firsttag = array_shift($tagList);
+			$html .= build_link_for_tag($firsttag);
+			$display = "{$firsttag->name}";
+			foreach($tagList as $tag) {
+				$newlen = strlen($display) + strlen($tag->name);
+				// only add next tag if it fits within the limit
+				if ($newlen < MAX_CHARS_IN_SUMMARY_TAG_LIST) {
+					$display .= ", {$tag->name}";
+					$html .= ", ".build_link_for_tag($tag);
+				} else {
+					// if there are undisplay tags, show ellipses
+					$html .= "...";
+					break;
+				}
+			}
+			$html .= '</div>';
+		}
+		return $html;
+	}
 
 ?>

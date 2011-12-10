@@ -12,7 +12,7 @@
 					<header>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 						<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
-						<?php the_tags('', ', '); ?>
+						<span class="fs-tags"><?php the_tags('', ', '); ?></span>
 					</header>
 
 					<section class="entry-content">
@@ -29,6 +29,6 @@
 
 			</section><!-- /#nav:content -->
 
-        </div><!-- /#content-container -->
+				<?php get_footer(); ?>
 
-<?php get_footer(); ?>
+		</div><!-- /#content-container -->
