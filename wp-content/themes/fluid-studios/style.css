@@ -147,7 +147,13 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {
 }
 .entry-meta {
 	font-family: Arial, sans-serif;
+	font-style: italic;
 	border-bottom: 1px solid #666666;
+}
+.entry-meta time,
+.entry-meta .fs-meta-author {
+	font-style: normal;
+	font-weight: bold;
 }
 .single .entry-content {
 	padding-top: 1em;
