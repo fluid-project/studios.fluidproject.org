@@ -123,17 +123,22 @@ input[type="submit"]:active {
 
 /* Main content styles
 --------------------------------------------------------------------------- */
-.type-post, .type-page, [id="404"]{
+.type-post, .type-page {
 	margin-right:0.25em;
 	padding-bottom:1.25em;
 }
 body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,body.search h2.entry-title,body.archive h2.entry-title{
 	margin-bottom:0;
 }
-.entry-title, [id="404"] h1 {
+.entry-title {
 	font-family: Arial, sans-serif;
 	border:0;
 	color: #CCCC00;
+}
+[id="404"] {
+	width: 50%;
+	margin-top: 10%;
+	font-size: 120%;
 }
 h1.entry-title {
 	font-size: 2em;
