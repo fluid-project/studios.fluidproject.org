@@ -6,6 +6,9 @@
 
 			<section id="nav:content" class="fl-clearfix fl-col-main" role="main">
 
+			<!-- This is where the Table of Contents will be displayed -->
+			<div class="flc-toc-tocContainer toc"> </div>
+
 			<?php if (have_posts()) : ?>
 
 				<?php $post = $posts[0]; // hack: set $post so that the_date() works ?>
