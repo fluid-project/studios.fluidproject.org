@@ -8,7 +8,7 @@
 
 				<article id="404" class="fl-centered">
 					<h1>Page not found</h1>
-					<p>Sorry, but the requested page does not exist or was was found. Please try again or contact this site's administrator's for assistance. Thank you for your interest.</p>
+					<p>Sorry, but the requested page does not exist or was not found. Please try again or contact this site's administrator's for assistance. Thank you for your interest.</p>
 				</article><!-- /#404 -->
 
 			</section><!-- /#nav:content -->
