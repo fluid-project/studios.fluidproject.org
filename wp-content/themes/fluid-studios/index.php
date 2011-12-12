@@ -6,6 +6,9 @@
 
 			<section id="nav:content" class="fl-clearfix fl-col-main" role="main">
 
+  <!-- This is where the Table of Contents will be displayed -->
+  <div class="flc-toc-tocContainer toc"> </div>
+
 				<ul class="fl-grid">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
