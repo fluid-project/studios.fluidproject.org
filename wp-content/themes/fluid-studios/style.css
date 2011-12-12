@@ -44,6 +44,10 @@ h1,h2,h3,h4,h5,h6{
 p,ul,ol,blockquote,figure {
 	margin-bottom: 1em;
 }
+/* STUDIO-24: These styles were borrowed from fluid-base-global.css. TODO: Can we use that file instead?*/
+ol,ul,dl{margin-left:2em;}
+ol li{list-style:decimal outside;}
+ul li{list-style:disc outside;}
 .fluid-studios-theme a {
 	text-decoration: none;
 	color: #0099CC;
