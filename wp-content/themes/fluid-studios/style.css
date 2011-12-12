@@ -402,6 +402,9 @@ input#s{
 	min-width: 50em;
 	padding-left: 3%;
 }
+#colophon ul {
+	margin-left: 0;
+}
 #colophon ul li{
 	display:inline;
 	list-style:none;
