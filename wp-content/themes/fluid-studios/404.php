@@ -8,8 +8,9 @@
 
 				<article id="404" class="fl-centered">
 					<h1>Page not found</h1>
-					<p>Sorry, but the requested page does not exist or was not found. Please try again or contact 
-						<a href="mailto:mdsouza@ocadu.ca">this site's administrator</a> for assistance. Thank you for your interest.</p>
+					<p>Sorry, but the requested page does not exist or was not found. Please try again or contact the
+						<a href="mailto:fluid-talk@fluidproject.org">Fluid Studios discussion email list</a>
+						for assistance. Thank you for your interest.</p>
 				</article><!-- /#404 -->
 
 			</section><!-- /#nav:content -->
