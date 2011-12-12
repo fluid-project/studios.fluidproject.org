@@ -66,6 +66,7 @@ ul li{list-style:disc outside;}
 	margin-left: 20%;
 	padding-top: 2.5em; /* 40 / 16 */
 	padding-bottom: 4em;
+	padding-left: 3%;
 	height: 100%;
 }
 /* Header branding styles
@@ -125,7 +126,6 @@ input[type="submit"]:active {
 .type-post,.type-page{
 	margin-right:0.25em;
 	padding-bottom:1.25em;
-	margin-left: 5%;
 }
 body.home h2.entry-title,body.blog h1.entry-title,body.single h1.entry-title,body.search h2.entry-title,body.archive h2.entry-title{
 	margin-bottom:0;
@@ -147,7 +147,13 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {
 }
 .entry-meta {
 	font-family: Arial, sans-serif;
+	font-style: italic;
 	border-bottom: 1px solid #666666;
+}
+.entry-meta time,
+.entry-meta .fs-meta-author {
+	font-style: normal;
+	font-weight: bold;
 }
 .single .entry-content {
 	padding-top: 1em;
@@ -328,7 +334,10 @@ input#s{
     font-family: Arial,sans-serif;
     margin-right: 0;
 	padding: 0.3125em;  /* 5 / 16 */
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
 	padding-left: 1.5625em; /* 25 / 16 */
+	line-height: 150%;
     position: absolute;
     right: 14em;
     text-transform: lowercase;
@@ -398,12 +407,12 @@ input#s{
 .footer{
 	position: absolute;
 	bottom: 0;
-	margin-left: 25%;
+	margin-left: 20%;
 	min-width: 50em;
+	padding-left: 3%;
 }
-#colophon{
-	margin:0 auto;
-	padding:0 3.5%;
+#colophon ul {
+	margin-left: 0;
 }
 #colophon ul li{
 	display:inline;
@@ -422,7 +431,8 @@ input#s{
 	width: 15em; /* 240 / 16 */
 	height: 34.375em; /* 550 / 16 */
 	height: 26em;
-	padding: 0 1.875em;  /* 30 / 16 */
+	margin: 0;
+	margin-right: 3%
 }
 
 /* Wordpress alignment styles
@@ -461,6 +471,7 @@ input#s{
 	border-top-right-radius: 0;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	border: 0;
 	font-family: Arial,sans-serif;
 	font-weight: normal;
 	text-transform: lowercase;
