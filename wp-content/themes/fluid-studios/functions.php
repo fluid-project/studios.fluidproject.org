@@ -3,8 +3,9 @@
 /**********************************
  *  Wordpress Supports
  **********************************/
-
+// TODO:  check with cindy if this needs to be wrapped in a check for function existance
 add_theme_support('post-thumbnails');
+
 
 
 /**********************************
@@ -14,10 +15,25 @@ add_theme_support('post-thumbnails');
 // Max num of chars in tag list on summary pages
 if ( ! defined("FL_MAX_CHARS_IN_TAGS_SUMMARY") ) define("FL_MAX_CHARS_IN_TAGS_SUMMARY", 50);
 
+// The number of characters for content excerpt on the index page 
+if ( ! defined("FL_MAX_WORDS_IN_EXCERPT") ) define("FL_MAX_WORDS_IN_EXCERPT", 20);
+
+//TODO: rename and use this or remove it
+// The maximum number of characters in the "new post" page, "title" field
+if ( ! defined("MAX_CHARS_IN_POST_TITLE") ) define("MAX_CHARS_IN_POST_TITLE", 80);
+
+
 
 /**********************************
  *  Studios Functions
  ***********************************/
+
+// Customize the excerpt length
+function fl_excerpt_length($length) {
+	return FL_MAX_WORDS_IN_EXCERPT;
+}
+add_filter('excerpt_length', 'fl_excerpt_length');
+
 
 // Build an HTML link for a tag
 function fl_tag_link($aTag) {
