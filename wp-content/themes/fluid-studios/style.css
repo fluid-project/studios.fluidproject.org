@@ -265,6 +265,13 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 .fl-theme-uio-wb  .fl-toggleButton { background-image: url("images/icon-uio-black.png");}
 .fl-theme-uio-wb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-white.png");}
 
-
+/* uiOptions black on yellow theme specific styles
+--------------------------------------------------------------------------- */
+.fl-theme-uio-by  .fls-loginout-link, .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { background-color: #000000 !important;}
+.fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { color: #FFFF00 !important;}
+.fl-theme-uio-by  .fls-loginout-link { background-image: url("images/icon-login-yellow.png");}
+.fl-theme-uio-by  .fls-back-link { background-image: url("images/icon-back-yellow.png");}
+.fl-theme-uio-by  .fl-toggleButton { background-image: url("images/icon-uio-yellow.png");}
+.fl-theme-uio-by .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
 
 
