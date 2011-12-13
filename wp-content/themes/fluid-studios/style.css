@@ -175,5 +175,44 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 .fls-theme .fls-logo a {background-image: url("images/logo-fluidSTUDIOS.png");}
 .fls-theme .fls-logo a:hover {background-image: url("images/logo-fluidSTUDIOS-green.png");}
 
+/* Footer styles
+--------------------------------------------------------------------------- */
+.footer {
+	position: absolute;
+	bottom: 0;
+	margin-left: 20%;
+	min-width: 50em;
+	padding-left: 3%;
+}
+#colophon ul {margin-left: 0;}
+
+/* Styles for the title page grid (Overriding FSS styles)
+--------------------------------------------------------------------------- */
+.fl-grid li {
+	width: 15em; /* 240 / 16 */
+	height: 34.375em; /* 550 / 16 */
+	height: 26em;
+	margin: 0;
+	margin-right: 3%
+}
+
+/* Wordpress alignment styles
+--------------------------------------------------------------------------- */
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.625em;
+}
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.625em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
