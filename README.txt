@@ -2,6 +2,8 @@ Fluid Studios is a place to incubate new ideas, projects, and collaborations ded
 
 The site is based on Wordpress Version 3.2.1 downloaded from wordpress.org
 with the CKEditor plugin Version 3.6.2.3 downloaded from http://wordpress.org/extend/plugins/ckeditor-for-wordpress/
+and FSSFive revision 0cd799bc8c5e0fe80b118abac8814de79d0c6e75 from https://github.com/abledaccess/FSSFive
+
 
 To activate the CKEditor plugin after the installation of Fluid Studios,
 1. Login as admin
