@@ -10,9 +10,8 @@ if ( ! defined("FL_MAX_CHARS_IN_TAGS_SUMMARY") ) define("FL_MAX_CHARS_IN_TAGS_SU
 // The number of characters for content excerpt on the index page 
 if ( ! defined("FL_MAX_WORDS_IN_EXCERPT") ) define("FL_MAX_WORDS_IN_EXCERPT", 20);
 
-//TODO: rename and use this or remove it
 // The maximum number of characters in the "new post" page, "title" field
-if ( ! defined("MAX_CHARS_IN_POST_TITLE") ) define("MAX_CHARS_IN_POST_TITLE", 80);
+if ( ! defined("FL_MAX_CHARS_IN_TITLE") ) define("FL_MAX_CHARS_IN_TITLE", 80);
 
 //TODO: make sure we don't require the thumbnail sizes
 
@@ -43,6 +42,7 @@ function fl_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'fl_excerpt_more');
 
+// TODO: the admin footer is being concatenated with the FSSFive admin footer. We might want to try to override it completely.
 function fl_admin_footer() {
 	echo 'Fluid Studios is a child theme of FSSFive.   ';
 } 
