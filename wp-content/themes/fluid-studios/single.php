@@ -14,7 +14,7 @@
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
+						<?php include (STYLESHEETPATH . '/inc/meta.php' ); ?>
 						<span class="fs-tags"><?php the_tags('', ', '); ?></span>
 					</header>
 

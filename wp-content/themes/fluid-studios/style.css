@@ -18,11 +18,11 @@ body {
 	height: 100%;
 	position: relative;
 }
-.fl-studios-theme {
+.fls-theme {
 	color: #333333;
 	background:#ffffff;
 }
-.home.fl-studios-theme, .archive.fl-studios-theme {color: #666666;}
+.home.fls-theme, .archive.fls-theme {color: #666666;}
 #content-container {
 	height: auto;
 	min-height: 100%;
@@ -33,11 +33,11 @@ body {
 
 /* Text styles
 --------------------------------------------------------------------------- */
-.fl-studios-theme a {
+.fls-theme a {
 	text-decoration: none;
 	color: #0099CC;
 }
-.fl-studios-theme a:hover {color: #CCCC00;}
+.fls-theme a:hover {color: #CCCC00;}
 
 /* STUDIO-24: These styles were borrowed from fluid-base-global.css. TODO: Can we use that file instead?
 --------------------------------------------------------------------------- */
@@ -59,3 +59,32 @@ ul li{list-style:disc outside;}
 	padding-left: 3%;
 	height: 100%;
 }
+
+/* Content styles
+--------------------------------------------------------------------------- */
+.entry-title {
+	font-family: Arial, sans-serif;
+	border:0;
+}
+.fls-theme .entry-title {color: #CCCC00;}
+[id="404"] {
+	width: 50%;
+	margin-top: 10%;
+	font-size: 120%;
+}
+h1.entry-title {
+	font-size: 2em;
+	padding-bottom: .5em;
+}
+h2.entry-title {font-size: 1.1em;}
+p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 0;}
+.entry-meta {
+	font-family: Arial, sans-serif;
+	font-style: italic;
+	border-bottom: 1px solid #666666;
+}
+.entry-meta time, .entry-meta .fls-meta-author {
+	font-style: normal;
+	font-weight: bold;
+}
+.single .entry-content {padding-top: 1em;}
