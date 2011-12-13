@@ -99,6 +99,6 @@
 		});
 	</script>
 
-<div class="fs-loginout-link">
+<div class="fls-loginout-link">
 	<?php wp_loginout(); ?>
 </div>
