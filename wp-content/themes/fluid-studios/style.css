@@ -215,4 +215,40 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	margin-right: auto;
 }
 
+/* uiOptions fat panel specific styles
+--------------------------------------------------------------------------- */
+.fl-uiOptions-fatPanel .fl-panelBar {position: relative;}
+.fl-uiOptions-fatPanel .fl-toggleButton{
+	background-position: 0.3125em center;  /* 5 / 16 */
+	background-repeat: no-repeat;
+	padding: 0.3125em;  /* 5 / 16 */
+	padding-left: 1.5625em; /* 25 / 16 */
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 0;
+	font-family: Arial,sans-serif;
+	font-weight: normal;
+	text-transform: lowercase;
+	position:absolute;
+	right: 0;
+	margin-right: 0;
+	cursor: pointer;
+	z-index: 999999;
+}
+.fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton {
+	background-image: url("images/icon-uio.png");
+	background-color: #0099CC;
+	color: #FFFFFF;
+}
+.fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover {background-color: #CCCC00;}
+.fl-uiOptions-fatPanel .fl-toggleButton:focus{
+	border:2px solid #f00;
+	border-top-width:0;
+	outline:0 none;
+}
+.fl-text-underline{border:0;}
+a.fl-text-underline>abbr{padding:0;}
+.fs-uiOptions-panel {border: 2px solid #0099CC;	}
 
