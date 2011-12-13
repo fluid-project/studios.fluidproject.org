@@ -43,6 +43,10 @@ function fl_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'fl_excerpt_more');
 
+function fl_admin_footer() {
+	echo 'Fluid Studios is a child theme of FSSFive.   ';
+} 
+add_filter('admin_footer_text', 'fl_admin_footer');
 
 // Build an HTML link for a tag
 function fl_tag_link($aTag) {
