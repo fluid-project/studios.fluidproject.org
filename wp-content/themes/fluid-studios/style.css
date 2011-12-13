@@ -2,4 +2,60 @@
 Theme Name:     Fluid Studios
 Description:    Child theme for the FSSFive
 Template:       FSSFive
+Author: The Fluid Project
 */
+
+/* Theme specific container and body styles
+--------------------------------------------------------------------------- */
+@import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
+
+html {height: 100%;}
+body {
+	line-height:1.4;
+	font-family: "Neuton", "Times New Roman", Times, serif;
+	font-weight: 300;
+	max-width: 1280px;
+	height: 100%;
+	position: relative;
+}
+.fl-studios-theme {
+	color: #333333;
+	background:#ffffff;
+}
+.home.fl-studios-theme, .archive.fl-studios-theme {color: #666666;}
+#content-container {
+	height: auto;
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: visible;
+}
+
+/* Text styles
+--------------------------------------------------------------------------- */
+.fl-studios-theme a {
+	text-decoration: none;
+	color: #0099CC;
+}
+.fl-studios-theme a:hover {color: #CCCC00;}
+
+/* STUDIO-24: These styles were borrowed from fluid-base-global.css. TODO: Can we use that file instead?
+--------------------------------------------------------------------------- */
+ol,ul,dl{margin-left:2em;}
+ol li{list-style:decimal outside;}
+ul li{list-style:disc outside;}
+
+/* FSS Column style overrides
+--------------------------------------------------------------------------- */
+.fl-col-mixed2 .fl-col-side {
+	width: 20%;
+	min-width: 8.125em; /* 130 / 16 */
+	padding-right: 0;
+}
+.fl-col-mixed2 .fl-col-main {
+	margin-left: 20%;
+	padding-top: 2.5em; /* 40 / 16 */
+	padding-bottom: 4em;
+	padding-left: 3%;
+	height: 100%;
+}
