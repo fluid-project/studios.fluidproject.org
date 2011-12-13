@@ -5,7 +5,6 @@ Author: The Fluid Project
 
 /* Global Fluid Studios theme specific container and body styles
 --------------------------------------------------------------------------- */
-@import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
 
 html {
 	height: 100%;
@@ -319,6 +318,11 @@ input#s{
 	min-width: 8.125em;
 	padding-right: 0;
 	width: 20%;
+	float: right;
+	overflow: hidden;
+}
+.fluid-studios-theme .nav:content {
+	overflow: auto;
 }
 #sidebar>ul{
 	list-style:none;
@@ -332,21 +336,21 @@ input#s{
 	list-style:inside disc;
 }
 .fs-loginout-link {
-    background-position: 0.3125em center;
-    background-repeat: no-repeat;
-    border-radius: 0 0 5px 5px;
-    cursor: pointer;
-    font-family: Arial,sans-serif;
-    margin-right: 0;
+	background-position: 0.3125em center;
+	background-repeat: no-repeat;
+	border-radius: 0 0 5px 5px;
+	cursor: pointer;
+	font-family: Arial,sans-serif;
+	margin-right: 0;
 	padding: 0.3125em;  /* 5 / 16 */
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
 	padding-left: 1.5625em; /* 25 / 16 */
 	line-height: 150%;
-    position: absolute;
-    right: 14em;
-    text-transform: lowercase;
-    z-index: 999999;
+	position: absolute;
+	right: 14em;
+	text-transform: lowercase;
+	z-index: 999999;
 }
 .fluid-studios-theme  .fs-loginout-link {
 	background-image: url("images/icon-login.png");
@@ -471,12 +475,15 @@ input#s{
 	background-position: 0.3125em center;  /* 5 / 16 */
 	background-repeat: no-repeat;
 	padding: 0.3125em;  /* 5 / 16 */
+	padding-top: 0.2em;
+	padding-bottom: 0.1em;
 	padding-left: 1.5625em; /* 25 / 16 */
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	border: 0;
+	line-height: 150%;
 	font-family: Arial,sans-serif;
 	font-weight: normal;
 	text-transform: lowercase;
@@ -701,91 +708,3 @@ a.fl-text-underline>abbr{
 	background-image: url("images/logo-fluidSTUDIOS-yellow.png");
 }
 
-/* Responsive screen styles for viewports from 320px (small screen) and exceeding 1024px (desktop and beyond)
---------------------------------------------------------------------------- */
-@media screen and (max-width: 1024px){
-	input#s{
-		width:40%;
-	}
-}
-
-@media screen and (max-width: 768px){
-input#s{
-		display:block;
-		margin-bottom:0.25em;
-		width:80%;
-	}
-	ol.commentlist .comment.depth-2,ol.commentlist .comment.depth-3,ol.commentlist .comment.depth-4,ol.commentlist .comment.depth-4,ol.commentlist .comment.depth-5,ol.commentlist .comment.depth-7,ol.commentlist .comment.depth-8,ol.commentlist .comment.depth-9,ol.commentlist .comment.depth-10 {
-		margin:0;
-	}
-	ol.commentlist .comment.depth-2{
-		padding-left:5em;
-	}
-	#colophon ul li{
-		width:50%;
-	}
-}
-
-@media screen and (max-width: 640px){
-	.fl-container-flex75,.fl-container-flex25{
-		float:none;
-	}
-	#sidebar>ul{
-		margin-left:0;
-	}
-	.fl-widget{
-		display:inline-block;
-		padding:0;
-		width:50%;
-		vertical-align:top;
-	}
-	.widget_search{
-		margin-bottom:2em;
-		width:100%;
-	}
-	input#s{
-		display:inline;
-		margin:0;
-		width:70%;
-	}
-}
-
-@media screen and (max-width: 480px){
-	input[type="url"],input[type="email"],input[type="search"],input[type="text"]{
-		width:97%;
-	}
-	textarea{
-		width:97%;
-	}
-}
-
-@media screen and (max-width: 320px){
-	body{
-		border:0;
-	}
-	#branding{
-		padding:1em 0 0;
-	}
-	.fl-tabs{
-		padding:0;
-		margin-bottom:0.5em;
-		text-align:center;
-	}
-	.fl-tabs li{
-		clear:left;
-		display:block;
-		float:left;
-		margin:0 auto 0.25em;
-	}
-	.fl-tabs li a{
-		clear:left;
-		display:block;
-		float:left;
-		min-width:10em;
-	}
-	input#s{
-		display:inline;
-		margin:0;
-		width:50%;
-	}
-}
