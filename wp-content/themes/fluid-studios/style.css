@@ -88,3 +88,8 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	font-weight: bold;
 }
 .single .entry-content {padding-top: 1em;}
+.fls-tags {font-style: italic;}
+.fls-theme .fls-tags {color: #0099CC;}
+
+
+

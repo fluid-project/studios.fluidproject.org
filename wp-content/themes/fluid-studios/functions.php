@@ -62,7 +62,7 @@ function fl_tag_link($aTag) {
 function fl_tags_summary($tagList) {
 	$html = '';
 	if ($tagList) {
-		$html = '<div class="fs-tags post_tags">';
+		$html = '<div class="fls-tags post_tags">';
 		// always display at least the first tag
 		$firsttag = array_shift($tagList);
 		$html .= fl_tag_link($firsttag);
