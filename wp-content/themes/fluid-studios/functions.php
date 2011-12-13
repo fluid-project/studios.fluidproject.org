@@ -1,14 +1,6 @@
 <?php
 
 /**********************************
- *  Wordpress Supports
- **********************************/
-// TODO:  check with cindy if this needs to be wrapped in a check for function existance
-add_theme_support('post-thumbnails');
-
-
-
-/**********************************
  *  Studios Constants
  **********************************/
 
@@ -22,6 +14,16 @@ if ( ! defined("FL_MAX_WORDS_IN_EXCERPT") ) define("FL_MAX_WORDS_IN_EXCERPT", 20
 // The maximum number of characters in the "new post" page, "title" field
 if ( ! defined("MAX_CHARS_IN_POST_TITLE") ) define("MAX_CHARS_IN_POST_TITLE", 80);
 
+//TODO: make sure we don't require the thumbnail sizes
+
+
+
+/**********************************
+ *  Wordpress Supports
+ **********************************/
+// TODO:  check with cindy if this needs to be wrapped in a check for function existance
+add_theme_support('post-thumbnails');
+
 
 
 /**********************************
@@ -33,6 +35,13 @@ function fl_excerpt_length($length) {
 	return FL_MAX_WORDS_IN_EXCERPT;
 }
 add_filter('excerpt_length', 'fl_excerpt_length');
+
+// Customized the excerpt "more" 
+function fl_excerpt_more($more) {
+	global $post;
+	return '&nbsp;<a href="'. get_permalink($post->ID) . '" rel="bookmark" title="Continue reading ' . the_title('', '', false) . '">(...more)</a>';
+}
+add_filter('excerpt_more', 'fl_excerpt_more');
 
 
 // Build an HTML link for a tag
