@@ -274,4 +274,12 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 .fl-theme-uio-by  .fl-toggleButton { background-image: url("images/icon-uio-yellow.png");}
 .fl-theme-uio-by .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
 
+/* uiOptions yellow on black theme specific styles
+--------------------------------------------------------------------------- */
+.fl-theme-uio-yb  .fls-loginout-link, .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { background-color: #FFFF00 !important;}
+.fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { color: #000000 !important;}
+.fl-theme-uio-yb  .fls-loginout-link { background-image: url("images/icon-login-black.png");}
+.fl-theme-uio-yb  .fls-back-link { background-image: url("images/icon-back-black.png");}
+.fl-theme-uio-yb  .fl-toggleButton { background-image: url("images/icon-uio-black.png");}
+.fl-theme-uio-yb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-yellow.png");}
 
