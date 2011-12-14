@@ -9,7 +9,6 @@ Author: The Fluid Project
 
 html {height: 100%;}
 body {
-	line-height:1.4;
 	font-family: "Neuton", "Times New Roman", Times, serif;
 	font-weight: 300;
 	max-width: 1280px;
@@ -110,8 +109,6 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
     background-repeat: no-repeat;
     border-radius: 0 0 5px 5px;
     cursor: pointer;
-    font-family: Arial,sans-serif;
-    margin-right: 0;
 	padding: 0.3125em;  /* 5 / 16 */
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
@@ -119,7 +116,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	line-height: 150%;
     position: absolute;
     right: 14em;
-    text-transform: lowercase;
+    top: 0;
     z-index: 999999;
 }
 .fls-theme  .fls-loginout-link {
