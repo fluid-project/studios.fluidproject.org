@@ -59,6 +59,10 @@ ul li{list-style:disc outside;}
 
 /* Content styles
 --------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.2em;
+}
 .entry-title {
 	font-family: Arial, sans-serif;
 	border:0;
@@ -145,7 +149,6 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	font-family: Arial,sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: inherit;
 }
 .fls-theme .fls-back-link {
 	background-image: url("images/icon-back.png");
