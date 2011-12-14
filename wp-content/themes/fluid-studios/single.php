@@ -15,7 +15,7 @@
 					<header>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 						<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
-						<span class="fs-tags"><?php the_tags('', ', '); ?></span>
+						<span class="fls-tags"><?php the_tags('', ', '); ?></span>
 					</header>
 
 					<section class="entry-content">
