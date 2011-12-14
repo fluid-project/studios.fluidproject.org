@@ -42,7 +42,7 @@
 				<ul class="fl-grid">
 			<?php while (have_posts()) : the_post(); ?>
 
-				<li><?php include (STYLESHEETPATH . '/inc/single-post-summary.php' ); ?></li>
+				<li><?php include (TEMPLATEPATH . '/inc/single-post-summary.php' ); ?></li>
 
 			<?php endwhile; ?>
 				</ul>
