@@ -62,7 +62,7 @@
 
 </head>
 
-<body id="nav:page-top" <?php body_class('fl-fix'); ?>>
+<body id="nav:page-top" <?php body_class('fl-fix fls-theme'); ?>>
 
   <div class="flc-uiOptions-fatPanel fl-uiOptions-fatPanel">
 	  <!-- This is the div that will contain the UI Options component -->
@@ -74,16 +74,13 @@
   	</div>
   </div>	
 
-  <!-- This is where the Table of Contents will be displayed -->
-  <div class="flc-toc-tocContainer toc"> </div>
-
 	<script type="text/javascript">
 		// Instantiate the UI Enhancer component, specifying the table of contents' template URL
 		fluid.pageEnhancer({
 			tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html",
 			classnameMap: {
 				theme: {
-					"default": "fluid-studios-theme"
+					"default": "fls-theme"
 				}
 			}
 		});
@@ -102,6 +99,6 @@
 		});
 	</script>
 
-<div class="fs-loginout-link">
+<div class="fls-loginout-link">
 	<?php wp_loginout(); ?>
 </div>
