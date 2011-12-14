@@ -7,7 +7,11 @@ Author: The Fluid Project
 --------------------------------------------------------------------------- */
 @import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
 
-html {height: 100%;}
+html {
+	height: 100%;
+	background-image: url("images/bg.jpg");
+	background-repeat: repeat;
+}
 body {
 	font-family: "Neuton", "Times New Roman", Times, serif;
 	font-weight: 300;
@@ -105,7 +109,6 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	position: absolute;
 	bottom: 0;
 	top: 0;
-	z-index: -1;
 	min-width: 8.125em;
 	padding-right: 0;
 	width: 20%;
@@ -146,6 +149,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	margin-top: 12em;
 	width: 4em;
 	float: right;
+	position: relative;
 }
 .fls-back-link a {
 	font-family: Arial,sans-serif;
@@ -166,6 +170,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	margin-right: 15%;
 	float: right;
 	margin-top: 8em;  /* 128 / 16 */
+	position: relative;
 }
 .fls-logo a {
 	display:block;
