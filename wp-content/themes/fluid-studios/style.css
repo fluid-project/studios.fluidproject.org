@@ -79,7 +79,6 @@ h1.entry-title {
 	font-size: 2em;
 }
 h2.entry-title {font-size: 1.1em;}
-p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 0;}
 .entry-meta {
 	font-family: Arial, sans-serif;
 	font-style: italic;
@@ -92,6 +91,8 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 .single .entry-content {padding-top: 1em;}
 .fls-tags {font-style: italic;}
 .fls-theme .fls-tags {color: #0099CC;}
+p, ul, ol, blockquote, figure { margin-bottom: 1em;}
+p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 0;}
 
 /* Sidebar styles
 --------------------------------------------------------------------------- */
