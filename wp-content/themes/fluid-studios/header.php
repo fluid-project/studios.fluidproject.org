@@ -62,7 +62,7 @@
 
 </head>
 
-<body id="nav:page-top" <?php body_class('fl-fix'); ?>>
+<body id="nav:page-top" <?php body_class('fl-fix fls-theme'); ?>>
 
   <div class="flc-uiOptions-fatPanel fl-uiOptions-fatPanel">
 	  <!-- This is the div that will contain the UI Options component -->
@@ -80,7 +80,7 @@
 			tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html",
 			classnameMap: {
 				theme: {
-					"default": "fluid-studios-theme"
+					"default": "fls-theme"
 				}
 			}
 		});
@@ -99,6 +99,6 @@
 		});
 	</script>
 
-<div class="fs-loginout-link">
+<div class="fls-loginout-link">
 	<?php wp_loginout(); ?>
 </div>

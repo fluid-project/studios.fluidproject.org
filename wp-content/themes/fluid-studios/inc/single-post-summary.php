@@ -7,7 +7,7 @@
 										the_post_thumbnail();
 									} else {
 										// the current post lacks a thumbnail, display the default picture
-										echo '<img alt="Featured image is missing" src="' . get_template_directory_uri() .'/images/placeholder.jpg" width="' . THUMBNAIL_WIDTH . '" />';
+										echo '<img alt="Featured image is missing" src="' . get_stylesheet_directory_uri() .'/images/placeholder.jpg" width="' . THUMBNAIL_WIDTH . '" />';
 									}
 									?></a>
 								</div>
@@ -17,7 +17,7 @@
 								<?php echo the_excerpt(); ?>
 							</section><!-- /.entry-content -->
 							<footer class="entry-utility">
-								<?php echo get_tags_summary(get_the_tags()); ?>
+								<?php echo fl_tags_summary(get_the_tags()); ?>
 							</footer><!-- /.entry-utility -->
 						</article><!-- /#post-<?php the_ID(); ?> -->
 				
