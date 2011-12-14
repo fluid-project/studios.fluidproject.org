@@ -13,15 +13,18 @@ if ( ! defined("FL_MAX_WORDS_IN_EXCERPT") ) define("FL_MAX_WORDS_IN_EXCERPT", 20
 // The maximum number of characters in the "new post" page, "title" field
 if ( ! defined("FL_MAX_CHARS_IN_TITLE") ) define("FL_MAX_CHARS_IN_TITLE", 80);
 
-//TODO: make sure we don't require the thumbnail sizes
+// The size of the featured image on the index page
+if ( ! defined("FL_THUMBNAIL_WIDTH") ) define("FL_THUMBNAIL_WIDTH", 240);
+if ( ! defined("FL_THUMBNAIL_HEIGHT") ) define("FL_THUMBNAIL_HEIGHT", 160);
 
 
 
 /**********************************
- *  Wordpress Supports
+ *  Configure thumbnails
  **********************************/
-// TODO:  check with cindy if this needs to be wrapped in a check for function existance
+ 
 add_theme_support('post-thumbnails');
+set_post_thumbnail_size( FL_THUMBNAIL_WIDTH, FL_THUMBNAIL_HEIGHT, true );
 
 
 
