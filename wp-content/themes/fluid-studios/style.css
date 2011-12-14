@@ -177,12 +177,10 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 --------------------------------------------------------------------------- */
 .footer {
 	position: absolute;
-	bottom: 0;
+	bottom: 1.5em;
 	margin-left: 20%;
-	min-width: 50em;
 	padding-left: 3%;
 }
-#colophon ul {margin-left: 0;}
 
 /* Styles for the title page grid (Overriding FSS styles)
 --------------------------------------------------------------------------- */
