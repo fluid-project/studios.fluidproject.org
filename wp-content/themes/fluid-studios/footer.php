@@ -1,16 +1,12 @@
 
 	
 	<footer class="footer" role="contentinfo">
-		<section id="colophon">
-			<ul>
-				<li>&copy; <?= date('Y'); ?> OCAD University</li>
-				<li><a href="#nav:page-top" title="Return to the top of this page">Top</a></li>
-			</ul>
-		</section><!-- /#colophon -->
+        &copy; <?= date('Y'); ?> OCAD University — <a href="#nav:page-top" title="Return to the top of this page">Top</a>
+		
+		<!-- Required for wordpress to put in the admin bar at the top! -->	
+	    <?php wp_footer(); ?>
 
-	<?php wp_footer(); ?>
-
-	</footer><!-- /#contentinfo -->
+	</footer>
 
 </body>
 
