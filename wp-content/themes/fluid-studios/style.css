@@ -84,6 +84,14 @@ h2.entry-title {
 }
 .entry-meta {
 	font-family: Arial, sans-serif;
+}
+.fls-theme.home .entry-meta, .fls-theme.archive .entry-meta {
+    color: #999999;
+}
+.home .entry-meta, .archive .entry-meta {
+    font-size: .9em;
+}
+.single .entry-meta {
 	font-style: italic;
 	border-bottom: 1px solid #666666;
 }
