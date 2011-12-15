@@ -78,7 +78,10 @@ h1, h2, h3, h4, h5, h6 {
 h1.entry-title {
 	font-size: 2em;
 }
-h2.entry-title {font-size: 1.1em;}
+h2.entry-title {
+    font-size: 1.1em;
+    margin-bottom: 0em;
+}
 .entry-meta {
 	font-family: Arial, sans-serif;
 	font-style: italic;
