@@ -3,8 +3,6 @@
 				<div class="fl-clearfix fl-col-side">
 					<?php include (TEMPLATEPATH . '/inc/sidebar-common.php' ); ?>
 	
-					<div class="fls-back-link fl-push">
-						<a href="javascript: void();" onclick="javascript: window.history.back();return false;" title="Go Back">Back</a>
-					</div>
+					<a class="fls-back-link fl-push" href="javascript: void();" onclick="javascript: window.history.back();return false;" title="Go Back">Back</a>
 				</div>
 			</aside><!-- /#sidebar -->

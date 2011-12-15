@@ -158,18 +158,15 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	margin-top: 12em;
 	width: 4em;
 	float: right;
-}
-.fls-back-link a {
 	font-family: Arial,sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: inherit;
 }
 .fls-theme .fls-back-link {
 	background-image: url("images/icon-back.png");
 	color: #0099CC;
 }
-.fls-theme .fls-back-link:hover {
+.fls-theme .fls-back-link:hover, .fls-theme .fls-back-link:focus  {
 	background-image: url("images/icon-back-green.png");
 	color: #CCCC00;
 }
