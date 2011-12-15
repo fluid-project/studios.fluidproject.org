@@ -62,7 +62,8 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1.75em;
 	font-weight: bold;
 	line-height: 1.2em;
-	margin-bottom: .75em;
+	margin-bottom: .5em;
+	margin-top: .25em;
 }
 .entry-title {
 	font-family: Arial, sans-serif;
@@ -87,7 +88,14 @@ h2.entry-title {font-size: 1.1em;}
 	font-style: normal;
 	font-weight: bold;
 }
-.single .entry-content {padding-top: 1em;}
+.single .entry-content {
+    padding-top: 1em;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+.single .entry-content strong {
+    font-weight: 700;
+}
 .fls-tags {font-style: italic;}
 .fls-theme .fls-tags {color: #0099CC;}
 p, ul, ol, blockquote, figure { margin-bottom: 1em;}
