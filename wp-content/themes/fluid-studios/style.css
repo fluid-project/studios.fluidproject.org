@@ -5,7 +5,6 @@ Author: The Fluid Project
 
 /* Theme specific container and body styles
 --------------------------------------------------------------------------- */
-@import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
 
 html {height: 100%;}
 body {
@@ -60,10 +59,10 @@ ul li{list-style:disc outside;}
 /* Content styles
 --------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
-    font-size: 1.75em;
-    font-weight: bold;
-    line-height: 1.2em;
-    margin-bottom: .75em;
+	font-size: 1.75em;
+	font-weight: bold;
+	line-height: 1.2em;
+	margin-bottom: .75em;
 }
 .entry-title {
 	font-family: Arial, sans-serif;
@@ -109,23 +108,24 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	min-width: 8.125em;
 	padding-right: 0;
 	width: 20%;
+	float: right;
+	overflow: hidden;
 }
 .fls-loginout-link {
-    background-position: 0.3125em center;
-    background-repeat: no-repeat;
-    border-radius: 0 0 5px 5px;
-    cursor: pointer;
-	padding: 0.3125em;  /* 5 / 16 */
+	background-position: 0.3125em center;
+	background-repeat: no-repeat;
+	border-radius: 0 0 5px 5px;
+	cursor: pointer;
+	padding: 0.3125em; /* 5 / 16 */
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
 	padding-left: 1.5625em; /* 25 / 16 */
 	line-height: 150%;
-    position: absolute;
-    right: 14em;
-    top: 0;
-    z-index: 999999;
-}
-.fls-theme  .fls-loginout-link {
+	position: absolute;
+	right: 14em;
+	top: 0;
+	z-index: 999999;
+}.fls-theme  .fls-loginout-link {
 	background-image: url("images/icon-login.png");
 	background-color: #0099CC;
 }
@@ -217,19 +217,22 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 /* uiOptions fat panel specific styles
 --------------------------------------------------------------------------- */
 .fl-uiOptions-fatPanel .fl-panelBar {
-    position: relative;
-    height: 0;
+	position: relative;
+	height: 0;
 }
 .fl-uiOptions-fatPanel .fl-toggleButton{
 	background-position: 0.3125em center;  /* 5 / 16 */
 	background-repeat: no-repeat;
 	padding: 0.3125em;  /* 5 / 16 */
+	padding-top: 0.2em;
+	padding-bottom: 0.1em;
 	padding-left: 1.5625em; /* 25 / 16 */
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	border: 0;
+	line-height: 150%;
 	font-family: Arial,sans-serif;
 	font-weight: normal;
 	text-transform: lowercase;
