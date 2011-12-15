@@ -183,7 +183,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	background-repeat: no-repeat;
 }
 .fls-theme .fls-logo a {background-image: url("images/logo-fluidSTUDIOS.png");}
-.fls-theme .fls-logo a:hover {background-image: url("images/logo-fluidSTUDIOS-green.png");}
+.fls-theme .fls-logo a:hover, .fls-theme .fls-logo a:focus {background-image: url("images/logo-fluidSTUDIOS-green.png");}
 
 /* Footer styles
 --------------------------------------------------------------------------- */
@@ -256,7 +256,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	background-color: #0099CC;
 	color: #FFFFFF;
 }
-.fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover {background-color: #CCCC00;}
+.fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover, .fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:focus {background-color: #CCCC00;}
 .fs-uiOptions-panel {border: 2px solid #0099CC;	}
 
 /* uiOptions black on white theme specific styles
