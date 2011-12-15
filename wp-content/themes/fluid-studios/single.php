@@ -6,7 +6,7 @@
 
 			<section id="nav:content" role="main">
 				<div class="fl-clearfix fl-col-main">
-	
+
 					<!-- This is where the Table of Contents will be displayed -->
 					<div class="flc-toc-tocContainer toc"> </div>
 	
@@ -16,7 +16,7 @@
 						<header>
 							<h1 class="entry-title"><?php the_title(); ?></h1>
 							<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
-							<span class="fs-tags"><?php the_tags('', ', '); ?></span>
+							<span class="fls-tags"><?php the_tags('', ', '); ?></span>
 						</header>
 	
 						<section class="entry-content">
