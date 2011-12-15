@@ -11,6 +11,9 @@ html {
 	background-image: url("images/bg.jpg");
 	background-repeat: repeat;
 }
+html.fs-no-background {
+	background-image: none;
+}
 body {
 	font-family: "Neuton", "Times New Roman", Times, serif;
 	font-weight: 300;
@@ -254,7 +257,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	color: #FFFFFF;
 }
 .fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover {background-color: #CCCC00;}
-.fs-uiOptions-panel {border: 2px solid #0099CC;	}
+.fs-uiOptions-panel {border-bottom: 2px solid #0099CC;	}
 
 /* uiOptions black on white theme specific styles
 --------------------------------------------------------------------------- */
