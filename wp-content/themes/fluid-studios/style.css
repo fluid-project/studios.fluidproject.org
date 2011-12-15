@@ -123,20 +123,21 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	overflow: hidden;
 }
 .fls-loginout-link {
-	background-position: 0.3125em center;
+	background-position: 0.35em center;
 	background-repeat: no-repeat;
-	border-radius: 0 0 5px 5px;
+	border-radius: 5px;
 	cursor: pointer;
-	padding: 0.3125em; /* 5 / 16 */
+	padding-right: 0.33em;
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
-	padding-left: 1.5625em; /* 25 / 16 */
+	padding-left: 1.5em;
 	line-height: 150%;
-	position: absolute;
-	right: 14em;
-	top: 0;
+	float:right;
+	margin-top: 2em;
+	margin-right: 22%;
 	z-index: 999999;
-}.fls-theme  .fls-loginout-link {
+}
+.fls-theme  .fls-loginout-link {
 	background-image: url("images/icon-login.png");
 	background-color: #0099CC;
 }

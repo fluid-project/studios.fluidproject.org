@@ -96,7 +96,3 @@
 		   }
 		});
 	</script>
-
-<div class="fls-loginout-link">
-	<?php wp_loginout(); ?>
-</div>
