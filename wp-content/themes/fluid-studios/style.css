@@ -33,7 +33,7 @@ body {
 	text-decoration: none;
 	color: #0099CC;
 }
-.fls-theme a:hover {color: #CCCC00;}
+.fls-theme a:hover, .fls-theme a:focus {color: #CCCC00;}
 
 /* STUDIO-24: These styles were borrowed from fluid-base-global.css. TODO: Can we use that file instead?
 --------------------------------------------------------------------------- */
@@ -141,7 +141,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	background-image: url("images/icon-login.png");
 	background-color: #0099CC;
 }
-.fls-theme  .fls-loginout-link:hover {background-color: #CCCC00;}
+.fls-theme  .fls-loginout-link:hover, .fls-theme  .fls-loginout-link a:focus {background-color: #CCCC00;}
 .fls-loginout-link a {
 	font-family: Arial,sans-serif;
 	text-transform: lowercase;
