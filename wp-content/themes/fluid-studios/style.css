@@ -16,6 +16,7 @@ body {
 	font-weight: 300;
 	max-width: 1280px;
 	position: relative;
+	height: 100%;
 }
 .fls-theme {
 	color: #333333;
@@ -58,7 +59,9 @@ ul li{list-style:disc outside;}
 	padding-left: 3%;
 	height: 100%;
 }
-
+.fls-theme .fl-col-mixed2 .fl-col-main {
+	background-color: #FFFFFF;
+}
 /* Content styles
 --------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
