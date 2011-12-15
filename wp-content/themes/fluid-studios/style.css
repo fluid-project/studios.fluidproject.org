@@ -10,7 +10,7 @@ html {height: 100%;}
 body {
 	font-family: "Neuton", "Times New Roman", Times, serif;
 	font-weight: 300;
-	max-width: 1280px;
+	max-width: 1200px;
 	height: 100%;
 	position: relative;
 }
@@ -204,7 +204,8 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	height: 34.375em; /* 550 / 16 */
 	height: 26em;
 	margin: 0;
-	margin-right: 3%
+	margin-right: 5%;
+	margin-left: 2%;
 }
 
 /* Wordpress alignment styles
