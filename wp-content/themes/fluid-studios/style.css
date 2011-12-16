@@ -239,6 +239,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	position:absolute;
 	right: 0;
 	margin-right: 0;
+	top: -1px;  /* STUDIO-20: Get rid of the white line above the prefs button. */
 	z-index: 999999;
 }
 .fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton {
