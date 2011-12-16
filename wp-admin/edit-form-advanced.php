@@ -237,8 +237,6 @@ $side_meta_boxes = do_meta_boxes($post_type, 'side', $post);
 <div id="titlediv">
 <div id="titlewrap">
 	<label class="hide-if-no-js" style="visibility:hidden" id="title-prompt-text" for="title"><?php echo apply_filters( 'enter_title_here', __( 'Enter title here' ), $post ); ?></label>
-	<!-- STUDIO-3   Limiting the number of characters in the title. -->
-	<!-- TODO: We should find another way to make this change that doesn't require us to modify wordpress directly -->
 	<input type="text" name="post_title" size="30" tabindex="1" value="<?php echo esc_attr( htmlspecialchars( $post->post_title ) ); ?>" id="title" autocomplete="off" />
 </div>
 <div class="inside">
