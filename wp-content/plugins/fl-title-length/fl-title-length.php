@@ -53,8 +53,8 @@ function fl_title_length_delete_options(){
 // Update the option with the posted value from the admin page
 function fl_title_length_update_options(){
 	check_admin_referer('fl-title-length-set-options');
-	update_option( 'fl_title_length', $_POST['max_count'] );
-	$_POST['notice'] = __('Option saved');
+	update_option( 'fl_title_length', $_POST['fl_max_count'] );
+	$_POST['fl_notice'] = __('Option saved');
 }
 
 // Generate the admin settings page 
@@ -62,15 +62,15 @@ function fl_title_length_create_admin_page(){?>
 	<div class="wrap">
 		<div class="icon32"></div>
 		<h2><?php _e('Define Post Title Length','fl-title-length');?></h2>
-		<?php if($_POST['notice']):?>
-			<div class="updated fade"><p><strong><?php echo $_POST['notice'];?></strong></p></div>
+		<?php if($_POST['fl_notice']):?>
+			<div class="updated fade"><p><strong><?php echo $_POST['fl_notice'];?></strong></p></div>
 		<?php endif; ?>
 		<form method="post" action="" enctype="multipart/form-data">
 			<table class="form-table">
 				<tbody>
 					<tr valign="top">
 						<th scope="row"><label for="blogname">Maximum characters allowed:</label></th>
-						<td><input type="text" class="regular-text" value="<?php echo get_option('fl_title_length'); ?>" name="max_count"></td>
+						<td><input type="text" class="regular-text" value="<?php echo get_option('fl_title_length'); ?>" name="fl_max_count"></td>
 					</tr>
 					<tr>
 						<td colspan="2"><span class="description">Be cautious that reducing the post title length cuts the existing post title to the new length at re-editting.</span></td>
