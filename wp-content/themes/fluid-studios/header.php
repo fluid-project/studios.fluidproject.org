@@ -20,6 +20,7 @@
 
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 <?php $template_url = get_bloginfo( 'template_url', 'display' ); ?>
+<link rel="shortcut icon" href="<?php echo $template_url; ?>/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/infusion/framework/fss/css/fss-reset-global.css" media="all" />
 <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/infusion/framework/fss/css/fss-layout.css" media="all" />
 <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/infusion/framework/fss/css/fss-text.css" media="all" />
