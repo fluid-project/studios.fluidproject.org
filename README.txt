@@ -3,8 +3,18 @@ Fluid Studios is a place to incubate new ideas, projects, and collaborations ded
 The site is based on Wordpress Version 3.2.1 downloaded from wordpress.org
 with the CKEditor plugin Version 3.6.2.3 downloaded from http://wordpress.org/extend/plugins/ckeditor-for-wordpress/
 
-To activate the CKEditor plugin after the installation of Fluid Studios,
-1. Login as admin
-2. Go to Dashboard -> Plugins. This page lists all the available plugins
-3. Click on "Activate" link of the "CKEditor for WordPress"
-4. Enjoy!
+
+To set up an instance of the Studios site follow these steps:
+
+1. Get the code from http://github.com/fluid-project/studios.fluidproject.org
+2. Set up a web server 
+    * for local development on a Mac, consider using MAMP http://www.mamp.info/en/index.html
+3. Ensure that the studios code is inside the web server document root
+4. Create a new database and a database user with all privileges 
+5. Copy the wp-config-sample.php file to wp-config.php and set the db name, db user, db password, db host and auth keys
+6. Load the studios application in your web browser and go through the wordpress install http://localhost:8888/
+7. Go to the admin interface and configure these settings:
+    a) under appearance, set the studios theme 
+    b) under plugins, activate CK Editor
+    c) under settings -> media, set the thumbnail size to 240 X 160
+    d) under settings -> reading, set the blog pages show at most to 100
