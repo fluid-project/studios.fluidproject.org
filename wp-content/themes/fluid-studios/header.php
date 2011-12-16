@@ -20,6 +20,7 @@
 
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 <?php $template_url = get_bloginfo( 'template_url', 'display' ); ?>
+<link rel="shortcut icon" href="<?php echo $template_url; ?>/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/infusion/framework/fss/css/fss-reset-global.css" media="all" />
 <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/infusion/framework/fss/css/fss-layout.css" media="all" />
 <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/infusion/framework/fss/css/fss-text.css" media="all" />
@@ -38,10 +39,10 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/infusion/lib/jquery/ui/css/fl-theme-yb/yb.css" media="all" />
 
 <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/style.css" media="all" />
-<link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/style_media.css" media="all" />
+<link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/style-media.css" media="all" />
 
 <script type="text/javascript" src="<?php echo $template_url; ?>/infusion/MyInfusion.js"></script>
-<script type="text/javascript" src="<?php echo $template_url; ?>/js/modernizr.js"></script>
+<script type="text/javascript" src="<?php echo $template_url; ?>/js/fluid-studios.js"></script>
 
 <title><?php if (function_exists('is_tag') && is_tag()) { single_tag_title("Tag Archive for &quot;"); echo'&quot; &mdash; '; } elseif (is_archive()) { wp_title(''); echo ' Archive &mdash; '; } elseif (is_search()) { echo 'Search for &quot;'.esc_html($s).'&quot; &mdash; '; } elseif (!(is_404()) && (is_single()) || (is_page())) { wp_title(''); echo ' &mdash; '; } elseif (is_404()) { echo '404 Error &mdash; Page not found &mdash; '; } if (is_home()) { bloginfo('name'); echo ' &mdash; '; bloginfo('description'); } else { bloginfo('name'); } ?><?php if ($paged>1) { echo ' &mdash; page '. $paged; } ?></title>
 
