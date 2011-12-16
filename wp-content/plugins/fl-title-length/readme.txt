@@ -1,34 +1,20 @@
-Goal: Limit the post title to a defined length
-Contributors: jpmurray
-Donate link: http://jpmurray.net/wordpress-plugin-limit-a-post-title-to-x-characters/
-Tags: post title, title, count, counter, twitter
-Requires at least: 3.0
-Tested up to: 3.1.3
-Stable tag: 1.0
+Plugin Name: Restrict the length of the post title
+Description: Restrict the post title length to a predefined limit. Once the limit is reached at creating or editing a post, the furthur input on the post title is not allowed. This plugin is created based on another plugin named "Limit a post title to X characters" and authored by Jean-Philippe Murray. The plugin site of "Limit a post title to X characters": http://wordpress.org/extend/plugins/limit-a-post-title-to-x-characters/. 
 
-Limit posts titles length as defined in options. Shoes the current caracter count and stop the publication process if over.
-
-== Description ==
-
-This plugin will limit a post title to a predefined number of characters. While showing at the right of the post title the current number of characters, it will stop Wordpress from publishing the post if the title is over the maximum allowed.
-
-Usefull to limit title characters dues to theme restrictions, or Twitter automatic posting, for examples.
-
-I can provide limited support <a href="http://jpmurray.net/wordpress-plugin-limit-a-post-title-to-x-characters/">here</a>
+Version: 0.1
+Author: Fluid Studios Team
+Author URI: http://studios.fluidproject.org/
+Tested Wordpress version: 3.2.1
 
 == Installation ==
 
-Install this plugin by going to Plugins >> Add New >> and type this plugin's name, from your own Wordpress installation.
+The steps is within the context of Fluid Studios
 
-== Frequently Asked Questions ==
+1. Login as admin
+2. Dashboard -> Plugins -> Activate "Post Title Length"
 
-Nothing be see here... Yet !
+== How to use ==
 
-== Screenshots ==
-
-== Changelog ==
-
-= 1.0 =
-* Release. Everything seems to work !
-
-== Upgrade Notice ==
+1. Login as admin
+2. Go to Dashboard -> Settings -> Post Title Length, adjust the length limit and save
+3. Now at creating or editing a post, the input is allowed into the post title field once the limit is reached.
