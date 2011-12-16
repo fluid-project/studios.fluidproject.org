@@ -38,7 +38,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/infusion/lib/jquery/ui/css/fl-theme-yb/yb.css" media="all" />
 
 <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/style.css" media="all" />
-<link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/style_media.css" media="all" />
+<link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/style-media.css" media="all" />
 
 <script type="text/javascript" src="<?php echo $template_url; ?>/infusion/MyInfusion.js"></script>
 <script type="text/javascript" src="<?php echo $template_url; ?>/js/fluid-studios.js"></script>

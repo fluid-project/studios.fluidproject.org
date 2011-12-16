@@ -16,6 +16,15 @@ https://github.com/fluid-project/infusion/raw/master/Infusion-LICENSE.txt
 /*jslint white: true, funcinvoke: true, undef: true, newcap: true, nomen: true, regexp: true, bitwise: true, browser: true, forin: true, maxerr: 100, indent: 4 */
 
 (function ($) {
+	var fls_go_back = function () {
+		history.back(-1);
+		return false;
+	};
+	
+	$(document).ready(function() {
+		$("#flsc-go-back-link").click(fls_go_back);
+	});
+	
     
     fls_hide_background = function (newModel, oldModel, changeRequest) {
         if (newModel.theme !== oldModel.theme) {
