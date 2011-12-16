@@ -60,7 +60,7 @@ function fl_title_length_update_options(){
 function fl_title_length_create_admin_page(){?>
 	<div class="wrap">
 		<div class="icon32"></div>
-		<h2><?php _e('Define Post Title Length','fl-title-length');?></h2>
+		<h2><?php _e('Post Title Length','fl-title-length');?></h2>
 		<?php if($_POST['fl_notice']):?>
 			<div class="updated fade"><p><strong><?php echo $_POST['fl_notice'];?></strong></p></div>
 		<?php endif; ?>
@@ -68,11 +68,11 @@ function fl_title_length_create_admin_page(){?>
 			<table class="form-table">
 				<tbody>
 					<tr valign="top">
-						<th scope="row"><label for="blogname">Maximum characters allowed:</label></th>
+						<th scope="row"><label for="blogname">Maximum characters in post title:</label></th>
 						<td><input type="text" class="regular-text" value="<?php echo get_option('fl_title_length'); ?>" name="fl_max_count"></td>
 					</tr>
 					<tr>
-						<td colspan="2"><span class="description">Be cautious that reducing the post title length cuts the existing post title to the new length at re-editting.</span></td>
+						<td colspan="2"><span class="description">Note that reducing the post title length will not change existing post titles until they are edited.</span></td>
 					</tr>
 					<tr valign="top">
 						<td>
