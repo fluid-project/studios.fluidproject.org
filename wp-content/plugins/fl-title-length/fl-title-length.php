@@ -1,13 +1,12 @@
 <?php
 /*
-Plugin Name: Restrict the length of the post title
-Description: Restrict the post title length to a predefined limit. Once the limit is reached at creating or editing a post, any furthur input is not allowed.
-Version: 0.1
+Plugin Name: Post Title Length
+Description: Restricts the post title length to a predefined limit. Once the limit is reached when creating or editing a post, no furthur input is allowed.
 Author: Fluid Studios Team
 Author URI: http://studios.fluidproject.org/
 
-This plugin is created based on another plugin named "Limit a post title to X characters" and authored by Jean-Philippe Murray.
-(The plugin site of "Limit a post title to X characters": http://wordpress.org/extend/plugins/limit-a-post-title-to-x-characters/) 
+This plugin is based on the "Limit a post title to X characters" plugin authored by Jean-Philippe Murray:
+    http://wordpress.org/extend/plugins/limit-a-post-title-to-x-characters/
 */
 
 // The maximum number of characters in the "new post" page, "title" field
