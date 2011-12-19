@@ -1,0 +1,16 @@
+/*
+Theme Name:     Fluid Studios
+Author: The Fluid Project
+Goal: This css is specific for the admin interface
+*/
+
+/* Theme specific focus styles
+--------------------------------------------------------------------------- */
+
+:focus, #adminmenu li a:focus, .button:focus, .button-secondary:focus, input[type="button"]:focus, input[type="submit"]:focus, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu:focus, #adminmenu li.current a.menu-top:focus, #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head:focus {
+	border: .25em solid #CCCC00;
+}
+
+input[type="text"]:focus, textarea:focus, #dashboard-widgets form .input-text-wrap input:focus, #dashboard-widgets form .textarea-wrap textarea:focus {
+    outline: .25em solid #CCCC00;
+}
