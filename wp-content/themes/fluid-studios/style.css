@@ -6,17 +6,25 @@ Author: The Fluid Project
 /* Theme specific container and body styles
 --------------------------------------------------------------------------- */
 
-html {height: 100%;}
+html {
+	height: 100%;
+	background-image: url("images/bg.jpg");
+	background-repeat: repeat;
+}
+html.fs-no-background {
+	background-image: none;
+}
 body {
 	font-family: "Neuton", "Times New Roman", Times, serif;
 	font-weight: 300;
 	max-width: 1200px;
-	height: 100%;
 	position: relative;
+	height: 100%;
 }
 .fls-theme {
 	color: #333333;
 	background:#ffffff;
+	z-index: -1;
 }
 .home.fls-theme, .archive.fls-theme {color: #666666;}
 #content-container {
@@ -55,7 +63,9 @@ ul li{list-style:disc outside;}
 	padding-left: 3%;
 	height: 100%;
 }
-
+.fls-theme .fl-col-mixed2 .fl-col-main {
+	background-color: #FFFFFF;
+}
 /* Content styles
 --------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
@@ -123,12 +133,12 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	position: absolute;
 	bottom: 0;
 	top: 0;
-	z-index: -1;
 	min-width: 8.125em;
 	padding-right: 0;
 	width: 20%;
 	float: right;
 	overflow: hidden;
+	z-index: -1;
 }
 .fls-loginout-link {
 	background-position: 0.35em center;
@@ -143,7 +153,6 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	float:right;
 	margin-top: 2em;
 	margin-right: 22%;
-	z-index: 999999;
 }
 .fls-theme  .fls-loginout-link {
 	background-image: url("images/icon-login.png");
@@ -166,6 +175,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	margin-top: 12em;
 	width: 4em;
 	float: right;
+	position: relative;
 	font-family: Arial,sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -183,6 +193,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	margin-right: 15%;
 	float: right;
 	margin-top: 8em;  /* 128 / 16 */
+	position: relative;
 }
 .fls-logo a {
 	display:block;
@@ -266,7 +277,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	color: #FFFFFF;
 }
 .fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover, .fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:focus {background-color: #CCCC00;}
-.fs-uiOptions-panel {border: 2px solid #0099CC;	}
+.fs-uiOptions-panel {border-bottom: 2px solid #0099CC;	}
 
 /* uiOptions black on white theme specific styles
 --------------------------------------------------------------------------- */
