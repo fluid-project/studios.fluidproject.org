@@ -24,6 +24,7 @@ body {
 .fls-theme {
 	color: #333333;
 	background:#ffffff;
+	z-index: -1;
 }
 .home.fls-theme, .archive.fls-theme {color: #666666;}
 #content-container {
@@ -137,6 +138,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	width: 20%;
 	float: right;
 	overflow: hidden;
+	z-index: -1;
 }
 .fls-loginout-link {
 	background-position: 0.35em center;
@@ -151,7 +153,6 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	float:right;
 	margin-top: 2em;
 	margin-right: 22%;
-	z-index: 999999;
 }
 .fls-theme  .fls-loginout-link {
 	background-image: url("images/icon-login.png");
