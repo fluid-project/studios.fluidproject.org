@@ -81,23 +81,22 @@
 				theme: {
 					"default": "fls-theme"
 				}
+			},
+			listeners: {
+				modelChanged: fls_hide_background 
 			}
 		});
 	
 		// Start up UI Options
 		fluid.uiOptions.fatPanel(".flc-uiOptions-fatPanel", {
 			prefix: "<?php echo $template_url; ?>/infusion/components/uiOptions/html/",
-		   slidingPanel: {
+			slidingPanel: {
 			   options: {
 				   strings: {
 					   showText: "Show Display Preferences",
 					   hideText: "Hide Display Preferences"
 				   }
 			   }
-		   }
+			}
 		});
 	</script>
-
-<div class="fls-loginout-link">
-	<?php wp_loginout(); ?>
-</div>

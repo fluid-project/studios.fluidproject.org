@@ -1,7 +1,10 @@
 Fluid Studios is a place to incubate new ideas, projects, and collaborations dedicated to improving the usability and accessibility of the open web. This site is an open gallery for contributors to work collaboratively, document their progress, and showcase their projects.
 
-The site is based on WordPress Version 3.2.1 downloaded from wordpress.org
-with the CKEditor plugin Version 3.6.2.3 downloaded from http://wordpress.org/extend/plugins/ckeditor-for-wordpress/
+
+The site is based on WordPress Version 3.2.1 downloaded from http://wordpress.org with the following plugins:
+    1. CKEditor plugin Version 3.6.2.3 downloaded from http://wordpress.org/extend/plugins/ckeditor-for-wordpress/
+    2. The Fluid Studios "Post Title Length" plugin
+
 
 
 To set up an instance of the Studios site follow these steps:
@@ -17,6 +20,6 @@ To set up an instance of the Studios site follow these steps:
 6. Load the studios application in your web browser and go through the WordPress install http://localhost:8888/
 7. Go to the admin interface and configure these settings:
     a) under appearance, activate the studios theme 
-    b) under plugins, activate CKEditor
+    b) under plugins, activate CKEditor and Post Title Length
     c) under settings -> media, set the thumbnail size to 240 X 160
     d) under settings -> reading, set the "Blog pages show at most" to 100
