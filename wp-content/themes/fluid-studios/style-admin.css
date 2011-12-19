@@ -7,10 +7,10 @@ Goal: This css is specific for the admin interface
 /* Theme specific focus styles
 --------------------------------------------------------------------------- */
 
-:focus, #adminmenu li a:focus, .button:focus, .button-secondary:focus, input[type="button"]:focus, input[type="submit"]:focus, input[type="text"]:focus, textarea:focus {
-	border: 2px solid gray;	
+:focus, #adminmenu li a:focus, .button:focus, .button-secondary:focus, input[type="button"]:focus, input[type="submit"]:focus, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu:focus, #adminmenu li.current a.menu-top:focus, #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head:focus {
+	border: .25em solid #CCCC00;
 }
 
-#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu:focus, #adminmenu li.current a.menu-top:focus, #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head:focus {
-	border: 2px solid white;
+input[type="text"]:focus, textarea:focus, #dashboard-widgets form .input-text-wrap input:focus, #dashboard-widgets form .textarea-wrap textarea:focus {
+    outline: .25em solid #CCCC00;
 }
