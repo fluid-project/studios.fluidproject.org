@@ -12,6 +12,7 @@
 									?></a>
 								</div>
 								<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Direct Link to <?php the_title_attribute(); ?>"><?php echo the_title('', '', false); ?></a></h2>
+                                <time class="entry-meta" datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate" class="updated"><?php the_time('F j, Y') ?></time>
 							</header>
 							<section class="entry-content">
 								<?php echo the_excerpt(); ?>

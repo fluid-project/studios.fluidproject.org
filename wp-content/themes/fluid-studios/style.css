@@ -6,17 +6,25 @@ Author: The Fluid Project
 /* Theme specific container and body styles
 --------------------------------------------------------------------------- */
 
-html {height: 100%;}
+html {
+	height: 100%;
+	background-image: url("images/bg.jpg");
+	background-repeat: repeat;
+}
+html.fs-no-background {
+	background-image: none;
+}
 body {
 	font-family: "Neuton", "Times New Roman", Times, serif;
 	font-weight: 300;
-	max-width: 1280px;
-	height: 100%;
+	max-width: 1200px;
 	position: relative;
+	height: 100%;
 }
 .fls-theme {
 	color: #333333;
 	background:#ffffff;
+	z-index: -1;
 }
 .home.fls-theme, .archive.fls-theme {color: #666666;}
 #content-container {
@@ -33,7 +41,7 @@ body {
 	text-decoration: none;
 	color: #0099CC;
 }
-.fls-theme a:hover {color: #CCCC00;}
+.fls-theme a:hover, .fls-theme a:focus {color: #CCCC00;}
 
 /* STUDIO-24: These styles were borrowed from fluid-base-global.css. TODO: Can we use that file instead?
 --------------------------------------------------------------------------- */
@@ -55,14 +63,17 @@ ul li{list-style:disc outside;}
 	padding-left: 3%;
 	height: 100%;
 }
-
+.fls-theme .fl-col-mixed2 .fl-col-main {
+	background-color: #FFFFFF;
+}
 /* Content styles
 --------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
 	font-size: 1.75em;
 	font-weight: bold;
 	line-height: 1.2em;
-	margin-bottom: .75em;
+	margin-bottom: .5em;
+	margin-top: .25em;
 }
 .entry-title {
 	font-family: Arial, sans-serif;
@@ -77,9 +88,20 @@ h1, h2, h3, h4, h5, h6 {
 h1.entry-title {
 	font-size: 2em;
 }
-h2.entry-title {font-size: 1.1em;}
+h2.entry-title {
+    font-size: 1.1em;
+    margin-bottom: 0em;
+}
 .entry-meta {
 	font-family: Arial, sans-serif;
+}
+.fls-theme.home .entry-meta, .fls-theme.archive .entry-meta {
+    color: #999999;
+}
+.home .entry-meta, .archive .entry-meta {
+    font-size: .9em;
+}
+.single .entry-meta {
 	font-style: italic;
 	border-bottom: 1px solid #666666;
 }
@@ -87,7 +109,14 @@ h2.entry-title {font-size: 1.1em;}
 	font-style: normal;
 	font-weight: bold;
 }
-.single .entry-content {padding-top: 1em;}
+.single .entry-content {
+    padding-top: 1em;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+.single .entry-content strong {
+    font-weight: 700;
+}
 .fls-tags {font-style: italic;}
 .fls-theme .fls-tags {color: #0099CC;}
 p, ul, ol, blockquote, figure { margin-bottom: 1em;}
@@ -104,32 +133,32 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	position: absolute;
 	bottom: 0;
 	top: 0;
-	z-index: -1;
 	min-width: 8.125em;
 	padding-right: 0;
 	width: 20%;
 	float: right;
 	overflow: hidden;
+	z-index: -1;
 }
 .fls-loginout-link {
-	background-position: 0.3125em center;
+	background-position: 0.35em center;
 	background-repeat: no-repeat;
-	border-radius: 0 0 5px 5px;
+	border-radius: 5px;
 	cursor: pointer;
-	padding: 0.3125em; /* 5 / 16 */
+	padding-right: 0.33em;
 	padding-top: 0.2em;
 	padding-bottom: 0.2em;
-	padding-left: 1.5625em; /* 25 / 16 */
+	padding-left: 1.5em;
 	line-height: 150%;
-	position: absolute;
-	right: 14em;
-	top: 0;
-	z-index: 999999;
-}.fls-theme  .fls-loginout-link {
+	float:right;
+	margin-top: 2em;
+	margin-right: 22%;
+}
+.fls-theme  .fls-loginout-link {
 	background-image: url("images/icon-login.png");
 	background-color: #0099CC;
 }
-.fls-theme  .fls-loginout-link:hover {background-color: #CCCC00;}
+.fls-theme  .fls-loginout-link:hover, .fls-theme  .fls-loginout-link a:focus {background-color: #CCCC00;}
 .fls-loginout-link a {
 	font-family: Arial,sans-serif;
 	text-transform: lowercase;
@@ -146,18 +175,16 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	margin-top: 12em;
 	width: 4em;
 	float: right;
-}
-.fls-back-link a {
+	position: relative;
 	font-family: Arial,sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: inherit;
 }
 .fls-theme .fls-back-link {
 	background-image: url("images/icon-back.png");
 	color: #0099CC;
 }
-.fls-theme .fls-back-link:hover {
+.fls-theme .fls-back-link:hover, .fls-theme .fls-back-link:focus  {
 	background-image: url("images/icon-back-green.png");
 	color: #CCCC00;
 }
@@ -166,6 +193,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	margin-right: 15%;
 	float: right;
 	margin-top: 8em;  /* 128 / 16 */
+	position: relative;
 }
 .fls-logo a {
 	display:block;
@@ -174,7 +202,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	background-repeat: no-repeat;
 }
 .fls-theme .fls-logo a {background-image: url("images/logo-fluidSTUDIOS.png");}
-.fls-theme .fls-logo a:hover {background-image: url("images/logo-fluidSTUDIOS-green.png");}
+.fls-theme .fls-logo a:hover, .fls-theme .fls-logo a:focus {background-image: url("images/logo-fluidSTUDIOS-green.png");}
 
 /* Footer styles
 --------------------------------------------------------------------------- */
@@ -192,7 +220,8 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	height: 34.375em; /* 550 / 16 */
 	height: 26em;
 	margin: 0;
-	margin-right: 3%
+	margin-right: 5%;
+	margin-left: 2%;
 }
 
 /* Wordpress alignment styles
@@ -239,6 +268,7 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	position:absolute;
 	right: 0;
 	margin-right: 0;
+	top: -1px;  /* STUDIO-20: Get rid of the white line above the prefs button. */
 	z-index: 999999;
 }
 .fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton {
@@ -246,8 +276,8 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	background-color: #0099CC;
 	color: #FFFFFF;
 }
-.fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover {background-color: #CCCC00;}
-.fs-uiOptions-panel {border: 2px solid #0099CC;	}
+.fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover, .fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:focus {background-color: #CCCC00;}
+.fs-uiOptions-panel {border-bottom: 2px solid #0099CC;	}
 
 /* uiOptions black on white theme specific styles
 --------------------------------------------------------------------------- */
