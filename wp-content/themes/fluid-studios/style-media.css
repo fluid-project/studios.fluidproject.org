@@ -9,89 +9,126 @@ Author: The Fluid Project
 
 /* Responsive screen styles for viewports from 320px (small screen) and exceeding 1024px (desktop and beyond)
 --------------------------------------------------------------------------- */
-@media screen and (max-width: 1024px){
-	input#s{
-		width:40%;
-	}
-}
-
-@media screen and (max-width: 768px){
-input#s{
-		display:block;
-		margin-bottom:0.25em;
-		width:80%;
-	}
-	ol.commentlist .comment.depth-2,ol.commentlist .comment.depth-3,ol.commentlist .comment.depth-4,ol.commentlist .comment.depth-4,ol.commentlist .comment.depth-5,ol.commentlist .comment.depth-7,ol.commentlist .comment.depth-8,ol.commentlist .comment.depth-9,ol.commentlist .comment.depth-10 {
-		margin:0;
-	}
-	ol.commentlist .comment.depth-2{
-		padding-left:5em;
-	}
-	#colophon ul li{
-		width:50%;
-	}
-}
-
-@media screen and (max-width: 640px){
-	.fl-container-flex75,.fl-container-flex25{
-		float:none;
-	}
-	#sidebar>ul{
-		margin-left:0;
-	}
-	.fl-widget{
-		display:inline-block;
-		padding:0;
-		width:50%;
-		vertical-align:top;
-	}
-	.widget_search{
-		margin-bottom:2em;
-		width:100%;
-	}
-	input#s{
-		display:inline;
-		margin:0;
-		width:70%;
-	}
-}
-
 @media screen and (max-width: 480px){
-	input[type="url"],input[type="email"],input[type="search"],input[type="text"]{
-		width:97%;
+	.fls-logo {
+		margin-top: 3em;
 	}
-	textarea{
-		width:97%;
+	.fl-col-mixed2 .fl-col-side {
+		width: 30%;
+	}
+	.fl-col-mixed2 .fl-col-main {
+		margin-left: 30%;
+	}
+	.sidebarback {
+		width: 30%;
+	}
+	.single-post #sidebar {
+		height: inherit;
+	}
+	.single-post .sidebarback {
+		width: 100%;
+		float: none;
+	}
+	.single-post .fl-col-mixed2 .fl-col-main {
+		margin: 0;
+	}
+	.single-post .fl-col-mixed2 .fl-col-side {
+		height: 3em;
+		float: none;
+		width: auto;
+	}
+	.single-post .fls-logo {
+		display: none;
+	}
+	.single-post .fls-back-link {
+		float: none;
+		border: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		position: absolute;
+		left: 0;
+		margin-top: 0.5em;
+	}
+	.single-post .fl-uiOptions-fatPanel .fl-toggleButton {
+		width: 1em;
+		height: 1em;
+		overflow: hidden;
+		padding-top: 1.5em;
+	}
+	.single-post .fls-loginout-link {
+		margin-top: 0.5em;
+		margin-right: 3em;
 	}
 }
 
 @media screen and (max-width: 320px){
-	body{
-		border:0;
+	#sidebar {
+		height: inherit;
 	}
-	#branding{
-		padding:1em 0 0;
+	.sidebarback {
+		width: 100%;
+		float: none;
 	}
-	.fl-tabs{
-		padding:0;
-		margin-bottom:0.5em;
-		text-align:center;
+	.fl-col-mixed2 .fl-col-main {
+		margin: 0;
 	}
-	.fl-tabs li{
-		clear:left;
+	.fl-col-mixed2 .fl-col-side {
+		height: 9em;
+		float: none;
+		width: auto;
+	}
+	.fls-back-link {
+		float: none;
+		border: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		position: absolute;
+		left: 0;
+		margin-top: 0.5em;
+	}
+	.fl-uiOptions-fatPanel .fl-toggleButton {
+		width: 1em;
+		height: 1em;
+		overflow: hidden;
+		padding-top: 1.5em;
+	}
+	.fls-loginout-link {
+		margin-top: 0.5em;
+		margin-right: auto;
+		margin-left: auto;
+		width: 3em;
+		float: none;
+	}
+	.fls-logo {
+		margin-left:auto;
+		margin-right:auto;
 		display:block;
-		float:left;
-		margin:0 auto 0.25em;
+		float: none;
+		width: 100px;
+		margin-top: .5em;
 	}
-	.fl-tabs li a{
-		clear:left;
-		display:block;
-		float:left;
-		min-width:10em;
+	.fl-uiOptions-fatPanel .fl-toggleButton {
+		width: 1em;
+		height: 1em;
+		overflow: hidden;
+		padding-top: 1.5em;
 	}
-	input#s{
-		display:inline;
-		margin:0;
-		width:50%;
+	.fl-col-mixed2 .fl-col-main {
+		margin: 0;
+	}
+	.fl-grid li {
+		float: none;
+	}
+	.single-post .fl-col-mixed2 .fl-col-side {
+		height: 3em;
+		float: none;
+		width: auto;
+	}
+	.single-post .fls-logo {
+		display: none;
 	}
 }
