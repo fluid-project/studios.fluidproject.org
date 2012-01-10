@@ -1,274 +1,329 @@
 /*
-Theme Name:     Fluid Studios
-Author: The Fluid Project
+Theme Name:Fluid-Studios
+Theme URI:http://studios.fluidproject.org/wp-content/themes/fluid-studios/
+Description:Usability and accessibility on the open web...
+Author:The Fluid Project
+Author URI:http://fluidproject.org
+Version:2
 */
 
-/* Theme specific container and body styles
---------------------------------------------------------------------------- */
+@import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
 
-html {
-	height: 100%;
-	background-image: url("images/bg.jpg");
-	background-repeat: repeat;
+/* Additional resets: HTML5 display role reset for older browsers
+--------------------------------------------------------------------------- */
+article,aside,details,figcaption,figure,footer,
+header,hgroup,menu,nav,section{
+	display:block;
 }
-html.fs-no-background {
-	background-image: none;
+
+/* Fluid Studios specific styles
+--------------------------------------------------------------------------- */
+html{
+	text-align:center;
 }
-body {
+body{
 	font-family: "Neuton", "Times New Roman", Times, serif;
 	font-weight: 300;
-	max-width: 1200px;
 	position: relative;
-	height: 100%;
 }
-.fls-theme {
+.fls-theme{
 	color: #333333;
 	background:#ffffff;
-	z-index: -1;
 }
-.home.fls-theme, .archive.fls-theme {color: #666666;}
-#content-container {
-	height: auto;
-	min-height: 100%;
-	width: 100%;
+.home.fls-theme, .archive.fls-theme{
+	color: #666666;
+}
+.wrapper{
+	height:auto;
 	position: relative;
 	overflow: visible;
 }
 
 /* Text styles
 --------------------------------------------------------------------------- */
-.fls-theme a {
-	text-decoration: none;
-	color: #0099CC;
+strong,b,mark{
+	font-weight:bold;
+	font-style:inherit;
 }
-.fls-theme a:hover, .fls-theme a:focus {color: #CCCC00;}
+em,i,cite,q,address,dfn,var{
+	font-style:italic;
+	font-weight:inherit;
+}
+abbr[title],dfn[title]{
+	cursor:help;
+	border-bottom:1px dotted;
+}
+ins{
+	border-bottom:1px solid;
+}
+a,u,ins{
+	text-decoration:none;
+}
+del,s{
+	text-decoration:line-through;
+}
+pre,code,samp,kbd{
+	font-family:monospace;
+}
+small{
+	font-size:0.75em;
+}
+img{
+	border:none;
+	font-style:italic;
+}
+input,
+select,option,optgroup,
+textarea{
+	font:inherit;
+}
+.fls-theme a{
+	text-decoration:none;
+	color:#0099CC;
+}
+.fls-theme a:hover{
+	color:#CCCC00;
+}
+ol,ul,dl{
+	margin-left:2em;
+}
+ol li{
+	list-style:decimal outside;
+}
+ul li{
+	list-style:disc outside;
+}
 
-/* STUDIO-24: These styles were borrowed from fluid-base-global.css. TODO: Can we use that file instead?
+/* Flexible width media
 --------------------------------------------------------------------------- */
-ol,ul,dl{margin-left:2em;}
-ol li{list-style:decimal outside;}
-ul li{list-style:disc outside;}
+img,embed,object,video{
+	max-width: 100%;
+	height:auto;
+}
 
-/* FSS Column style overrides
---------------------------------------------------------------------------- */
-.fl-col-mixed2 .fl-col-side {
-	width: 20%;
-	min-width: 8.125em; /* 130 / 16 */
-	padding-right: 0;
-}
-.fl-col-mixed2 .fl-col-main {
-	margin-left: 20%;
-	padding-top: 2.5em; /* 40 / 16 */
-	padding-bottom: 4em;
-	padding-left: 3%;
-	height: 100%;
-}
-.fls-theme .fl-col-mixed2 .fl-col-main {
-	background-color: #FFFFFF;
-}
 /* Content styles
 --------------------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6 {
-	font-size: 1.75em;
-	font-weight: bold;
-	line-height: 1.2em;
-	margin-bottom: .5em;
-	margin-top: .25em;
+.banner{
+	border-bottom:1px solid #fff;
+	background-image: url("images/bg.jpg");
+	margin:0 auto;
 }
-.entry-title {
-	font-family: Arial, sans-serif;
+.masthead{
+	max-width:60em;
+}
+.access ul{
+	margin-bottom:-0.75em;
+	margin-left:0;
+}
+.access ul li{
+	list-style:none inside;
+}
+.main{
+	padding-top:2em;
+	text-align:left;
+}
+.single .main{
+	max-width:60em;
+}
+.single .main .article{
+	padding:0 8%;
+}
+.single .entry-content{
+	font-size:1.2em;
+	line-height:1.4;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size:1.75em;
+    font-weight:bold;
+    line-height:1.2em;
+    margin-bottom:0.5em;
+}
+.entry-title,
+.archive-title{
+	font-family:Arial, sans-serif;
 	border:0;
 }
-.fls-theme .entry-title {color: #CCCC00;}
-[id="404"] {
-	width: 50%;
-	margin-top: 10%;
-	font-size: 120%;
+.fls-theme .entry-title,
+.fls-theme .archive-title{
+	color:#CCCC00;
 }
-h1.entry-title {
-	font-size: 2em;
+.archive .archive-title{
+	padding:0 4%;
 }
-h2.entry-title {
-    font-size: 1.1em;
-    margin-bottom: 0em;
+[id="404"]{
+	width:50%;
+	margin-top:10%;
+	font-size:120%;
 }
-.entry-meta {
-	font-family: Arial, sans-serif;
+h1.entry-title{
+	font-size:2em;
 }
-.fls-theme.home .entry-meta, .fls-theme.archive .entry-meta {
-    color: #999999;
+h2.entry-title{
+	font-size:1.1em;
 }
-.home .entry-meta, .archive .entry-meta {
-    font-size: .9em;
+.entry-meta{
+	font-family:Arial, sans-serif;
+	font-style:italic;
+	border-bottom:1px solid #666666;
 }
-.single .entry-meta {
+.entry-meta time, .entry-meta .fls-meta-author{
+	font-style:normal;
+	font-weight:bold;
+}
+.single .entry-content{
+	padding-top:1em;
+}
+.fls-tags{
 	font-style: italic;
-	border-bottom: 1px solid #666666;
 }
-.entry-meta time, .entry-meta .fls-meta-author {
-	font-style: normal;
-	font-weight: bold;
+.fls-theme .fls-tags{
+	color: #0099CC;
 }
-.single .entry-content {
-    padding-top: 1em;
-    font-size: 1.2em;
-    line-height: 1.4em;
+p,ul,ol,blockquote,figure{
+	margin-bottom:1em;
 }
-.single .entry-content strong {
-    font-weight: 700;
+p.entry-meta,.home .entry-content p,.archive .entry-content p{
+	margin-bottom:0;
 }
-.fls-tags {font-style: italic;}
-.fls-theme .fls-tags {color: #0099CC;}
-p, ul, ol, blockquote, figure { margin-bottom: 1em;}
-p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 0;}
-
-/* Sidebar styles
---------------------------------------------------------------------------- */
-#sidebar {
-	height: 100%;
+.fls-logo {
+	margin:4em 0 2em;
+	position:relative;
 }
-.fls-theme .sidebarback {background-image: url("images/bg.jpg");}
-.sidebarback {
-	background-repeat: repeat;
-	position: absolute;
-	bottom: 0;
-	top: 0;
-	min-width: 8.125em;
-	padding-right: 0;
-	width: 20%;
-	float: right;
-	overflow: hidden;
-	z-index: -1;
-}
-.fls-loginout-link {
-	background-position: 0.35em center;
+.fls-logo a {
 	background-repeat: no-repeat;
-	border-radius: 5px;
-	cursor: pointer;
-	padding-right: 0.33em;
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-	padding-left: 1.5em;
-	line-height: 150%;
-	float:right;
-	margin-top: 2em;
-	margin-right: 22%;
+	display:block;
+	height:95px;
+	margin: 0 auto;
+	width:99px;
+}
+.fls-theme .fls-logo a {
+	background-image: url("images/logo-fluidSTUDIOS.png");
+}
+.fls-theme .fls-logo a:hover {
+	background-image: url("images/logo-fluidSTUDIOS-green.png");
+}
+.fls-loginout-link{
+	border-radius:5px;
+	cursor:pointer;
+	line-height:150%;
+	padding:0.2em 0.33em 0.2em 1.5em;
+	position:relative;
+	margin:0 auto -0.9em;
+	text-align:center;
+	width:2.75em;
 }
 .fls-theme  .fls-loginout-link {
-	background-image: url("images/icon-login.png");
-	background-color: #0099CC;
+	background-image:url("images/icon-login.png");
+	background-repeat:no-repeat;
+	background-position:0.35em center;
+	background-color:#0099cc;
 }
-.fls-theme  .fls-loginout-link:hover, .fls-theme  .fls-loginout-link a:focus {background-color: #CCCC00;}
-.fls-loginout-link a {
-	font-family: Arial,sans-serif;
-	text-transform: lowercase;
+.fls-theme  .fls-loginout-link:hover{
+	background-color: #CCCC00;
 }
-.fls-theme .fls-loginout-link a {color: #FFFFFF;}
+.fls-loginout-link a{
+	font-family:Arial,sans-serif;
+	text-transform:lowercase;
+}
+.fls-theme .fls-loginout-link a{
+	color: #FFFFFF;
+}
 .fls-back-link {
 	background-position: 0.4375em center;  /* 7 / 16 */
 	background-repeat: no-repeat;
 	background-color: white;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	padding: 0.3125em;  /* 5 / 16 */
-	padding-left: 1.5625em; /* 25 / 16 */
-	margin-top: 12em;
-	width: 4em;
-	float: right;
-	position: relative;
+	border:2px solid #0099cc;
+	border-radius: 5px;
+	margin-top:-1.1em;
+	margin-left:8%;
+	margin-bottom:-0.9em;
+	padding:0.3em 0.5em;
+	padding-left: 1em;
+	position:relative;
+	float:left;
+}
+.fls-back-link a {
+	color: inherit;
 	font-family: Arial,sans-serif;
 	font-weight: bold;
+	margin:-1.1em 8% -0.75em;
 	text-transform: uppercase;
+	width: 3.5em;
 }
 .fls-theme .fls-back-link {
 	background-image: url("images/icon-back.png");
 	color: #0099CC;
 }
-.fls-theme .fls-back-link:hover, .fls-theme .fls-back-link:focus  {
+.fls-theme .fls-back-link:hover {
 	background-image: url("images/icon-back-green.png");
 	color: #CCCC00;
+	border:2px solid #cccc00;
 }
-.fls-logo {
-	text-align: right;
-	margin-right: 15%;
-	float: right;
-	margin-top: 8em;  /* 128 / 16 */
-	position: relative;
-}
-.fls-logo a {
-	display:block;
-	height:95px;
-	width:99px;
-	background-repeat: no-repeat;
-}
-.fls-theme .fls-logo a {background-image: url("images/logo-fluidSTUDIOS.png");}
-.fls-theme .fls-logo a:hover, .fls-theme .fls-logo a:focus {background-image: url("images/logo-fluidSTUDIOS-green.png");}
 
 /* Footer styles
 --------------------------------------------------------------------------- */
-.footer {
-	position: absolute;
-	bottom: 1.5em;
-	margin-left: 20%;
-	padding-left: 3%;
+.contentinfo{
+	max-width:60em;
+}
+.colophon{
+	padding:2em 4% 4em;
 }
 
-/* Styles for the title page grid (Overriding FSS styles)
+/* Styles for the index page grid (Overriding FSS styles)
 --------------------------------------------------------------------------- */
-.fl-grid li {
-	width: 15em; /* 240 / 16 */
-	height: 34.375em; /* 550 / 16 */
-	height: 26em;
-	margin: 0;
-	margin-right: 5%;
-	margin-left: 2%;
+.fl-grid li{
+	display:inline-block;
+	float:none;
+	height:auto;
+	margin:0 4% 2em; /* 40px / 960px rounded off */
+	vertical-align:top;
+	width: 25%; /* 240px / 960px */
+}
+.fl-grid li .fs-post-thumbnail{
+	margin-bottom:1em;
+}
+.fl-grid li .index-summary{
+	margin:0 auto;
+	max-width:15em;
 }
 
 /* Wordpress alignment styles
 --------------------------------------------------------------------------- */
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.625em;
+.alignright{
+	display:inline;
+	float:right;
+	margin-left:1.625em;
 }
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.625em;
+.alignleft{
+	display:inline;
+	float:left;
+	margin-right:1.625em;
 }
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.aligncenter{
+	clear:both;
+	display:block;
+	margin:0 auto;
 }
 
 /* uiOptions fat panel specific styles
 --------------------------------------------------------------------------- */
 .fl-uiOptions-fatPanel .fl-panelBar {
-	position: relative;
-	height: 0;
+    position: relative;
+    height: 0;
 }
 .fl-uiOptions-fatPanel .fl-toggleButton{
-	background-position: 0.3125em center;  /* 5 / 16 */
+	background-position: 0.3125em center;
 	background-repeat: no-repeat;
-	padding: 0.3125em;  /* 5 / 16 */
-	padding-top: 0.2em;
-	padding-bottom: 0.1em;
-	padding-left: 1.5625em; /* 25 / 16 */
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border: 0;
-	line-height: 150%;
+	border: 0 none;
+	border-radius: 0 0 5px 5px;
+	float:none;
 	font-family: Arial,sans-serif;
 	font-weight: normal;
+	line-height: 150%;
+	margin: 0 auto;
+	padding: 0.2em 0.3125em 0.1em 1.5625em;
+	position: relative;
 	text-transform: lowercase;
-	position:absolute;
-	right: 0;
-	margin-right: 0;
-	top: -1px;  /* STUDIO-20: Get rid of the white line above the prefs button. */
 	z-index: 999999;
 }
 .fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton {
@@ -276,14 +331,16 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 	background-color: #0099CC;
 	color: #FFFFFF;
 }
-.fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover, .fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:focus {background-color: #CCCC00;}
-.fs-uiOptions-panel {border-bottom: 2px solid #0099CC;	}
+.fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover {background-color: #CCCC00;}
+.fs-uiOptions-panel {border: 2px solid #0099CC;	}
 
 /* uiOptions black on white theme specific styles
 --------------------------------------------------------------------------- */
 .fl-theme-uio-bw  .fls-loginout-link, .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {background-color: #000000 !important;}
 .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {color: #FFFFFF !important;}
-.fl-theme-uio-bw  .fls-loginout-link { background-image: url("images/icon-login.png");}
+.fl-theme-uio-bw * { background-color: transparent !important; }
+.fl-theme-uio-bw  .banner { background-image: none; }
+.fl-theme-uio-bw  .fls-loginout-link{background-image: url("images/icon-login.png"); background-repeat:no-repeat; background-position:0.35em center;}
 .fl-theme-uio-bw  .fls-back-link { background-image: url("images/icon-back-white.png");}
 .fl-theme-uio-bw  .fl-toggleButton { background-image: url("images/icon-uio.png");}
 .fl-theme-uio-bw .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
@@ -292,7 +349,9 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 --------------------------------------------------------------------------- */
 .fl-theme-uio-wb  .fls-loginout-link, .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { background-color: #FFFFFF !important;}
 .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { color: #000000 !important;}
-.fl-theme-uio-wb  .fls-loginout-link { background-image: url("images/icon-login-black.png");}
+.fl-theme-uio-wb * { background-color: transparent !important; }
+.fl-theme-uio-wb  .banner { background-image: none; }
+.fl-theme-uio-wb  .fls-loginout-link { background-image: url("images/icon-login-black.png"); background-repeat:no-repeat; background-position:0.35em center;}
 .fl-theme-uio-wb  .fls-back-link { background-image: url("images/icon-back-black.png");}
 .fl-theme-uio-wb  .fl-toggleButton { background-image: url("images/icon-uio-black.png");}
 .fl-theme-uio-wb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-white.png");}
@@ -301,8 +360,10 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 --------------------------------------------------------------------------- */
 .fl-theme-uio-by  .fls-loginout-link, .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { background-color: #000000 !important;}
 .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { color: #FFFF00 !important;}
-.fl-theme-uio-by  .fls-loginout-link { background-image: url("images/icon-login-yellow.png");}
-.fl-theme-uio-by  .fls-back-link { background-image: url("images/icon-back-yellow.png");}
+.fl-theme-uio-by * { background-color: transparent !important; }
+.fl-theme-uio-by  .banner { background-image: none; }
+.fl-theme-uio-by  .fls-loginout-link { background-image: url("images/icon-login-yellow.png"); background-repeat:no-repeat; background-position:0.35em center;}
+..fl-theme-uio-by  .fls-back-link { background-image: url("images/icon-back-yellow.png");}
 .fl-theme-uio-by  .fl-toggleButton { background-image: url("images/icon-uio-yellow.png");}
 .fl-theme-uio-by .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
 
@@ -310,7 +371,9 @@ p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 
 --------------------------------------------------------------------------- */
 .fl-theme-uio-yb  .fls-loginout-link, .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { background-color: #FFFF00 !important;}
 .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { color: #000000 !important;}
-.fl-theme-uio-yb  .fls-loginout-link { background-image: url("images/icon-login-black.png");}
+.fl-theme-uio-yb * { background-color: transparent !important; }
+.fl-theme-uio-yb  .banner { background-image: none; }
+.fl-theme-uio-yb  .fls-loginout-link { background-image: url("images/icon-login-black.png"); background-repeat:no-repeat; background-position:0.35em center;}
 .fl-theme-uio-yb  .fls-back-link { background-image: url("images/icon-back-black.png");}
 .fl-theme-uio-yb  .fl-toggleButton { background-image: url("images/icon-uio-black.png");}
 .fl-theme-uio-yb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-yellow.png");}

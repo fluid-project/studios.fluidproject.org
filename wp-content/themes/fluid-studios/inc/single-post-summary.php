@@ -1,4 +1,4 @@
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<article id="post-<?php the_ID(); ?>" <?php post_class('index-summary'); ?>>
 							<header>
 								<div class="fs-post-thumbnail">
 									<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'fluid-studios' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php 
@@ -7,12 +7,11 @@
 										the_post_thumbnail();
 									} else {
 										// the current post lacks a thumbnail, display the default picture
-										echo '<img alt="Featured image is missing" src="' . get_stylesheet_directory_uri() .'/images/placeholder.jpg" width="' . FL_THUMBNAIL_WIDTH . '" />';
+										echo '<img alt="Featured image is missing" src="' . get_stylesheet_directory_uri() .'/images/placeholder.jpg" />';
 									}
 									?></a>
 								</div>
 								<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Direct Link to <?php the_title_attribute(); ?>"><?php echo the_title('', '', false); ?></a></h2>
-                                <time class="entry-meta" datetime="<?php the_time('Y-m-d') ?>" pubdate="pubdate" class="updated"><?php the_time('F j, Y') ?></time>
 							</header>
 							<section class="entry-content">
 								<?php echo the_excerpt(); ?>

@@ -1,10 +1,8 @@
 <?php get_header(); ?>
 
-		<div id="content-container" class="fl-clearfix fl-col-mixed2 fl-push">
-
-<?php get_sidebar("non-index"); ?>
-
-			<section id="nav:content" class="fl-clearfix fl-col-main" role="main">
+	<section id="nav:content" class="main fl-clearfix fl-col-main" role="main">
+		<!-- This is where the Table of Contents will be displayed -->
+		<div class="flc-toc-tocContainer toc"></div><!-- /.flc-tocContainer -->
 
 				<article id="404" class="fl-centered">
 					<h1>Page not found</h1>
@@ -16,6 +14,4 @@
 			</section><!-- /#nav:content -->
 
 <?php get_footer(); ?>
-
-		</div><!-- /#content-container -->
 		
