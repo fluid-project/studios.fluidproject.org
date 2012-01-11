@@ -37,7 +37,7 @@
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/infusion/components/uiOptions/css/FatPanelUIOptions.css" media="all" />
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="all" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/media-queries.css" media="all" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/media-queriess.css" media="all" />
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/infusion/MyInfusion.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/modernizr.js"></script>
@@ -105,7 +105,7 @@
 				<nav class="access">
 					<ul>
 						<li class="fls-loginout-link"><a href="/wp-login.php">Log in</a></li>
-						<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back"><span>Back</span> <span class="fls-back-showhide">to <span><b>fluid</b>studios</span></span></a></li>'); ?>
+						<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back">Back</a></li>'); ?>
 					</ul>
 				</nav><!-- /.access -->
 			</div><!-- /.masthead -->
