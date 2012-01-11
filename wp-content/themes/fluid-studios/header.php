@@ -105,7 +105,7 @@
 				<nav class="access">
 					<ul>
 						<li class="fls-loginout-link"><a href="/wp-login.php">Log in</a></li>
-						<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back">Back</a></li>'); ?>
+						<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back"><span>Back</span> <span class="fls-back-showhide">to <span><b>fluid</b>studios</span></span></a></li>'); ?>
 					</ul>
 				</nav><!-- /.access -->
 			</div><!-- /.masthead -->

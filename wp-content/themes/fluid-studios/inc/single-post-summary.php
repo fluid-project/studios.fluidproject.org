@@ -7,7 +7,7 @@
 										the_post_thumbnail();
 									} else {
 										// the current post lacks a thumbnail, display the default picture
-										echo '<img alt="Featured image is missing" src="' . get_stylesheet_directory_uri() .'/images/placeholder.jpg" />';
+										echo '<img alt="Featured image is missing" src="' . get_stylesheet_directory_uri() .'/images/placeholder.jpg" width="240" height="160" />';
 									}
 									?></a>
 								</div>

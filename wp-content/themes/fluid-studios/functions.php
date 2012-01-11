@@ -10,9 +10,6 @@ if ( ! defined("FL_MAX_CHARS_IN_TAGS_SUMMARY") ) define("FL_MAX_CHARS_IN_TAGS_SU
 // The number of characters for content excerpt on the index page 
 if ( ! defined("FL_MAX_WORDS_IN_EXCERPT") ) define("FL_MAX_WORDS_IN_EXCERPT", 20);
 
-// The maximum number of characters in the "new post" page, "title" field
-if ( ! defined("FL_MAX_CHARS_IN_TITLE") ) define("FL_MAX_CHARS_IN_TITLE", 80);
-
 // The size of the featured image on the index page
 if ( ! defined("FL_THUMBNAIL_WIDTH") ) define("FL_THUMBNAIL_WIDTH", 240);
 if ( ! defined("FL_THUMBNAIL_HEIGHT") ) define("FL_THUMBNAIL_HEIGHT", 160);
@@ -51,6 +48,13 @@ function fl_admin_footer() {
 } 
 add_filter('admin_footer_text', 'fl_admin_footer');
 
+// Customize the WP admin interface styles.
+function fl_custom_admin_css() {
+	echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo( 'template_url', 'display' ) . '/css/style-admin.css" media="all" />
+';
+}
+add_action('admin_head', 'fl_custom_admin_css');
+
 // Build an HTML link for a tag
 function fl_tag_link($aTag) {
 	$tag_link = get_tag_link($aTag->term_id);
@@ -82,11 +86,10 @@ function fl_tags_summary($tagList) {
 				break;
 			}
 		}
-		
+
 		$html .= '</div>';
 	}
 	return $html;
 }
-
 
 ?>

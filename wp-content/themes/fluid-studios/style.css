@@ -259,6 +259,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	color: #CCCC00;
 	border:2px solid #cccc00;
 }
+.fls-back-link .fls-back-showhide{
+	display:none;
+}
 
 /* Footer styles
 --------------------------------------------------------------------------- */
