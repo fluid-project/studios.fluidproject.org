@@ -33,11 +33,6 @@ body{
 .home.fls-theme, .archive.fls-theme{
 	color: #666666;
 }
-.wrapper{
-	height:auto;
-	position: relative;
-	overflow: visible;
-}
 
 /* Text styles
 --------------------------------------------------------------------------- */
@@ -98,18 +93,22 @@ ul li{
 --------------------------------------------------------------------------- */
 img,embed,object,video{
 	max-width: 100%;
-	height:auto;
 }
 
 /* Content styles
 --------------------------------------------------------------------------- */
+.wrapper{
+	min-height:100%;
+}
 .banner{
 	border-bottom:1px solid #fff;
 	background-image: url("images/bg.jpg");
 	margin:0 auto;
 }
 .masthead{
+	margin:0 auto;
 	max-width:60em;
+	padding:0 8%;
 }
 .access ul{
 	margin-bottom:-0.75em;
@@ -119,15 +118,13 @@ img,embed,object,video{
 	list-style:none inside;
 }
 .main{
-	padding-top:2em;
+	padding:2em 0;
 	text-align:left;
 }
 .single .main{
 	max-width:60em;
-	padding-top:3.25em;
-}
-.single .main .article{
-	padding:0 8%;
+	margin:0 auto;
+	padding:4em 8% 0;
 }
 .single .entry-content{
 	font-size:1.2em;
@@ -187,8 +184,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	margin-bottom:0;
 }
 .fls-logo {
-	margin:4em 0 2em;
+	margin:4em auto 2em;
 	position:relative;
+	width:99px;
 }
 .fls-logo a {
 	background-repeat: no-repeat;
@@ -235,7 +233,6 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	border-radius: 5px;
 	margin-top:1em;
 	margin-bottom:-5em;
-	margin-left:8%;
 	padding:0.3em 0.5em;
 	padding-left: 1em;
 	position:relative;
@@ -270,11 +267,10 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 /* Styles for the index page grid (Overriding FSS styles)
 --------------------------------------------------------------------------- */
 .fl-grid li{
-	display:inline-block;
-	float:none;
-	height:auto;
-	margin:0 4% 2em; /* 40px / 960px rounded off */
-	vertical-align:top;
+	float:left;
+	min-height:20em;
+	margin:0;
+	padding:0 4.166667% 2em; /* left and right padding 40px / 960px */
 	width: 25%; /* 240px / 960px */
 }
 .fl-grid li .fs-post-thumbnail{

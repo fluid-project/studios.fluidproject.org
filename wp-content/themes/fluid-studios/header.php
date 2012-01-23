@@ -37,7 +37,7 @@
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/infusion/components/uiOptions/css/FatPanelUIOptions.css" media="all" />
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="all" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/media-queriess.css" media="all" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/media-queries.css" media="all" />
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/infusion/MyInfusion.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/modernizr.js"></script>
