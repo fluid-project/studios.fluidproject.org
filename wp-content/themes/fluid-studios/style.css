@@ -143,8 +143,9 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 	border-radius:5px;
 	color:transparent !important;
 	cursor:pointer;
+	float:right;
 	height:1.5625em; /* 25px / 16px */
-	margin-bottom:-0.75em;
+	margin-top:-0.75em;
 	overflow:hidden;
 	padding:0;
 	width:1.5625em; /* 25px / 16px */
@@ -170,20 +171,15 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 .banner{
 	border-bottom:1px solid #fff;
 	background-image: url("images/bg.jpg");
-	height:auto;
 }
 .masthead{
-	height:auto;
 	margin:0 auto;
 	max-width:15em;
 	padding:0;
 }
 .fls-logo {
-	margin:4em auto 4em;
+	margin:2.3em auto;
 	width:99px;
-}
-h1.fls-logo{
-	margin:2.3em auto 1.2em;
 }
 .fls-logo a {
 	background-repeat:no-repeat;
@@ -201,24 +197,20 @@ h1.fls-logo{
 
 /* Navigation (.access) specific styles
 ----------------------------------------- */
-.access{
-	height:auto;
-}
 .access ul{
-	height:auto;
 	margin:0 auto;
 	width:3.75em;
 }
 .access ul li{
 	list-style:none;
-	display:inline;
 }
 .fls-loginout-link{
 	border-radius:5px;
-	height:1.5625em;
-	margin-bottom:-0.75em;
+	float:left;
+	height:1.5625em; /* 25px / 16px */
+	margin-top:-0.75em;
 	overflow:hidden;
-	padding:0;
+	padding-top:-0.75em;
 	width:1.5625em; /* 25px / 16px */
 }
 .fls-theme .fls-loginout-link{
@@ -268,8 +260,7 @@ h1.fls-logo{
 --------------------------------------------------------------------------- */
 .main{
 	max-width:15em;
-	margin:0 auto;
-	padding:2em 0;
+	margin:2em auto;
 }
 .single .main{
 	max-width:60em;
@@ -291,6 +282,32 @@ h1.fls-logo{
 .fl-grid li .index-summary{
 	margin:0 auto;
 	max-width:15em;
+}
+
+/* Wordpress alignment styles
+----------------------------------------- */
+.alignright{
+	display:inline;
+	float:right;
+	margin-left:1.625em;
+}
+.alignleft{
+	display:inline;
+	float:left;
+	margin-right:1.625em;
+}
+.aligncenter{
+	clear:both;
+	display:block;
+	margin:0 auto;
+}
+
+/* Footer (.contentinfo) styles
+--------------------------------------------------------------------------- */
+.contentinfo{
+	max-width:15em;
+	margin-bottom:2em;
+	text-align:center;
 }
 
 /* uiOptions colour and contrast theme specific styles
