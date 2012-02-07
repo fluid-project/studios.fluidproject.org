@@ -4,7 +4,7 @@
 
 <head>
 
-<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
+<meta charset="<?php bloginfo('charset'); ?>" />
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 
@@ -37,10 +37,9 @@
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/infusion/components/uiOptions/css/FatPanelUIOptions.css" media="all" />
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="all" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/media-queries.css" media="all" />
 
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/infusion/MyInfusion.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/modernizr.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/infusion/MyInfusion.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/modernizr.js"></script>
 
 <title><?php if (function_exists('is_tag') && is_tag()) { single_tag_title("Tag Archive for &quot;"); echo'&quot; &mdash; '; } elseif (is_archive()) { wp_title(''); echo ' Archive &mdash; '; } elseif (is_search()) { echo 'Search for &quot;'.esc_html($s).'&quot; &mdash; '; } elseif (!(is_404()) && (is_single()) || (is_page())) { wp_title(''); echo ' &mdash; '; } elseif (is_404()) { echo '404 Error &mdash; Page not found &mdash; '; } if (is_home()) { bloginfo('name'); echo ' &mdash; '; bloginfo('description'); } else { bloginfo('name'); } ?><?php if ($paged>1) { echo ' &mdash; page '. $paged; } ?></title>
 
@@ -67,7 +66,7 @@
 
 	  <!-- This div is for the sliding panel that shows and hides the UI Options controls -->
   	<div class="fl-panelBar">
-  		<button class="flc-slidingPanel-toggleButton fl-toggleButton">Show display preferences</button>
+  		<button class="flc-slidingPanel-toggleButton fl-toggleButton hide">Show display preferences</button>
   	</div>
   </div>	
 
@@ -98,15 +97,19 @@
 
 	<div class="wrapper">
 		<header class="banner" role="banner">
-			<div class="masthead fl-centered fl-clearfix">
-				<div class="fls-logo fl-push">
+			<div class="masthead fl-centered fl-fix">
+				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
+
+				<<?php echo $heading_tag; ?> class="fls-logo">
 					<a href="/" title="Go Home" class="fl-hidden-replace" rel="home">Fluid Studios</a>
-				</div><!-- /.fls-logo -->
-				<nav class="access">
-					<ul>
-						<li class="fls-loginout-link"><a href="/wp-login.php">Log in</a></li>
-						<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back">Back</a></li>'); ?>
-					</ul>
-				</nav><!-- /.access -->
+				</<?php echo $heading_tag; ?>>
 			</div><!-- /.masthead -->
+			<nav class="access">
+				<ul>
+					<li class="fls-loginout-link"><a href="/wp-login.php">Log in</a></li>
+					<li class="fl-toggleButton">Show</li>
+					<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back">Back<span> to fluidSTUDIOS</span></a></li>'); ?>
+
+				</ul>
+			</nav><!-- /.access -->
 		</header><!-- /.banner -->

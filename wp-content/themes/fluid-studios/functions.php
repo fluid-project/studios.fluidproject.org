@@ -1,5 +1,8 @@
 <?php
 
+// remove WordPress version number from head
+remove_action('wp_head', 'wp_generator');
+
 /**********************************
  *  Studios Constants
  **********************************/
