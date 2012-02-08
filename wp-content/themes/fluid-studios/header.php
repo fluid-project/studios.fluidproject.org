@@ -58,7 +58,7 @@
 
 </head>
 
-<body id="nav:page-top" <?php body_class('fl-fix fls-theme'); ?>>
+<body id="nav:page-top" <?php body_class('fl-clearfix fls-theme'); ?>>
 
   <div class="flc-uiOptions-fatPanel fl-uiOptions-fatPanel">
 	  <!-- This is the div that will contain the UI Options component -->
@@ -82,7 +82,7 @@
 		});
 	
 		// Start up UI Options
-		fluid.uiOptions.fatPanel(".flc-uiOptions-fatPanel", {
+		var uio = fluid.uiOptions.fatPanel(".flc-uiOptions-fatPanel", {
 			prefix: "<?php bloginfo('template_url'); ?>/infusion/components/uiOptions/html/",
 		   slidingPanel: {
 			   options: {
@@ -97,19 +97,24 @@
 
 	<div class="wrapper">
 		<header class="banner" role="banner">
-			<div class="masthead fl-centered fl-fix">
+			<div class="masthead fl-centered fl-clearfix">
 				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 
 				<<?php echo $heading_tag; ?> class="fls-logo">
 					<a href="/" title="Go Home" class="fl-hidden-replace" rel="home">Fluid Studios</a>
 				</<?php echo $heading_tag; ?>>
 			</div><!-- /.masthead -->
-			<nav class="access">
+			<nav class="access fl-clearfix">
 				<ul>
 					<li class="fls-loginout-link"><a href="/wp-login.php">Log in</a></li>
-					<li class="fl-toggleButton">Show</li>
+					<li id="uioProxyButton" class="fl-toggleButton"><a href="#">Proxy Button</a></li>
 					<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back">Back<span> to fluidSTUDIOS</span></a></li>'); ?>
 
 				</ul>
+				<script>
+					$("#uioProxyButton").click(function () {
+					uio.slidingPanel.operateShow();
+					});
+				</script>
 			</nav><!-- /.access -->
 		</header><!-- /.banner -->

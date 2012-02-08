@@ -2,7 +2,7 @@
 Theme Name:Fluid-Studios
 Theme URI:http://studios.fluidproject.org/wp-content/themes/fluid-studios/
 Description:Usability and accessibility on the open web...
-Author:The Fluid Project
+	Author:The Fluid Project
 Author URI:http://fluidproject.org
 Version:2
 */
@@ -19,6 +19,8 @@ Fluid Studios theme specific styles
 		Navigation (.access) specific styles
 	Main content (.main) styles
 		Styles for the index page grid (Overriding FSS styles)
+		Wordpress alignment styles
+	Footer (.contentinfo) specific styles
 	uiOptions colour and contrast theme specific styles
 		uiOptions black on white theme specific styles
 		uiOptions white on black theme specific styles
@@ -38,7 +40,9 @@ header,hgroup,menu,nav,section{
 /* Additional "restart" styles
 --------------------------------------------------------------------------- */
 h1,h2,h3,h4,h5,h6{
-	font-size:100%;
+	font-size:1.75rem;
+	font-weight:bold;
+	line-height:1.2;
 }
 table{
 	border-collapse:collapse;
@@ -141,13 +145,11 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 .fl-toggleButton{
 	background-position:center center;
 	border-radius:5px;
-	color:transparent !important;
 	cursor:pointer;
 	float:right;
 	height:1.5625em; /* 25px / 16px */
-	margin-top:-0.75em;
+	margin-bottom:-0.75em;
 	overflow:hidden;
-	padding:0;
 	width:1.5625em; /* 25px / 16px */
 }
 .fls-theme .fl-uiOptions-fatPanel .fl-toggleButton,
@@ -156,7 +158,6 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 	background-image:url("images/icon-uio.png");
 	background-position:center center;
 	background-repeat:no-repeat;
-	color:#fff;
 }
 .fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover,
 .fl-toggleButton:hover{
@@ -180,6 +181,9 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 .fls-logo {
 	margin:2.3em auto;
 	width:99px;
+}
+h1.fls-logo{
+	font-size:1rem;
 }
 .fls-logo a {
 	background-repeat:no-repeat;
@@ -208,7 +212,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 	border-radius:5px;
 	float:left;
 	height:1.5625em; /* 25px / 16px */
-	margin-top:-0.75em;
+	margin-bottom:-0.75em;
 	overflow:hidden;
 	padding-top:-0.75em;
 	width:1.5625em; /* 25px / 16px */
@@ -302,7 +306,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 	margin:0 auto;
 }
 
-/* Footer (.contentinfo) styles
+/* Footer (.contentinfo) specific styles
 --------------------------------------------------------------------------- */
 .contentinfo{
 	max-width:15em;
