@@ -58,7 +58,7 @@
 
 </head>
 
-<body id="nav:page-top" <?php body_class('fl-clearfix fls-theme'); ?>>
+<body id="nav:page-top" <?php body_class('fls-theme'); ?>>
 
   <div class="flc-uiOptions-fatPanel fl-uiOptions-fatPanel">
 	  <!-- This is the div that will contain the UI Options component -->
@@ -66,11 +66,11 @@
 
 	  <!-- This div is for the sliding panel that shows and hides the UI Options controls -->
   	<div class="fl-panelBar">
-  		<button class="flc-slidingPanel-toggleButton fl-toggleButton hide">Show display preferences</button>
+  		<button class="flc-slidingPanel-toggleButton fl-toggleButton">Show display preferences</button>
   	</div>
   </div>	
 
-	<script type="text/javascript">
+	<script>
 		// Instantiate the UI Enhancer component, specifying the table of contents' template URL
 		fluid.pageEnhancer({
 			tocTemplate: "<?php bloginfo('template_url'); ?>/infusion/components/tableOfContents/html/TableOfContents.html",
@@ -104,11 +104,11 @@
 					<a href="/" title="Go Home" class="fl-hidden-replace" rel="home">Fluid Studios</a>
 				</<?php echo $heading_tag; ?>>
 			</div><!-- /.masthead -->
-			<nav class="access fl-clearfix">
-				<ul>
+			<nav class="access">
+				<ul class="fl-clearfix">
+					<li id="uioProxyButton" class="fl-toggleButton"><a href="#"></a></li>
 					<li class="fls-loginout-link"><a href="/wp-login.php">Log in</a></li>
-					<li id="uioProxyButton" class="fl-toggleButton"><a href="#">Proxy Button</a></li>
-					<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back">Back<span> to fluidSTUDIOS</span></a></li>'); ?>
+					<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back">Back<span> to <span>fluid</span><span>STUDIOS</span></span></a></li>'); ?>
 
 				</ul>
 				<script>

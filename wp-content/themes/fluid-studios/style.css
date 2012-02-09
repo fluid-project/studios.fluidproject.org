@@ -15,13 +15,13 @@ Additional "restarts" styles
 	Flexible width media
 Fluid Studios theme specific styles
 	uiOptions fat panel specific styles
-	Header specific styles
+	Header (.banner) specific styles
 		Navigation (.access) specific styles
 	Main content (.main) styles
 		Styles for the index page grid (Overriding FSS styles)
 		Wordpress alignment styles
 	Footer (.contentinfo) specific styles
-	uiOptions colour and contrast theme specific styles
+	uiOptions colour, contrast, font theme specific styles
 		uiOptions black on white theme specific styles
 		uiOptions white on black theme specific styles
 		uiOptions black on yellow theme specific styles
@@ -125,7 +125,7 @@ body{
 .fls-theme a:hover{
 	color:#CC0;
 }
-h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
+h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	margin-bottom:1em;
 }
 
@@ -133,7 +133,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 --------------------------------------------------------------------------- */
 .no-js #myUIOptions,
 .no-js .fl-uiOptions-fatPanel .fl-panelBar,
-.hide{
+.flc-slidingPanel-toggleButton.fl-toggleButton{
 	display:none;
 }
 .fl-uiOptions-fatPanel .fl-panelBar{
@@ -145,6 +145,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 .fl-toggleButton{
 	background-position:center center;
 	border-radius:5px;
+	color:transparent;
 	cursor:pointer;
 	float:right;
 	height:1.5625em; /* 25px / 16px */
@@ -167,7 +168,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 	border:2px solid #09c;	
 }
 
-/* Header specific styles
+/* Header (.banner) specific styles
 --------------------------------------------------------------------------- */
 .banner{
 	border-bottom:1px solid #fff;
@@ -175,7 +176,6 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 }
 .masthead{
 	margin:0 auto;
-	max-width:15em;
 	padding:0;
 }
 .fls-logo {
@@ -183,6 +183,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre{
 	width:99px;
 }
 h1.fls-logo{
+	font-size:16px;
 	font-size:1rem;
 }
 .fls-logo a {
@@ -198,12 +199,29 @@ h1.fls-logo{
 .fls-theme .fls-logo a:hover {
 	background-image:url("images/logo-fluidSTUDIOS-green.png");
 }
+.single .fls-logo{
+	display:none;
+}
 
 /* Navigation (.access) specific styles
 ----------------------------------------- */
 .access ul{
 	margin:0 auto;
 	width:3.75em;
+}
+.single .access ul{
+	padding:0.5em 0;
+	padding-right:4%;
+	width:auto;
+}
+.single .access ul li.fls-loginout-link,
+.single .access ul li.fl-toggleButton{
+	float:right;
+	margin-left:0.5em;
+}
+.single .access ul li.fls-back-link{
+	float:left;
+	margin:0;
 }
 .access ul li{
 	list-style:none;
@@ -234,20 +252,36 @@ h1.fls-logo{
 	color:#fff;
 }
 .fls-back-link{
-	border-radius:5px;
+	background:#fff;
+	border-radius:0 5px 5px 0;
 	float:left;
 	font-family:Arial,sans-serif;
 	font-weight:bold;
+	padding: 0.2em 0;
 	position:relative;
 	text-transform:uppercase;
-	width:3.5em;
+}
+.fls-theme .fls-back-link{
+	background-image:url("images/icon-back.png");
+	background-position:0.35em center;
+	background-repeat:no-repeat;
+	color:#09C;
 }
 .fls-back-link a{
-	border-radius:5px;
-	padding:0.3em 0.5em 0.3em 1.25em;
+	float:left;
+	padding:0 0.75em 0 1.25em;
 }
 .fls-back-link a span{
-	display:none;
+	font-style:italic;
+	text-transform:lowercase;
+	font-weight:normal;
+}
+.fls-back-link a span>span{
+	font-style:normal;
+}
+.fls-back-link a span>span+span{
+	font-weight:bold;
+	text-transform:uppercase;
 }
 .fls-theme .fls-back-link{
 	background-image:url("images/icon-back.png");
@@ -265,6 +299,8 @@ h1.fls-logo{
 .main{
 	max-width:15em;
 	margin:2em auto;
+	max-width:15em;
+	padding:0 4%;
 }
 .single .main{
 	max-width:60em;
@@ -272,6 +308,56 @@ h1.fls-logo{
 .single .entry-content{
 	font-size:1.2em;
 	line-height:1.4;
+}
+.entry-title,
+.archive-title{
+	font-family:Arial, sans-serif;
+	border:0;
+}
+.fls-theme .entry-title,
+.fls-theme .archive-title{
+	color:#CCCC00;
+}
+[id="404"]{
+	width:50%;
+	margin-top:10%;
+	font-size:120%;
+}
+h1.entry-title{
+	font-size:2em;
+	margin-bottom:0.25em;
+}
+h2.entry-title{
+	font-size:1.1em;
+}
+.entry-meta{
+	font-family:Arial, sans-serif;
+	font-style:italic;
+	border-bottom:1px solid #666666;
+}
+.entry-meta time, .entry-meta .fls-meta-author{
+	font-style:normal;
+	font-weight:bold;
+}
+.home .entry-content,
+.archive .entry-content{
+	margin-bottom:0.5em;
+}
+.single .entry-content{
+	padding-top:1em;
+}
+.fls-tags{
+	font-style: italic;
+}
+.fls-theme .fls-tags{
+	color: #0099CC;
+}
+p.entry-meta,.home .entry-content p,.archive .entry-content p{
+	margin-bottom:0;
+}
+.home .entry-title,
+.archive .entry-title{
+	margin:0;
 }
 
 /* Styles for the index page grid (Overriding FSS styles)
@@ -281,11 +367,11 @@ h1.fls-logo{
 }
 .fl-grid li{
 	float:none;
-	height:auto;
 }
 .fl-grid li .index-summary{
 	margin:0 auto;
 	max-width:15em;
+	overflow:visible;
 }
 
 /* Wordpress alignment styles
