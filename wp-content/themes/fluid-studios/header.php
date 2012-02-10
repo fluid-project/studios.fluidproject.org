@@ -103,18 +103,18 @@
 				<<?php echo $heading_tag; ?> class="fls-logo">
 					<a href="/" title="Go Home" class="fl-hidden-replace" rel="home">Fluid Studios</a>
 				</<?php echo $heading_tag; ?>>
-			</div><!-- /.masthead -->
-			<nav class="access">
-				<ul class="fl-clearfix">
-					<li id="uioProxyButton" class="fl-toggleButton"><a href="#"></a></li>
-					<li class="fls-loginout-link"><a href="/wp-login.php">Log in</a></li>
-					<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back">Back<span> to <span>fluid</span><span>STUDIOS</span></span></a></li>'); ?>
+				<nav class="access">
+					<ul class="fl-clearfix">
+						<li id="uioProxyButton" class="fl-toggleButton"><a href="#"></a></li>
+						<li class="fls-loginout-link"><a href="/wp-login.php">Log in</a></li>
+						<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back">Back<span> to <span>fluid</span><span>STUDIOS</span></span></a></li>'); ?>
 
-				</ul>
-				<script>
-					$("#uioProxyButton").click(function () {
-					uio.slidingPanel.operateShow();
-					});
-				</script>
-			</nav><!-- /.access -->
+					</ul>
+					<script>
+						$("#uioProxyButton").click(function () {
+						uio.slidingPanel.operateShow();
+						});
+					</script>
+				</nav><!-- /.access -->
+			</div><!-- /.masthead -->
 		</header><!-- /.banner -->

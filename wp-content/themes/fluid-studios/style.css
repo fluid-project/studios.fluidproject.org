@@ -2,7 +2,7 @@
 Theme Name:Fluid-Studios
 Theme URI:http://studios.fluidproject.org/wp-content/themes/fluid-studios/
 Description:Usability and accessibility on the open web...
-	Author:The Fluid Project
+Author:The Fluid Project
 Author URI:http://fluidproject.org
 Version:2
 */
@@ -11,7 +11,7 @@ Version:2
 --------------------------------------------------------------------------- */
 /*
 Additional Resets:HTML5
-Additional "restarts" styles
+Additional "restart" styles
 	Flexible width media
 Fluid Studios theme specific styles
 	uiOptions fat panel specific styles
@@ -19,6 +19,7 @@ Fluid Studios theme specific styles
 		Navigation (.access) specific styles
 	Main content (.main) styles
 		Styles for the index page grid (Overriding FSS styles)
+		Single page styles for the base mobile theme
 		Wordpress alignment styles
 	Footer (.contentinfo) specific styles
 	uiOptions colour, contrast, font theme specific styles
@@ -26,6 +27,8 @@ Fluid Studios theme specific styles
 		uiOptions white on black theme specific styles
 		uiOptions black on yellow theme specific styles
 		uiOptions yellow on black theme specific styles
+Responsive media queries
+	
 */
 
 @import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
@@ -103,17 +106,30 @@ img,embed,object,video{
 
 /* Fluid-Studios theme specific styles
 --------------------------------------------------------------------------- */
+html,body,.wrapper{
+	height:100%;
+}
 html{
+	background-image:url("images/bg.jpg");
+	background-repeat:repeat;
 	font-family:"Neuton", "Times New Roman", Times, serif;
-	font-size:100%;
-	font-weight:300;
 }
 body{
 	background:#fff;
 	color: #333;
 	font-family: "Neuton", "Times New Roman", Times, serif;
+	font-size:100%;
 	font-weight: 300;
 	position:relative;
+}
+body>.wrapper{
+	background-color:#fff;
+	height:auto;
+	min-height:100%;
+	position:relative;
+}
+.wrapper{
+	background-color:#fff;
 }
 .home,.archive{
 	color: #666666;
@@ -179,7 +195,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	padding:0;
 }
 .fls-logo {
-	margin:2.3em auto;
+	margin:1.25em auto; /* 20px / 16px */
 	width:99px;
 }
 h1.fls-logo{
@@ -278,9 +294,10 @@ h1.fls-logo{
 }
 .fls-back-link a span>span{
 	font-style:normal;
+	font-weight:bold;
 }
 .fls-back-link a span>span+span{
-	font-weight:bold;
+	font-weight:normal;
 	text-transform:uppercase;
 }
 .fls-theme .fls-back-link{
@@ -298,16 +315,9 @@ h1.fls-logo{
 --------------------------------------------------------------------------- */
 .main{
 	max-width:15em;
-	margin:2em auto;
+	margin:0 auto;
 	max-width:15em;
-	padding:0 4%;
-}
-.single .main{
-	max-width:60em;
-}
-.single .entry-content{
-	font-size:1.2em;
-	line-height:1.4;
+	padding:2em 4%;
 }
 .entry-title,
 .archive-title{
@@ -343,9 +353,6 @@ h2.entry-title{
 .archive .entry-content{
 	margin-bottom:0.5em;
 }
-.single .entry-content{
-	padding-top:1em;
-}
 .fls-tags{
 	font-style: italic;
 }
@@ -374,6 +381,22 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	overflow:visible;
 }
 
+/* Single page styles for the base mobile theme
+----------------------------------------- */
+.single .main{
+	max-width:60em;
+}
+.single .entry-content{
+	font-size:1.2em;
+	line-height:1.4;
+}
+.single .main{
+	margin-top:1em;
+}
+.single .entry-content{
+	padding-top:1em;
+}
+
 /* Wordpress alignment styles
 ----------------------------------------- */
 .alignright{
@@ -395,8 +418,8 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 /* Footer (.contentinfo) specific styles
 --------------------------------------------------------------------------- */
 .contentinfo{
-	max-width:15em;
-	margin-bottom:2em;
+	background:#fff;
+	padding-bottom:2em;
 	text-align:center;
 }
 
@@ -446,3 +469,47 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-yb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
 .fl-theme-uio-yb  .fl-toggleButton { background-image: url("images/icon-uio-black.png");}
 .fl-theme-uio-yb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-yellow.png");}
+
+/* Responsive media queries
+--------------------------------------------------------------------------- */
+@media screen and (min-width:480px){
+	body.home{
+		max-width:70.625em; /* 1130 / 16 */
+		position:relative;
+	}
+	.home .banner{
+		border-bottom:0 !important;
+		border-right:2px solid #fff;
+		margin:0;
+		min-height:100%;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		padding-right:0;
+		width:35%; /* 168 / 480 */
+	}
+	.home .masthead{
+		padding:0 14.193548%; /* padding-right/left 32 / 310 = .10322580645161290322 */
+		float:right;
+	}
+	.fls-logo {
+		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
+		width:99px;
+	}
+	.access ul{
+		margin:0 auto;
+		width:3.75em;
+	}
+	.home .main{
+		margin:0;
+		padding:1em 0 0 39.583333%; /* 190 / 480 */
+	}
+	.fl-grid li{
+		padding:0 4.166667% 1em; /* left and right padding 40px / 960px */
+	}
+	.home .contentinfo{
+		padding-left:39.583333%; /* 190px / 480px */
+		text-align:left;
+	}
+}
