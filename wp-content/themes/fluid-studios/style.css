@@ -614,3 +614,16 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		padding-left:28.55%;
 	}
 }
+
+@media screen and (min-width:800px){
+	.flc-slidingPanel-toggleButton.fl-toggleButton{
+		margin-right:4.4%;
+	}
+	.main,.home .main,.single .main,.archive .main{
+		padding-right:0;
+	}
+	.fl-grid li{
+		padding:0 1.2%;
+		width:30.5%;
+	}
+}
