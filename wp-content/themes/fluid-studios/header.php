@@ -41,7 +41,7 @@
 <script src="<?php bloginfo('template_url'); ?>/infusion/MyInfusion.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/modernizr.js"></script>
 
-<title><?php if (function_exists('is_tag') && is_tag()) { single_tag_title("Tag Archive for &quot;"); echo'&quot; &mdash; '; } elseif (is_archive()) { wp_title(''); echo ' Archive &mdash; '; } elseif (is_search()) { echo 'Search for &quot;'.esc_html($s).'&quot; &mdash; '; } elseif (!(is_404()) && (is_single()) || (is_page())) { wp_title(''); echo ' &mdash; '; } elseif (is_404()) { echo '404 Error &mdash; Page not found &mdash; '; } if (is_home()) { bloginfo('name'); echo ' &mdash; '; bloginfo('description'); } else { bloginfo('name'); } ?><?php if ($paged>1) { echo ' &mdash; page '. $paged; } ?></title>
+<title><?php if (function_exists('is_tag') && is_tag()) { single_tag_title("Entries tagged &quot;"); echo'&quot; &mdash; '; } elseif (is_archive()) { wp_title(''); echo ' Archive &mdash; '; } elseif (is_search()) { echo 'Search for &quot;'.esc_html($s).'&quot; &mdash; '; } elseif (!(is_404()) && (is_single()) || (is_page())) { wp_title(''); echo ' &mdash; '; } elseif (is_404()) { echo '404 Error &mdash; Page not found &mdash; '; } if (is_home()) { bloginfo('name'); echo ' &mdash; '; bloginfo('description'); } else { bloginfo('name'); } ?><?php if ($paged>1) { echo ' &mdash; page '. $paged; } ?></title>
 
 <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/apple-touch-icon.png"/>
@@ -101,7 +101,7 @@
 				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 
 				<<?php echo $heading_tag; ?> class="fls-logo">
-					<a href="/" title="Go Home" class="fl-hidden-replace" rel="home">Fluid Studios</a>
+					<a href="/" title="Fluid Studios Home" class="fl-hidden-replace" rel="home">Fluid Studios</a>
 				</<?php echo $heading_tag; ?>>
 				<nav class="access">
 					<ul class="fl-clearfix">

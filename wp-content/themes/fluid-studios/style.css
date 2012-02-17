@@ -27,8 +27,7 @@ Fluid Studios theme specific styles
 		uiOptions white on black theme specific styles
 		uiOptions black on yellow theme specific styles
 		uiOptions yellow on black theme specific styles
-Responsive media queries
-	
+Responsive media queries	
 */
 
 @import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
@@ -88,7 +87,7 @@ textarea{
 	font:inherit;
 }
 ol,ul,dl{
-	margin-left:10%;
+	margin-left:2em;
 }
 ol li{
 	list-style:decimal outside;
@@ -157,19 +156,16 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	position:relative;
 	z-index:999999;
 }
-.fl-uiOptions-fatPanel .fl-toggleButton,
 .fl-toggleButton{
-	background-position:center center;
 	border-radius:5px;
 	color:transparent;
 	cursor:pointer;
 	float:right;
-	height:1.5625em; /* 25px / 16px */
+	height:1.5625em; /* 25 / 16 */
 	margin-bottom:-0.75em;
 	overflow:hidden;
-	width:1.5625em; /* 25px / 16px */
+	width:1.5625em; /* 25 / 16p */
 }
-.fls-theme .fl-uiOptions-fatPanel .fl-toggleButton,
 .fl-toggleButton{
 	background-color:#09c;
 	background-image:url("images/icon-uio.png");
@@ -187,7 +183,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 /* Header (.banner) specific styles
 --------------------------------------------------------------------------- */
 .banner{
-	border-bottom:1px solid #fff;
+	border-bottom:2px solid #fff;
 	background-image: url("images/bg.jpg");
 }
 .masthead{
@@ -215,29 +211,12 @@ h1.fls-logo{
 .fls-theme .fls-logo a:hover {
 	background-image:url("images/logo-fluidSTUDIOS-green.png");
 }
-.single .fls-logo{
-	display:none;
-}
 
 /* Navigation (.access) specific styles
 ----------------------------------------- */
 .access ul{
 	margin:0 auto;
 	width:3.75em;
-}
-.single .access ul{
-	padding:0.5em 0;
-	padding-right:4%;
-	width:auto;
-}
-.single .access ul li.fls-loginout-link,
-.single .access ul li.fl-toggleButton{
-	float:right;
-	margin-left:0.5em;
-}
-.single .access ul li.fls-back-link{
-	float:left;
-	margin:0;
 }
 .access ul li{
 	list-style:none;
@@ -300,13 +279,13 @@ h1.fls-logo{
 	font-weight:normal;
 	text-transform:uppercase;
 }
-.fls-theme .fls-back-link{
+.fls-theme .fls-back-link a{
 	background-image:url("images/icon-back.png");
 	background-position:0.35em center;
 	background-repeat:no-repeat;
 	color:#09C;
 }
-.fls-theme .fls-back-link:hover{
+.fls-theme .fls-back-link a:hover{
 	background-image:url("images/icon-back-green.png");
 	color:#CC0;
 }
@@ -314,9 +293,7 @@ h1.fls-logo{
 /* Main content (.main) styles
 --------------------------------------------------------------------------- */
 .main{
-	max-width:15em;
 	margin:0 auto;
-	max-width:15em;
 	padding:2em 4%;
 }
 .entry-title,
@@ -337,8 +314,8 @@ h1.entry-title{
 	font-size:2em;
 	margin-bottom:0.25em;
 }
-h2.entry-title{
-	font-size:1.1em;
+h2.entry-title,h1.archive-title{
+	font-size:1.25em;
 }
 .entry-meta{
 	font-family:Arial, sans-serif;
@@ -370,28 +347,45 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 /* Styles for the index page grid (Overriding FSS styles)
 ----------------------------------------- */
 .fl-grid{
-	height:auto;
+	width:auto;
 }
 .fl-grid li{
+	display:block;
 	float:none;
-}
-.fl-grid li .index-summary{
+	height:auto;
 	margin:0 auto;
 	max-width:15em;
-	overflow:visible;
+	width:15em;
+}
+.fl-grid li .index-summary{
+	margin-bottom:1.5em;
 }
 
 /* Single page styles for the base mobile theme
 ----------------------------------------- */
+.single .fls-logo{
+	display:none;
+}
+.single .access ul{
+	padding:0.5em 0;
+	padding-right:4%;
+	width:auto;
+}
+.single .access ul li.fls-loginout-link,
+.single .access ul li.fl-toggleButton{
+	float:right;
+	margin-left:0.5em;
+}
+.single .access ul li.fls-back-link{
+	float:left;
+	margin:0;
+}
 .single .main{
 	max-width:60em;
 }
 .single .entry-content{
 	font-size:1.2em;
 	line-height:1.4;
-}
-.single .main{
-	margin-top:1em;
 }
 .single .entry-content{
 	padding-top:1em;
@@ -433,8 +427,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-bw * { background-color: transparent !important; }
 .fl-theme-uio-bw  .banner { background-image: none; }
 .fl-theme-uio-bw  .fls-loginout-link a{background-image: url("images/icon-login.png"); background-repeat:no-repeat; background-position:0.45em center;}
-.fl-theme-uio-bw  .fls-back-link a{ background-image: url("images/icon-back-white.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
-.fl-theme-uio-bw  .fl-toggleButton { background-image: url("images/icon-uio.png");}
+.fl-theme-uio-bw  .fls-back-link a{ color:transparent; background-image: url("images/icon-back-white.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
+.fl-theme-uio-bw  #uioProxyButton { background-image: url("images/icon-uio.png"); background-position: center center;}
+.fl-theme-uio-bw  .fl-toggleButton { background-image: url("images/icon-uio.png"); background-position: 0.4375em center;}
 .fl-theme-uio-bw .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
 
 /* uiOptions white on black theme specific styles
@@ -445,7 +440,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-wb  .banner { background-image: none; }
 .fl-theme-uio-wb  .fls-loginout-link a{ background-image: url("images/icon-login-black.png"); background-repeat:no-repeat; background-position:0.45em center;}
 .fl-theme-uio-wb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
-.fl-theme-uio-wb  .fl-toggleButton { background-image: url("images/icon-uio-black.png");}
+.fl-theme-uio-wb  .fl-toggleButton { background-image: url("images/icon-uio-black.png"); background-position: 0.4375em center;}
 .fl-theme-uio-wb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-white.png");}
 
 /* uiOptions black on yellow theme specific styles
@@ -456,7 +451,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-by  .banner { background-image: none; }
 .fl-theme-uio-by  .fls-loginout-link a{ background-image: url("images/icon-login-yellow.png"); background-repeat:no-repeat; background-position:0.45em center;}
 ..fl-theme-uio-by  .fls-back-link a{ background-image: url("images/icon-back-yellow.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
-.fl-theme-uio-by  .fl-toggleButton { background-image: url("images/icon-uio-yellow.png");}
+.fl-theme-uio-by  .fl-toggleButton { background-image: url("images/icon-uio-yellow.png"); background-position: 0.4375em center;}
 .fl-theme-uio-by .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
 
 /* uiOptions yellow on black theme specific styles
@@ -467,17 +462,17 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-yb  .banner { background-image: none; }
 .fl-theme-uio-yb  .fls-loginout-link a{ background-image: url("images/icon-login-black.png"); background-repeat:no-repeat; background-position:0.45em center;}
 .fl-theme-uio-yb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
-.fl-theme-uio-yb  .fl-toggleButton { background-image: url("images/icon-uio-black.png");}
+.fl-theme-uio-yb  .fl-toggleButton { background-image: url("images/icon-uio-black.png"); background-position: 0.4375em center;}
 .fl-theme-uio-yb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-yellow.png");}
 
 /* Responsive media queries
 --------------------------------------------------------------------------- */
 @media screen and (min-width:480px){
-	body.home{
+	body,body.home{
 		max-width:70.625em; /* 1130 / 16 */
 		position:relative;
 	}
-	.home .banner{
+	.home .banner,.archive .banner{
 		border-bottom:0 !important;
 		border-right:2px solid #fff;
 		margin:0;
@@ -489,27 +484,133 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		padding-right:0;
 		width:35%; /* 168 / 480 */
 	}
-	.home .masthead{
-		padding:0 14.193548%; /* padding-right/left 32 / 310 = .10322580645161290322 */
+	.home .masthead,.archive .masthead{
+		padding:0 20%; /* padding-right/left 34 / 170 */
 		float:right;
 	}
-	.fls-logo {
+	.home .fls-logo,.archive .fls-logo{
 		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
-		width:99px;
 	}
-	.access ul{
+	.home .access ul,.archive .access ul{
 		margin:0 auto;
 		width:3.75em;
 	}
-	.home .main{
-		margin:0;
-		padding:1em 0 0 39.583333%; /* 190 / 480 */
+	.home .main,.archive .main{
+		padding:1.625em 0 0 41.666667%; /* margin-top: 26 / 16, margin-left: 200 / 480 */
 	}
 	.fl-grid li{
-		padding:0 4.166667% 1em; /* left and right padding 40px / 960px */
+		margin:0;
 	}
-	.home .contentinfo{
-		padding-left:39.583333%; /* 190px / 480px */
+	.home .contentinfo,.archive .contentinfo{
+		padding-left:41.666667%; /* 190 / 480 */
 		text-align:left;
+	}
+}
+
+@media screen and (min-width:620px){
+	.flc-slidingPanel-toggleButton.fl-toggleButton{
+		background-repeat:no-repeat;
+		border:0 none;
+		border-radius:0 0 5px 5px;
+		color:#fff;
+		cursor:pointer;
+		display:block;
+		float:right;
+		font-family:Arial,sans-serif;
+		font-weight:normal;
+		line-height:150%;
+		margin-right:8.4%;
+		padding:0 0.5em 0.3125em 1.5625em;
+		position:relative;
+		text-transform:lowercase;
+		width:auto;
+		z-index:999999;
+	}
+	.fls-theme .fl-uiOptions-fatPanel .fl-toggleButton{
+		background-color:#09c;
+		background-image:url("images/icon-uio.png");
+		background-position: 0.4375em center;
+		background-repeat:no-repeat;
+	}
+	.banner,.home .banner,.archive .banner{
+		border-bottom:0 !important;
+		border-right:2px solid #fff;
+		margin:0;
+		min-height:100%;
+		padding:0;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		width:23%
+	}
+	.masthead,.single .masthead{
+		padding:0 20%; /* padding-right/left 34 / 170 */
+		float:right;
+	}
+	.fls-logo,.single .fls-logo{
+		display:block;
+		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
+	}
+	.access ul,.home .access ul,.single .access ul,.archive .access ul{
+		margin:0 auto;
+		padding:0;
+		width:4.85em;
+	}
+	.fls-loginout-link{
+		border-radius:5px;
+		font-family:Arial,sans-serif;
+		font-weight:bold;
+		line-height:150%;
+		padding:0.2em 0 0.2em 0;
+		position:relative;
+		margin:0 auto;
+		text-transform:lowercase;
+		width:auto;
+	}
+	.fls-theme .fls-loginout-link {
+		background-image:url("images/icon-login.png");
+		background-repeat:no-repeat;
+		background-position:0.6em center;
+		background-color:#0099cc;
+	}
+	.access ul li.fls-loginout-link,.single .access ul li.fls-loginout-link{
+		float:none;
+		margin-left:0;
+		padding:none;
+	}
+	.fls-back-link{
+		border-radius:5px 0 0 5px;
+		position:absolute;
+		top:22.8125em; /* 365 /16 */
+		right:0;
+	}
+	.fls-back-link a span{
+		display:none;
+	}
+	#uioProxyButton{
+		display:none;
+	}
+	.main,.home .main,.single .main,.archive .main{
+		padding-left:27.5%; /* 220 / 800 */
+	}
+	.archive .main{
+		padding-top:2.4375em;
+	}
+	.single .main{
+		padding-right:10% !important;
+	}
+	.fl-grid li{
+		display:inline-block;
+		padding:0 1.50000000%; /* left and right padding 12 / 800 */
+		vertical-align:top;
+		width: 42.253521%; /* 240 / 568 */
+	}
+	.contentinfo,.home .contentinfo,.archive .contentinfo{
+		padding-left:27.5%; /* 220 / 800 */
+		text-align:left;
+	}
+	.home .contentinfo,.archive .contentinfo{
+		padding-left:28.55%;
 	}
 }

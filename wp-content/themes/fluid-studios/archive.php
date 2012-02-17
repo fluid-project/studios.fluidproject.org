@@ -15,7 +15,7 @@
 				?>
 
 				<?php } elseif(is_tag()) { ?>
-				<h1 class="archive-title">Posts Tagged &quot;<?php single_tag_title(); ?>&quot;</h1>
+				<h1 class="archive-title">Entries tagged &quot;<?php single_tag_title(); ?>&quot;</h1>
 
 				<?php } elseif (is_day()) { ?>
 				<h1 class="archive-title">Archive for <?php the_time('F jS, Y'); ?></h1>
