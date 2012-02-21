@@ -532,7 +532,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		background-position: 0.4375em center;
 		background-repeat:no-repeat;
 	}
-	.banner,.home .banner,.archive .banner{
+	.banner,.home .banner,.single .banner,.archive .banner{
 		border-bottom:0 !important;
 		border-right:2px solid #fff;
 		margin:0;
@@ -542,11 +542,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		top:0;
 		bottom:0;
 		left:0;
-		width:23%
-	}
-	.masthead,.single .masthead{
-		padding:0 20%; /* padding-right/left 34 / 170 */
-		float:right;
+		width:23.5% /* a greater width allows for more room left on the masthead as the veiwport narrows */
 	}
 	.fls-logo,.single .fls-logo{
 		display:block;
@@ -617,13 +613,26 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 @media screen and (min-width:800px){
 	.flc-slidingPanel-toggleButton.fl-toggleButton{
-		margin-right:4.4%;
+		margin-right:2%;
+	}
+	.banner,.home .banner,.single .banner,.archive .banner{
+		width:27.256637%; /* 308 / 1130 */
+	}
+	.home .masthead,.single .masthead{
+		padding:0 11.038961%; /* padding-right/left 34 / 308 */
 	}
 	.main,.home .main,.single .main,.archive .main{
 		padding-right:0;
+		padding-left:29.675153%; /* 338 / 1139 */
 	}
 	.fl-grid li{
 		padding:0 1.2%;
 		width:30.5%;
+	}
+	.home .contentinfo,.archive .contentinfo{
+		padding-left:30.553116%; /* 348 / 1139 */
+	}
+	.single .contentinfo{
+		padding-left:29.675153%; /* 338 / 1139 */
 	}
 }

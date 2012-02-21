@@ -112,7 +112,7 @@
 					</ul>
 					<script>
 						$("#uioProxyButton").click(function () {
-						uio.slidingPanel.operateShow();
+						uio.slidingPanel.togglePanel();
 						});
 					</script>
 				</nav><!-- /.access -->
