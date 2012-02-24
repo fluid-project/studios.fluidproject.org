@@ -227,7 +227,6 @@ h1.fls-logo{
 	height:1.5625em; /* 25px / 16px */
 	margin-bottom:-0.75em;
 	overflow:hidden;
-	padding-top:-0.75em;
 	width:1.5625em; /* 25px / 16px */
 }
 .fls-theme .fls-loginout-link{
@@ -240,11 +239,12 @@ h1.fls-logo{
 	background-color:#cc0;
 }
 .fls-loginout-link a{
-	border-radius:5px;
-	padding:0.65em 0.35em 0.65em 1.65em;
+	color:transparent !important;
 }
 .fls-theme .fls-loginout-link a{
 	color:#fff;
+	height:1.5625em;
+	width:1.5625em;
 }
 .fls-back-link{
 	background:#fff;
@@ -304,11 +304,6 @@ h1.fls-logo{
 .fls-theme .entry-title,
 .fls-theme .archive-title{
 	color:#CCCC00;
-}
-[id="404"]{
-	width:50%;
-	margin-top:10%;
-	font-size:120%;
 }
 h1.entry-title{
 	font-size:2em;
@@ -383,7 +378,12 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .single .main{
 	max-width:60em;
 }
-.single .entry-content{
+.single img{
+	display:block;
+	margin:0 auto;
+}
+.single .entry-content,
+.error404 .entry-content{
 	font-size:1.2em;
 	line-height:1.4;
 }
@@ -424,45 +424,46 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 ----------------------------------------- */
 .fl-theme-uio-bw  .fls-loginout-link, .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {background-color: #000000 !important;}
 .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {color: #FFFFFF !important;}
-.fl-theme-uio-bw * { background-color: transparent !important; }
+.fl-theme-uio-bw .fls-back-link a span{background-color: transparent !important; color:#fff !important;}
 .fl-theme-uio-bw  .banner { background-image: none; }
-.fl-theme-uio-bw  .fls-loginout-link a{background-image: url("images/icon-login.png"); background-repeat:no-repeat; background-position:0.45em center;}
-.fl-theme-uio-bw  .fls-back-link a{ color:transparent; background-image: url("images/icon-back-white.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
+.fl-theme-uio-bw  .fls-loginout-link a{background-image: url("images/icon-login.png"); background-repeat:no-repeat; background-position:0.425em 0.435em;color:transparent !important;}
+.fl-theme-uio-bw  .fls-back-link a{background-image: url("images/icon-back-white.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
 .fl-theme-uio-bw  #uioProxyButton { background-image: url("images/icon-uio.png"); background-position: center center;}
-.fl-theme-uio-bw  .fl-toggleButton { background-image: url("images/icon-uio.png"); background-position: 0.4375em center;}
+.fl-theme-uio-bw  .fl-toggleButton { background-image: url("images/icon-uio.png"); background-position: center center;}
 .fl-theme-uio-bw .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
 
 /* uiOptions white on black theme specific styles
 ----------------------------------------- */
 .fl-theme-uio-wb  .fls-loginout-link, .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { background-color: #FFFFFF !important;}
-.fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { color: #000000 !important;}
-.fl-theme-uio-wb * { background-color: transparent !important; }
+.fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { color: #000 !important;}
 .fl-theme-uio-wb  .banner { background-image: none; }
-.fl-theme-uio-wb  .fls-loginout-link a{ background-image: url("images/icon-login-black.png"); background-repeat:no-repeat; background-position:0.45em center;}
+.fl-theme-uio-wb .fls-back-link a span{background-color: transparent !important; color:#000 !important;}
+.fl-theme-uio-wb  .fls-loginout-link a{background-image: url("images/icon-login-black.png"); background-repeat:no-repeat; background-position:0.425em 0.435em;color:transparent !important;}
 .fl-theme-uio-wb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
-.fl-theme-uio-wb  .fl-toggleButton { background-image: url("images/icon-uio-black.png"); background-position: 0.4375em center;}
+.fl-theme-uio-wb  .fls-back-link a span{ background:transparent; color:#fff}
+.fl-theme-uio-wb  .fl-toggleButton { background-image: url("images/icon-uio-black.png"); background-position: center center;}
 .fl-theme-uio-wb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-white.png");}
 
 /* uiOptions black on yellow theme specific styles
 ----------------------------------------- */
 .fl-theme-uio-by  .fls-loginout-link, .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { background-color: #000000 !important;}
 .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { color: #FFFF00 !important;}
-.fl-theme-uio-by * { background-color: transparent !important; }
 .fl-theme-uio-by  .banner { background-image: none; }
-.fl-theme-uio-by  .fls-loginout-link a{ background-image: url("images/icon-login-yellow.png"); background-repeat:no-repeat; background-position:0.45em center;}
+.fl-theme-uio-by .fls-back-link a span{background-color: transparent !important; color:#ff0 !important;}
+.fl-theme-uio-by  .fls-loginout-link a{background-image: url("images/icon-login-yellow.png"); background-repeat:no-repeat; background-position:0.425em 0.435em;color:transparent !important;}
 ..fl-theme-uio-by  .fls-back-link a{ background-image: url("images/icon-back-yellow.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
-.fl-theme-uio-by  .fl-toggleButton { background-image: url("images/icon-uio-yellow.png"); background-position: 0.4375em center;}
+.fl-theme-uio-by  .fl-toggleButton { background-image: url("images/icon-uio-yellow.png"); background-position: center center;}
 .fl-theme-uio-by .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
 
 /* uiOptions yellow on black theme specific styles
 ----------------------------------------- */
 .fl-theme-uio-yb  .fls-loginout-link, .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { background-color: #FFFF00 !important;}
 .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { color: #000000 !important;}
-.fl-theme-uio-yb * { background-color: transparent !important; }
 .fl-theme-uio-yb  .banner { background-image: none; }
-.fl-theme-uio-yb  .fls-loginout-link a{ background-image: url("images/icon-login-black.png"); background-repeat:no-repeat; background-position:0.45em center;}
+.fl-theme-uio-yb .fls-back-link a span{background-color: transparent !important; color:#000 !important;}
+.fl-theme-uio-yb  .fls-loginout-link a{background-image: url("images/icon-login-black.png"); background-repeat:no-repeat; background-position:0.425em 0.435em;color:transparent !important;}
 .fl-theme-uio-yb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
-.fl-theme-uio-yb  .fl-toggleButton { background-image: url("images/icon-uio-black.png"); background-position: 0.4375em center;}
+.fl-theme-uio-yb  .fl-toggleButton { background-image: url("images/icon-uio-black.png"); background-position: center center;}
 .fl-theme-uio-yb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-yellow.png");}
 
 /* Responsive media queries
@@ -544,6 +545,13 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		left:0;
 		width:23.5% /* a greater width allows for more room left on the masthead as the veiwport narrows */
 	}
+	.home .masthead,.single .masthead{
+		padding:0 11.038961%; /* padding-right/left 34 / 308 */
+	}
+	.single .masthead,.archive .masthead,.error404 .masthead{
+		padding:0 11.038961%; /* padding-right/left 34 / 308 */
+		float:right;
+	}
 	.fls-logo,.single .fls-logo{
 		display:block;
 		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
@@ -563,6 +571,10 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		margin:0 auto;
 		text-transform:lowercase;
 		width:auto;
+	}
+	.fls-loginout-link a{
+		color:#fff !important;
+		padding-left:1.65em;
 	}
 	.fls-theme .fls-loginout-link {
 		background-image:url("images/icon-login.png");
@@ -587,13 +599,26 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	#uioProxyButton{
 		display:none;
 	}
+
+	/* uiOptions styles for a viewport 620 pixels and wider
+	----------------------------------------- */
+	.fl-theme-uio-bw  .fl-toggleButton { background-position: 0.4375em center;}
+	.fl-theme-uio-wb  .fl-toggleButton { background-position: 0.4375em center;}
+	.fl-theme-uio-by  .fl-toggleButton { background-position: 0.4375em center;}
+	.fl-theme-uio-yb  .fl-toggleButton { background-position: 0.4375em center;}
+
+	.fl-theme-uio-bw  .fls-loginout-link a{ background-position:0.6em center;color:#fff !important;}
+	.fl-theme-uio-wb  .fls-loginout-link a{ background-position:0.6em center;color:#000 !important;}
+	.fl-theme-uio-by  .fls-loginout-link a{ background-position:0.6em center;color:#ff0 !important;}
+	.fl-theme-uio-yb  .fls-loginout-link a{ background-position:0.6em center;color:#000 !important;}
+
 	.main,.home .main,.single .main,.archive .main{
 		padding-left:27.5%; /* 220 / 800 */
 	}
 	.archive .main{
 		padding-top:2.4375em;
 	}
-	.single .main{
+	.single .main,.error404 .main{
 		padding-right:10% !important;
 	}
 	.fl-grid li{
@@ -618,10 +643,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	.banner,.home .banner,.single .banner,.archive .banner{
 		width:27.256637%; /* 308 / 1130 */
 	}
-	.home .masthead,.single .masthead{
-		padding:0 11.038961%; /* padding-right/left 34 / 308 */
-	}
-	.main,.home .main,.single .main,.archive .main{
+	.main,.home .main,.single .main,.archive .main,.error404 .main{
 		padding-right:0;
 		padding-left:29.675153%; /* 338 / 1139 */
 	}
@@ -629,10 +651,13 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		padding:0 1.2%;
 		width:30.5%;
 	}
+	.single .main{
+		padding-right:2% !important;
+	}
 	.home .contentinfo,.archive .contentinfo{
 		padding-left:30.553116%; /* 348 / 1139 */
 	}
-	.single .contentinfo{
+	.single .contentinfo,.error404 .contentinfo{
 		padding-left:29.675153%; /* 338 / 1139 */
 	}
 }
