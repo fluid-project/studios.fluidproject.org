@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<section id="nav:content" class="main fl-clearfix fl-col-main" role="main">
+	<section id="nav:content" class="fls-main fl-clearfix fl-col-main" role="main">
 		<!-- This is where the Table of Contents will be displayed -->
 		<div class="flc-toc-tocContainer toc"></div><!-- /.flc-tocContainer -->
 
@@ -11,7 +11,7 @@
 				</section><!-- /.entry-content -->
 			</article><!-- /#404 -->
 
-		</section><!-- /#nav:content -->
+		</section><!-- /.fls-main -->
 
 <?php get_footer(); ?>
 		

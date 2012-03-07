@@ -95,19 +95,19 @@
 		});
 	</script>
 
-	<div class="wrapper">
-		<header class="banner" role="banner">
-			<div class="masthead fl-centered fl-clearfix">
+	<div class="fls-wrapper">
+		<header class="fls-banner" role="banner">
+			<div class="fls-masthead fl-centered fl-clearfix">
 				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
 
 				<<?php echo $heading_tag; ?> class="fls-logo">
 					<a href="/" title="Fluid Studios Home" class="fl-hidden-replace" rel="home">Fluid Studios</a>
 				</<?php echo $heading_tag; ?>>
-				<nav class="access">
+				<nav class="fls-access">
 					<ul class="fl-clearfix">
-						<li id="uioProxyButton" class="fl-toggleButton"><a href="#"></a></li>
+						<li id="uioProxyButton" class="fl-toggleButton"><a href="#">Show display preferences</a></li>
 						<li class="fls-loginout-link"><a href="/wp-login.php">Log in</a></li>
-						<?php if(is_single()) echo('<li class="fls-back-link"><a href="javascript: void();" onclick="javascript: window.history.back();" title="Go Back">Back<span> to <span>fluid</span><span>STUDIOS</span></span></a></li>'); ?>
+						<?php if(is_single()) echo('<li class="fls-back-link"><a href="/" title="Go Back">Back<span> to <span>fluid</span><span>STUDIOS</span></span></a></li>'); ?>
 
 					</ul>
 					<script>
@@ -115,6 +115,6 @@
 						uio.slidingPanel.togglePanel();
 						});
 					</script>
-				</nav><!-- /.access -->
-			</div><!-- /.masthead -->
-		</header><!-- /.banner -->
+				</nav><!-- /.fls-access -->
+			</div><!-- /.fls-masthead -->
+		</header><!-- /.fls-banner -->

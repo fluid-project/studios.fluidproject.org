@@ -1,14 +1,14 @@
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('index-summary fl-fix'); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('fls-index-summary fl-fix'); ?>>
 						<header>
-							<div class="fs-post-thumbnail">
+							<div class="fls-post-thumbnail">
 								<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'fluid-studios' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php 
 								if ( has_post_thumbnail() ) {
 									// the current post has a thumbnail
 									the_post_thumbnail();
 								} else {
 									// the current post lacks a thumbnail, display the default picture
-									echo '<img alt="Featured image is missing" src="' . get_stylesheet_directory_uri() .'/images/placeholder.jpg" width="' . THUMBNAIL_WIDTH . '" />';
+									echo '<img alt="Featured image is missing" src="' . get_stylesheet_directory_uri() .'/images/placeholder.jpg" />';
 								}
 								?></a>
 							</div>

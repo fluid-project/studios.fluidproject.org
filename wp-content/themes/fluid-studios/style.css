@@ -1,7 +1,7 @@
 /*
 Theme Name:Fluid-Studios
 Theme URI:http://studios.fluidproject.org/wp-content/themes/fluid-studios/
-Description:Usability and accessibility on the open web...
+Description:Usability and fls-accessibility on the open web...
 Author:The Fluid Project
 Author URI:http://fluidproject.org
 Version:2
@@ -14,14 +14,14 @@ Additional Resets:HTML5
 Additional "restart" styles
 	Flexible width media
 Fluid Studios theme specific styles
-	uiOptions fat panel specific styles
-	Header (.banner) specific styles
-		Navigation (.access) specific styles
-	Main content (.main) styles
+	Basic uiOptions fat panel styles
+	Header (.fls-banner) specific styles
+		Navigation (.fls-access) specific styles
+	Main content (.fls-main) styles
 		Styles for the index page grid (Overriding FSS styles)
 		Single page styles for the base mobile theme
 		Wordpress alignment styles
-	Footer (.contentinfo) specific styles
+	Footer (.fls-contentinfo) specific styles
 	uiOptions colour, contrast, font theme specific styles
 		uiOptions black on white theme specific styles
 		uiOptions white on black theme specific styles
@@ -78,7 +78,7 @@ small{
 	font-size:0.75em;
 }
 img{
-	border:none;
+	color:#09c;
 	font-style:italic;
 }
 input,
@@ -105,7 +105,7 @@ img,embed,object,video{
 
 /* Fluid-Studios theme specific styles
 --------------------------------------------------------------------------- */
-html,body,.wrapper{
+html,body,.fls-wrapper{
 	height:100%;
 }
 html{
@@ -121,34 +121,38 @@ body{
 	font-weight: 300;
 	position:relative;
 }
-body>.wrapper{
+body>.fls-wrapper{
 	background-color:#fff;
 	height:auto;
 	min-height:100%;
 	position:relative;
 }
-.wrapper{
+.fls-wrapper{
 	background-color:#fff;
 }
-.home,.archive{
-	color: #666666;
-}
 .fls-theme a{
-	text-decoration:none;
 	color:#09C;
 }
 .fls-theme a:hover{
 	color:#CC0;
 }
+.fls-theme a:active{
+	outline:none 0;
+}
+.fls-theme a:focus{
+	color:#CC0;
+	outline:2px solid #cc0;
+}
 h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	margin-bottom:1em;
 }
 
-/* uiOptions fat panel specific styles
+/* Basic uiOptions fat panel styles
 --------------------------------------------------------------------------- */
 .no-js #myUIOptions,
 .no-js .fl-uiOptions-fatPanel .fl-panelBar,
-.flc-slidingPanel-toggleButton.fl-toggleButton{
+.flc-slidingPanel-toggleButton.fl-toggleButton,
+.no-js #uioProxyButton{
 	display:none;
 }
 .fl-uiOptions-fatPanel .fl-panelBar{
@@ -156,37 +160,14 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	position:relative;
 	z-index:999999;
 }
-.fl-toggleButton{
-	border-radius:5px;
-	color:transparent;
-	cursor:pointer;
-	float:right;
-	height:1.5625em; /* 25 / 16 */
-	margin-bottom:-0.75em;
-	overflow:hidden;
-	width:1.5625em; /* 25 / 16p */
-}
-.fl-toggleButton{
-	background-color:#09c;
-	background-image:url("images/icon-uio.png");
-	background-position:center center;
-	background-repeat:no-repeat;
-}
-.fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover,
-.fl-toggleButton:hover{
-	background-color: #cc0;
-}
-.fs-uiOptions-panel {
-	border:2px solid #09c;	
-}
 
-/* Header (.banner) specific styles
+/* Header (.fls-banner) specific styles
 --------------------------------------------------------------------------- */
-.banner{
-	border-bottom:2px solid #fff;
+.fls-banner{
+	border-bottom:1px solid #fff;
 	background-image: url("images/bg.jpg");
 }
-.masthead{
+.fls-masthead{
 	margin:0 auto;
 	padding:0;
 }
@@ -208,63 +189,64 @@ h1.fls-logo{
 .fls-theme .fls-logo a {
 	background-image:url("images/logo-fluidSTUDIOS.png");
 }
-.fls-theme .fls-logo a:hover {
+.fls-theme .fls-logo a:hover,
+.fls-theme .fls-logo a:focus{
 	background-image:url("images/logo-fluidSTUDIOS-green.png");
 }
 
-/* Navigation (.access) specific styles
+/* Navigation (.fls-access) specific styles
 ----------------------------------------- */
-.access ul{
+.fls-access ul{
 	margin:0 auto;
 	width:3.75em;
 }
-.access ul li{
+.fls-access ul li{
 	list-style:none;
 }
-.fls-loginout-link{
-	border-radius:5px;
-	float:left;
-	height:1.5625em; /* 25px / 16px */
-	margin-bottom:-0.75em;
-	overflow:hidden;
-	width:1.5625em; /* 25px / 16px */
-}
-.fls-theme .fls-loginout-link{
+.fls-loginout-link a,
+.fl-toggleButton a{
 	background-color:#09c;
 	background-image:url("images/icon-login.png");
 	background-position:center center;
 	background-repeat:no-repeat;
-}
-.fls-theme .fls-loginout-link:hover{
-	background-color:#cc0;
-}
-.fls-loginout-link a{
-	color:transparent !important;
-}
-.fls-theme .fls-loginout-link a{
-	color:#fff;
-	height:1.5625em;
-	width:1.5625em;
-}
-.fls-back-link{
-	background:#fff;
-	border-radius:0 5px 5px 0;
+	border-radius:5px;
+	color:transparent;
 	float:left;
-	font-family:Arial,sans-serif;
-	font-weight:bold;
-	padding: 0.2em 0;
-	position:relative;
-	text-transform:uppercase;
+	height:1.5625em; /* 25 / 16 */
+	margin-bottom:-0.75em;
+	overflow:hidden;
+	width:1.5625em; /* 25 / 16 */
 }
-.fls-theme .fls-back-link{
+.fl-toggleButton a{
+	background-image:url("images/icon-uio.png");
+	float:right;
+}
+.fls-theme .fls-loginout-link a:hover,
+.fls-theme .fls-loginout-link a:focus,
+.fls-theme .fl-toggleButton a:hover,
+.fls-theme .fl-toggleButton a:focus{
+	background-color: #cc0;
+	color:transparent;
+	outline:0;
+}
+.fls-back-link a{
+	background:#fff;
 	background-image:url("images/icon-back.png");
 	background-position:0.35em center;
 	background-repeat:no-repeat;
 	color:#09C;
-}
-.fls-back-link a{
+	border-radius:0 5px 5px 0;
 	float:left;
-	padding:0 0.75em 0 1.25em;
+	font-family:Arial,sans-serif;
+	font-weight:bold;
+	padding:0.2em 0.5em 0.2em 1.25em;
+	position:relative;
+	text-transform:uppercase;
+}
+.fls-theme .fls-back-link a:hover,
+.fls-theme .fls-back-link a:focus{
+	background-image:url("images/icon-back-green.png");
+	color:#CC0;
 }
 .fls-back-link a span{
 	font-style:italic;
@@ -279,22 +261,15 @@ h1.fls-logo{
 	font-weight:normal;
 	text-transform:uppercase;
 }
-.fls-theme .fls-back-link a{
-	background-image:url("images/icon-back.png");
-	background-position:0.35em center;
-	background-repeat:no-repeat;
-	color:#09C;
-}
-.fls-theme .fls-back-link a:hover{
-	background-image:url("images/icon-back-green.png");
-	color:#CC0;
-}
 
-/* Main content (.main) styles
+/* Main content (.fls-main) styles
 --------------------------------------------------------------------------- */
-.main{
+.fls-main{
 	margin:0 auto;
 	padding:2em 4%;
+}
+.home,.archive{
+	color: #666666;
 }
 .entry-title,
 .archive-title{
@@ -311,6 +286,12 @@ h1.entry-title{
 }
 h2.entry-title,h1.archive-title{
 	font-size:1.25em;
+}
+.fls-post-thumbnail a:focus{
+	outline:none 0;
+}
+.fls-post-thumbnail a:focus img{
+	outline:2px solid #cc0;
 }
 .entry-meta{
 	font-family:Arial, sans-serif;
@@ -341,19 +322,18 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 /* Styles for the index page grid (Overriding FSS styles)
 ----------------------------------------- */
-.fl-grid{
-	width:auto;
-}
 .fl-grid li{
-	display:block;
 	float:none;
 	height:auto;
 	margin:0 auto;
-	max-width:15em;
-	width:15em;
 }
-.fl-grid li .index-summary{
-	margin-bottom:1.5em;
+.fl-grid li .fls-index-summary{
+	margin:0 auto;
+	max-width:15em;
+	padding:0 0.5em 1.25em;
+}
+.fl-grid li img{
+	display:inline;
 }
 
 /* Single page styles for the base mobile theme
@@ -361,22 +341,23 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .single .fls-logo{
 	display:none;
 }
-.single .access ul{
+.single .fls-access ul{
 	padding:0.5em 0;
 	padding-right:4%;
 	width:auto;
 }
-.single .access ul li.fls-loginout-link,
-.single .access ul li.fl-toggleButton{
+.single .fls-access ul li.fls-loginout-link,
+.single .fls-access ul li.fl-toggleButton{
 	float:right;
 	margin-left:0.5em;
 }
-.single .access ul li.fls-back-link{
+.single .fls-access ul li.fls-back-link{
 	float:left;
 	margin:0;
 }
-.single .main{
+.single .fls-main{
 	max-width:60em;
+	padding-top:1em;
 }
 .single img{
 	display:block;
@@ -396,12 +377,10 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .alignright{
 	display:inline;
 	float:right;
-	margin-left:1.625em;
 }
 .alignleft{
 	display:inline;
 	float:left;
-	margin-right:1.625em;
 }
 .aligncenter{
 	clear:both;
@@ -409,11 +388,11 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	margin:0 auto;
 }
 
-/* Footer (.contentinfo) specific styles
+/* Footer (.fls-contentinfo) specific styles
 --------------------------------------------------------------------------- */
-.contentinfo{
+.fls-contentinfo{
 	background:#fff;
-	padding-bottom:2em;
+	padding:2em 0;
 	text-align:center;
 }
 
@@ -422,49 +401,82 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 /* uiOptions black on white theme specific styles
 ----------------------------------------- */
+.fl-theme-uio-bw  a:focus {outline:2px solid #000;}
 .fl-theme-uio-bw  .fls-loginout-link, .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {background-color: #000000 !important;}
 .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {color: #FFFFFF !important;}
-.fl-theme-uio-bw .fls-back-link a span{background-color: transparent !important; color:#fff !important;}
-.fl-theme-uio-bw  .banner { background-image: none; }
-.fl-theme-uio-bw  .fls-loginout-link a{background-image: url("images/icon-login.png"); background-repeat:no-repeat; background-position:0.425em 0.435em;color:transparent !important;}
-.fl-theme-uio-bw  .fls-back-link a{background-image: url("images/icon-back-white.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
-.fl-theme-uio-bw  #uioProxyButton { background-image: url("images/icon-uio.png"); background-position: center center;}
-.fl-theme-uio-bw  .fl-toggleButton { background-image: url("images/icon-uio.png"); background-position: center center;}
-.fl-theme-uio-bw .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
+.fl-theme-uio-bw  button.fl-toggleButton:focus{ background-color:#fff !important; background-image:url("images/icon-uio-black.png"); color:#000 !important; outline:2px solid #000;}
+.fl-theme-uio-bw  .fls-banner { background-image: none; }
+.fl-theme-uio-bw  .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
+.fl-theme-uio-bw  .fls-loginout-link a{ background-image: url("images/icon-login.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-bw  .fls-loginout-link a:focus{ background-color:#fff !important; background-image:url("images/icon-login-black.png"); color:transparent !important; outline:2px solid #000; }
+.fl-theme-uio-bw  .fls-back-link a{ background-image: url("images/icon-back-white.png"); border-radius:0 !important; }
+.fl-theme-uio-bw  .fls-back-link a span{background-color: transparent !important; color:#fff !important;}
+.fl-theme-uio-bw  .fls-back-link a:focus{ background-color:#fff !important; background-image: url("images/icon-back-black.png"); color:#000 !important; }
+.fl-theme-uio-bw  .fls-back-link a:focus span{ color:#000 !important; }
+.fl-theme-uio-bw  .fl-toggleButton a{ background-color:#000 !important; background-image: url("images/icon-uio.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-bw  .fl-toggleButton a:focus{ background-color:#fff !important; background-image:url("images/icon-uio-black.png"); color:transparent; outline:2px solid #000;}
+.fl-theme-uio-bw  .fls-post-thumbnail a:focus {outline:none 0;}
+.fl-theme-uio-bw  .fls-post-thumbnail a:focus img{outline:2px solid #000;}
 
 /* uiOptions white on black theme specific styles
 ----------------------------------------- */
+.fl-theme-uio-wb  a:focus {outline:2px solid #fff;}
 .fl-theme-uio-wb  .fls-loginout-link, .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { background-color: #FFFFFF !important;}
 .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { color: #000 !important;}
-.fl-theme-uio-wb  .banner { background-image: none; }
-.fl-theme-uio-wb .fls-back-link a span{background-color: transparent !important; color:#000 !important;}
-.fl-theme-uio-wb  .fls-loginout-link a{background-image: url("images/icon-login-black.png"); background-repeat:no-repeat; background-position:0.425em 0.435em;color:transparent !important;}
-.fl-theme-uio-wb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
-.fl-theme-uio-wb  .fls-back-link a span{ background:transparent; color:#fff}
-.fl-theme-uio-wb  .fl-toggleButton { background-image: url("images/icon-uio-black.png"); background-position: center center;}
-.fl-theme-uio-wb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-white.png");}
+.fl-theme-uio-wb  button.fl-toggleButton{ background-image:url("images/icon-uio-black.png"); }
+.fl-theme-uio-wb  button.fl-toggleButton:focus{ background-color:#000 !important; background-image:url("images/icon-uio.png"); color:#fff !important; outline:2px solid #fff;}
+.fl-theme-uio-wb  .fls-banner { background-image: none; }
+.fl-theme-uio-wb  .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-white.png");}
+.fl-theme-uio-wb  .fls-loginout-link a{ background-image: url("images/icon-login-black.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-wb  .fls-loginout-link a:focus{ background-color:#000 !important; background-image:url("images/icon-login.png"); color:transparent !important; outline:2px solid #fff; }
+.fl-theme-uio-wb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); border-radius:0 !important; }
+.fl-theme-uio-wb  .fls-back-link a span{ background-color: transparent !important; color:#000 !important;}
+.fl-theme-uio-wb  .fls-back-link a:focus{ background-color:#000 !important; background-image: url("images/icon-back-white.png"); color:#fff !important; }
+.fl-theme-uio-wb  .fls-back-link a:focus span{ color:#fff !important; }
+.fl-theme-uio-wb  .fl-toggleButton a{ background-color:#fff !important; background-image: url("images/icon-uio-black.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-wb  .fl-toggleButton a:focus{ background-color:#000 !important; background-image:url("images/icon-uio.png"); color:transparent; outline:2px solid #fff;}
+.fl-theme-uio-wb  .fls-post-thumbnail a:focus {outline:none 0;}
+.fl-theme-uio-wb  .fls-post-thumbnail a:focus img{outline:2px solid #fff;}
 
 /* uiOptions black on yellow theme specific styles
 ----------------------------------------- */
+.fl-theme-uio-by  a:focus {outline:2px solid #000;}
 .fl-theme-uio-by  .fls-loginout-link, .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { background-color: #000000 !important;}
 .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { color: #FFFF00 !important;}
-.fl-theme-uio-by  .banner { background-image: none; }
-.fl-theme-uio-by .fls-back-link a span{background-color: transparent !important; color:#ff0 !important;}
-.fl-theme-uio-by  .fls-loginout-link a{background-image: url("images/icon-login-yellow.png"); background-repeat:no-repeat; background-position:0.425em 0.435em;color:transparent !important;}
-..fl-theme-uio-by  .fls-back-link a{ background-image: url("images/icon-back-yellow.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
-.fl-theme-uio-by  .fl-toggleButton { background-image: url("images/icon-uio-yellow.png"); background-position: center center;}
-.fl-theme-uio-by .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
+.fl-theme-uio-by  button.fl-toggleButton{ background-image:url("images/icon-uio-yellow.png"); }
+.fl-theme-uio-by  button.fl-toggleButton:focus{ background-color:#ff0 !important; background-image:url("images/icon-uio-black.png"); color:#000 !important; outline:2px solid #000;}
+.fl-theme-uio-by  .fls-banner { background-image: none; }
+.fl-theme-uio-by  .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
+.fl-theme-uio-by  .fls-loginout-link a{background-image: url("images/icon-login-yellow.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-by  .fls-loginout-link a:focus{ background-color:#ff0 !important; background-image:url("images/icon-login-black.png"); color:transparent !important; outline:2px solid #000; }
+.fl-theme-uio-by  .fls-back-link a{ background-image: url("images/icon-back-yellow.png"); border-radius:0 !important; }
+.fl-theme-uio-by  .fls-back-link a span{background-color: transparent !important; color:#ff0 !important;}
+.fl-theme-uio-by  .fls-back-link a:focus{ background-color:#ff0 !important; background-image: url("images/icon-back-black.png"); color:#000 !important; }
+.fl-theme-uio-by  .fls-back-link a:focus span{ color:#000 !important; }
+.fl-theme-uio-by  .fl-toggleButton a{ background-color:#000 !important; background-image: url("images/icon-uio-yellow.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-by  .fl-toggleButton a:focus{ background-color:#ff0 !important; background-image:url("images/icon-uio-black.png"); color:transparent; outline:2px solid #000;}
+.fl-theme-uio-by  .fls-post-thumbnail a:focus {outline:none 0;}
+.fl-theme-uio-by  .fls-post-thumbnail a:focus img{outline:2px solid #000;}
 
 /* uiOptions yellow on black theme specific styles
 ----------------------------------------- */
+.fl-theme-uio-yb  a:focus {outline:2px solid #ff0;}
 .fl-theme-uio-yb  .fls-loginout-link, .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { background-color: #FFFF00 !important;}
 .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { color: #000000 !important;}
-.fl-theme-uio-yb  .banner { background-image: none; }
-.fl-theme-uio-yb .fls-back-link a span{background-color: transparent !important; color:#000 !important;}
-.fl-theme-uio-yb  .fls-loginout-link a{background-image: url("images/icon-login-black.png"); background-repeat:no-repeat; background-position:0.425em 0.435em;color:transparent !important;}
-.fl-theme-uio-yb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); background-position: 0.4375em center; background-repeat: no-repeat;}
-.fl-theme-uio-yb  .fl-toggleButton { background-image: url("images/icon-uio-black.png"); background-position: center center;}
+.fl-theme-uio-yb  button.fl-toggleButton{ background-image:url("images/icon-uio-black.png"); }
+.fl-theme-uio-yb  button.fl-toggleButton:focus{ background-color:#000 !important; background-image:url("images/icon-uio-yellow.png"); color:#ff0 !important; outline:2px solid #ff0;}
+.fl-theme-uio-yb  .fls-banner { background-image: none; }
 .fl-theme-uio-yb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-yellow.png");}
+.fl-theme-uio-yb  .fls-loginout-link a{background-image: url("images/icon-login-black.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-yb  .fls-loginout-link a:focus{ background-color:#000 !important; background-image:url("images/icon-login-yellow.png"); color:transparent !important; outline:2px solid #ff0; }
+.fl-theme-uio-yb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); border-radius:0 !important; }
+.fl-theme-uio-yb  .fls-back-link a span{background-color: transparent !important; color:#000 !important;}
+.fl-theme-uio-yb  .fls-back-link a:focus{ background-color:#000 !important; background-image: url("images/icon-back-yellow.png"); color:#ff0 !important; }
+.fl-theme-uio-yb  .fls-back-link a:focus span{ color:#ff0 !important; }
+.fl-theme-uio-yb  .fl-toggleButton a{ background-color:#ff0 !important; background-image: url("images/icon-uio-black.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-yb  .fl-toggleButton a:focus{ background-color:#000 !important; background-image:url("images/icon-uio-yellow.png"); color:transparent; outline:2px solid #ff0;}
+.fl-theme-uio-yb  .fls-post-thumbnail a:focus {outline:none 0;}
+.fl-theme-uio-yb  .fls-post-thumbnail a:focus img{outline:2px solid #ff0;}
 
 /* Responsive media queries
 --------------------------------------------------------------------------- */
@@ -473,7 +485,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		max-width:70.625em; /* 1130 / 16 */
 		position:relative;
 	}
-	.home .banner,.archive .banner{
+	.home .fls-banner,.archive .fls-banner{
 		border-bottom:0 !important;
 		border-right:2px solid #fff;
 		margin:0;
@@ -485,24 +497,25 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		padding-right:0;
 		width:35%; /* 168 / 480 */
 	}
-	.home .masthead,.archive .masthead{
+	.home .fls-masthead,.archive .fls-masthead{
 		padding:0 20%; /* padding-right/left 34 / 170 */
 		float:right;
 	}
 	.home .fls-logo,.archive .fls-logo{
 		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
 	}
-	.home .access ul,.archive .access ul{
+	.home .fls-access ul,.archive .fls-access ul{
 		margin:0 auto;
 		width:3.75em;
 	}
-	.home .main,.archive .main{
-		padding:1.625em 0 0 41.666667%; /* margin-top: 26 / 16, margin-left: 200 / 480 */
+	.home .fls-main,.archive .fls-main{
+		padding:1.625em 0 0 40.666667%; /* margin-top: 26 / 16, margin-left: 200 / 480 */
 	}
-	.fl-grid li{
+	.fl-grid li .fls-index-summary{
 		margin:0;
+		padding:0 1.5% 1.25em;
 	}
-	.home .contentinfo,.archive .contentinfo{
+	.home .fls-contentinfo,.archive .fls-contentinfo{
 		padding-left:41.666667%; /* 190 / 480 */
 		text-align:left;
 	}
@@ -510,6 +523,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 @media screen and (min-width:620px){
 	.flc-slidingPanel-toggleButton.fl-toggleButton{
+		background-color:#09c;
+		background-image:url("images/icon-uio.png");
+		background-position: 0.4375em center;
 		background-repeat:no-repeat;
 		border:0 none;
 		border-radius:0 0 5px 5px;
@@ -520,20 +536,20 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		font-family:Arial,sans-serif;
 		font-weight:normal;
 		line-height:150%;
+		margin-top:0;
 		margin-right:8.4%;
-		padding:0 0.5em 0.3125em 1.5625em;
+		padding:0.15em 0.5em 0.15em 1.7em;
 		position:relative;
 		text-transform:lowercase;
 		width:auto;
 		z-index:999999;
 	}
-	.fls-theme .fl-uiOptions-fatPanel .fl-toggleButton{
-		background-color:#09c;
-		background-image:url("images/icon-uio.png");
-		background-position: 0.4375em center;
-		background-repeat:no-repeat;
+	.fls-theme button.fl-toggleButton:hover,
+	.fls-theme button.fl-toggleButton:focus{
+		background-color: #cc0;
+		outline:0 none;
 	}
-	.banner,.home .banner,.single .banner,.archive .banner{
+	.fls-banner,.home .fls-banner,.single .fls-banner,.archive .fls-banner{
 		border-bottom:0 !important;
 		border-right:2px solid #fff;
 		margin:0;
@@ -543,12 +559,12 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		top:0;
 		bottom:0;
 		left:0;
-		width:23.5% /* a greater width allows for more room left on the masthead as the veiwport narrows */
+		width:23.5% /* a greater width allows for more room left on the fls-masthead as the veiwport narrows */
 	}
-	.home .masthead,.single .masthead{
+	.home .fls-masthead,.single .fls-masthead{
 		padding:0 11.038961%; /* padding-right/left 34 / 308 */
 	}
-	.single .masthead,.archive .masthead,.error404 .masthead{
+	.single .fls-masthead,.archive .fls-masthead,.error404 .fls-masthead{
 		padding:0 11.038961%; /* padding-right/left 34 / 308 */
 		float:right;
 	}
@@ -556,38 +572,29 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		display:block;
 		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
 	}
-	.access ul,.home .access ul,.single .access ul,.archive .access ul{
+	.fls-access ul,.home .fls-access ul,.single .fls-access ul,.archive .fls-access ul{
 		margin:0 auto;
 		padding:0;
 		width:4.85em;
 	}
-	.fls-loginout-link{
-		border-radius:5px;
+	.fls-loginout-link a{
+		background-position:0.5em center;
+		color:#fff !important;
 		font-family:Arial,sans-serif;
 		font-weight:bold;
 		line-height:150%;
-		padding:0.2em 0 0.2em 0;
+		padding:0.2em 0.5em 0.2em 1.5em;
 		position:relative;
 		margin:0 auto;
 		text-transform:lowercase;
 		width:auto;
 	}
-	.fls-loginout-link a{
-		color:#fff !important;
-		padding-left:1.65em;
-	}
-	.fls-theme .fls-loginout-link {
-		background-image:url("images/icon-login.png");
-		background-repeat:no-repeat;
-		background-position:0.6em center;
-		background-color:#0099cc;
-	}
-	.access ul li.fls-loginout-link,.single .access ul li.fls-loginout-link{
+	.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link{
 		float:none;
 		margin-left:0;
 		padding:none;
 	}
-	.fls-back-link{
+	.fls-back-link a{
 		border-radius:5px 0 0 5px;
 		position:absolute;
 		top:22.8125em; /* 365 /16 */
@@ -600,25 +607,49 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		display:none;
 	}
 
-	/* uiOptions styles for a viewport 620 pixels and wider
-	----------------------------------------- */
-	.fl-theme-uio-bw  .fl-toggleButton { background-position: 0.4375em center;}
-	.fl-theme-uio-wb  .fl-toggleButton { background-position: 0.4375em center;}
-	.fl-theme-uio-by  .fl-toggleButton { background-position: 0.4375em center;}
-	.fl-theme-uio-yb  .fl-toggleButton { background-position: 0.4375em center;}
-
-	.fl-theme-uio-bw  .fls-loginout-link a{ background-position:0.6em center;color:#fff !important;}
-	.fl-theme-uio-wb  .fls-loginout-link a{ background-position:0.6em center;color:#000 !important;}
-	.fl-theme-uio-by  .fls-loginout-link a{ background-position:0.6em center;color:#ff0 !important;}
-	.fl-theme-uio-yb  .fls-loginout-link a{ background-position:0.6em center;color:#000 !important;}
-
-	.main,.home .main,.single .main,.archive .main{
-		padding-left:27.5%; /* 220 / 800 */
+	.fl-theme-uio-bw .fl-toggleButton,.fl-theme-uio-wb .fl-toggleButton,.fl-theme-uio-by .fl-toggleButton,.fl-theme-uio-yb .fl-toggleButton{
+		background-position: 0.4375em center; border-radius:0;
 	}
-	.archive .main{
+	.fl-theme-uio-bw  .fls-loginout-link a,.fl-theme-uio-wb  .fls-loginout-link a,.fl-theme-uio-by  .fls-loginout-link a,.fl-theme-uio-yb  .fls-loginout-link a{
+		background-position:0.6em center;
+	}
+
+	.fl-theme-uio-bw .fls-loginout-link a{
+		color:#fff !important;
+	}
+	.fl-theme-uio-bw .fls-loginout-link a:focus{
+		color:#000 !important;
+	}
+
+	.fl-theme-uio-wb .fls-loginout-link a{
+		color:#000 !important;
+	}
+	.fl-theme-uio-wb .fls-loginout-link a:focus{
+		color:#fff !important;
+	}
+
+	.fl-theme-uio-by .fls-loginout-link a{
+		color:#ff0 !important;
+	}
+	.fl-theme-uio-by .fls-loginout-link a:focus{
+		color:#000 !important;
+	}
+
+	.fl-theme-uio-yb .fls-loginout-link a{
+		color:#000 !important;
+	}
+	.fl-theme-uio-yb .fls-loginout-link a:focus{
+		color:#ff0 !important;
+	}
+	
+
+	.fls-main,.home .fls-main,.single .fls-main,.archive .fls-main{
+		padding-left:27.25%; /* eyeballed */
+	}
+	.archive .fls-main{
 		padding-top:2.4375em;
 	}
-	.single .main,.error404 .main{
+	.single .fls-main,.error404 .fls-main{
 		padding-right:10% !important;
 	}
 	.fl-grid li{
@@ -627,11 +658,11 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		vertical-align:top;
 		width: 42.253521%; /* 240 / 568 */
 	}
-	.contentinfo,.home .contentinfo,.archive .contentinfo{
+	.fls-contentinfo,.home .fls-contentinfo,.archive .fls-contentinfo{
 		padding-left:27.5%; /* 220 / 800 */
 		text-align:left;
 	}
-	.home .contentinfo,.archive .contentinfo{
+	.home .fls-contentinfo,.archive .fls-contentinfo{
 		padding-left:28.55%;
 	}
 }
@@ -640,10 +671,10 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	.flc-slidingPanel-toggleButton.fl-toggleButton{
 		margin-right:2%;
 	}
-	.banner,.home .banner,.single .banner,.archive .banner{
+	.fls-banner,.home .fls-banner,.single .fls-banner,.archive .fls-banner{
 		width:27.256637%; /* 308 / 1130 */
 	}
-	.main,.home .main,.single .main,.archive .main,.error404 .main{
+	.fls-main,.home .fls-main,.single .fls-main,.archive .fls-main,.error404 .fls-main{
 		padding-right:0;
 		padding-left:29.675153%; /* 338 / 1139 */
 	}
@@ -651,13 +682,13 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		padding:0 1.2%;
 		width:30.5%;
 	}
-	.single .main{
+	.single .fls-main{
 		padding-right:2% !important;
 	}
-	.home .contentinfo,.archive .contentinfo{
+	.home .fls-contentinfo,.archive .fls-contentinfo{
 		padding-left:30.553116%; /* 348 / 1139 */
 	}
-	.single .contentinfo,.error404 .contentinfo{
+	.single .fls-contentinfo,.error404 .fls-contentinfo{
 		padding-left:29.675153%; /* 338 / 1139 */
 	}
 }
