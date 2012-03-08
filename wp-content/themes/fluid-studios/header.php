@@ -80,6 +80,9 @@
 				theme: {
 					"default": "fls-theme"
 				}
+			},
+			listeners: {
+				modelChanged: fls_hide_background
 			}
 		});
 	
