@@ -108,8 +108,9 @@
 				<nav class="fls-access">
 					<ul class="fl-clearfix">
 						<li id="uioProxyButton" class="fl-toggleButton"><a href="#">Show display preferences</a></li>
-						<li class="fls-loginout-link"><a href="/wp-login.php">Log in</a></li>
-						<?php if(is_single()) echo('<li class="fls-back-link"><a href="/" title="Go Back">Back<span> to <span>fluid</span><span>STUDIOS</span></span></a></li>'); ?>
+						<li class="fls-loginout-link"><?php wp_loginout(); ?></li>
+						<?php if(is_single()) echo('<li class="fls-back-link"><!-- Note: The id "flsc-go-back-link" is used @ js/fluid-studios.js. Synchronizing both is the key to have "back" link work. -->
+						<a href="#" id="flsc-go-back-link" title="Go Back">Back<span> to <span>fluid</span><span>STUDIOS</span></span></a></li>'); ?>
 
 					</ul>
 					<script>
