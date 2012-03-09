@@ -248,16 +248,17 @@ h1.fls-logo{
 	background-image:url("images/icon-back-green.png");
 	color:#CC0;
 }
-.fls-back-link a span{
+.fls-back-link a .fls-back-link-text{
 	font-style:italic;
 	text-transform:lowercase;
 	font-weight:normal;
 }
-.fls-back-link a span>span{
+.fls-back-link a .fls-back-link-text-fluid{
 	font-style:normal;
 	font-weight:bold;
 }
-.fls-back-link a span>span+span{
+.fls-back-link a .fls-back-link-text-studios{
+	font-style:normal;
 	font-weight:normal;
 	text-transform:uppercase;
 }

@@ -7,7 +7,7 @@
 			<!-- Required for wordpress to put in the admin bar at the top! -->	
 			<?php wp_footer(); ?>
 
-		</footer><!-- /.fls-colophon -->
+		</footer><!-- /.fls-contentinfo -->
 
 	</div><!-- /.fls-wrapper -->
 
