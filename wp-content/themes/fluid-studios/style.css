@@ -140,8 +140,8 @@ body>.fls-wrapper{
 	outline:none 0;
 }
 .fls-theme a:focus{
-	color:#CC0;
-	outline:2px solid #cc0;
+	color:#cc0;
+	outline:2px solid #f00;
 }
 h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	margin-bottom:1em;
@@ -227,7 +227,10 @@ h1.fls-logo{
 .fls-theme .fl-toggleButton a:focus{
 	background-color: #cc0;
 	color:transparent;
-	outline:0;
+}
+.fls-theme .fls-loginout-link a:focus,
+.fls-theme .fl-toggleButton a:focus{
+	outline:2px solid #f00;
 }
 .fls-back-link a{
 	background:#fff;
@@ -292,7 +295,7 @@ h2.entry-title,h1.archive-title{
 	outline:none 0;
 }
 .fls-post-thumbnail a:focus img{
-	outline:2px solid #cc0;
+	outline:2px solid #f00;
 }
 .entry-meta{
 	font-family:Arial, sans-serif;
@@ -548,7 +551,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	.fls-theme button.fl-toggleButton:hover,
 	.fls-theme button.fl-toggleButton:focus{
 		background-color: #cc0;
-		outline:0 none;
+	}
+	.fls-theme button.fl-toggleButton:focus{
+		outline:2px solid #f00;
 	}
 	.fls-banner,.home .fls-banner,.single .fls-banner,.archive .fls-banner{
 		border-bottom:0 !important;
@@ -647,7 +652,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	.fls-main,.home .fls-main,.single .fls-main,.archive .fls-main{
 		padding-left:27.25%; /* eyeballed */
 	}
-	.archive .fls-main{
+	.archive .fls-main,.single .fls-main{
 		padding-top:2.4375em;
 	}
 	.single .fls-main,.error404 .fls-main{
@@ -680,7 +685,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		padding-left:29.675153%; /* 338 / 1139 */
 	}
 	.fl-grid li{
-		padding:0 1.2%;
+		padding:0 1%;
 		width:30.5%;
 	}
 	.single .fls-main{
