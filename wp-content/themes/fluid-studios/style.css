@@ -104,46 +104,6 @@ img,embed,object,video{
 	height:auto;
 }
 
-/* :link, :hover link, :active link and :focus link styles
------------------------------------------ */
-.fls-theme a{
-	color:#09C;
-}
-.single.fls-theme a{
-	display:inline-block;
-}
-.fls-theme a:hover{
-	color:#CC0;
-}
-.fls-theme a:focus{
-	color:#09c;
-	outline:2px solid #f00;
-}
-.fls-theme .fls-post-thumbnail a:focus img{
-	outline:2px solid #f00;
-}
-.fls-theme a:focus img.wp-caption{
-	outline:0;
-}
-.fls-post-thumbnail a:focus{
-	outline:none 0;
-}
-.fls-theme button.fl-toggleButton:hover{
-	background-color:#cc0;
-}
-.fls-theme .fls-logo a:hover{
-	background-image:url("images/logo-fluidSTUDIOS-green.png");
-}
-.fls-theme .fls-loginout-link a:hover,
-.fls-theme .fl-toggleButton a:hover{
-	background-color: #cc0;
-	color:transparent;
-}
-.fls-theme .fls-back-link a:hover{
-	background-image:url("images/icon-back-green.png");
-	color:#CC0;
-}
-
 /* Fluid-Studios theme specific styles
 --------------------------------------------------------------------------- */
 html,body,.fls-wrapper{
@@ -174,6 +134,19 @@ body>.fls-wrapper{
 h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	margin-bottom:1em;
 }
+.fls-theme a{
+	color:#09C;
+}
+.single.fls-theme a{
+	display:inline-block;
+}
+.fls-theme a:hover{
+	color:#CC0;
+}
+.fls-theme a:focus{
+	color:#09c;
+	outline:2px solid #f00;
+}
 
 /* Basic uiOptions fat panel styles
 --------------------------------------------------------------------------- */
@@ -187,6 +160,13 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	height:0;
 	position:relative;
 	z-index:999999;
+}
+.fls-theme button.fl-toggleButton:hover{
+	background-color:#cc0;
+	color:transparent;
+}
+.fls-theme .fl-toggleButton a:focus{
+	color:transparent;
 }
 
 /* Header (.fls-banner) specific styles
@@ -217,6 +197,9 @@ h1.fls-logo{
 .fls-theme .fls-logo a {
 	background-image:url("images/logo-fluidSTUDIOS.png");
 }
+.fls-theme .fls-logo a:hover{
+	background-image:url("images/logo-fluidSTUDIOS-green.png");
+}
 
 /* Navigation (.fls-access) specific styles
 ----------------------------------------- */
@@ -241,6 +224,13 @@ h1.fls-logo{
 	overflow:hidden;
 	width:1.5625em; /* 25 / 16 */
 }
+.fls-theme .fls-loginout-link a:hover{
+	background-color: #cc0;
+	color:transparent;
+}
+.fls-theme .fls-loginout-link a:focus{
+	color:transparent;
+}
 .fl-toggleButton a{
 	background-image:url("images/icon-uio.png");
 	float:right;
@@ -258,6 +248,10 @@ h1.fls-logo{
 	padding:0.2em 0.5em 0.2em 1.25em;
 	position:relative;
 	text-transform:uppercase;
+}
+.fls-theme .fls-back-link a:hover{
+	background-image:url("images/icon-back-green.png");
+	color:#CC0;
 }
 .fls-back-link a .fls-back-link-text{
 	font-style:italic;
@@ -285,8 +279,9 @@ h1.fls-logo{
 }
 .entry-title,
 .archive-title{
-	font-family:Arial, sans-serif;
 	border:0;
+	font-family:Arial, sans-serif;
+	word-wrap:break-word;
 }
 .fls-theme .entry-title,
 .fls-theme .archive-title{
@@ -325,6 +320,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .archive .entry-title{
 	margin:0;
 }
+.fls-theme a:focus img.wp-caption{
+	outline:0;
+}
 
 /* Styles for the index page grid (Overriding FSS styles)
 ----------------------------------------- */
@@ -337,6 +335,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	margin:0 auto;
 	max-width:15em;
 	padding:0 0.5em 1.25em;
+}
+.fls-theme .fls-post-thumbnail a:focus img{
+	outline:2px solid #f00;
 }
 
 /* Single page styles for the base mobile theme
