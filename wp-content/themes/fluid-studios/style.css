@@ -119,12 +119,6 @@ img,embed,object,video{
 	color:#09c;
 	outline:2px solid #f00;
 }
-.fls-theme a.fls-noLinkFocus:focus{
-	outline:0;
-}
-.fls-theme a:focus img{
-	outline:2px solid #f00;
-}
 .fls-theme a:focus img.wp-caption{
 	outline:0;
 }
