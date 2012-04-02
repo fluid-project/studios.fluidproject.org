@@ -13,6 +13,7 @@ Version:2
 Additional Resets:HTML5
 Additional "restart" styles
 	Flexible width media
+	:link, :hover link, :active link and :focus link styles
 Fluid Studios theme specific styles
 	Basic uiOptions fat panel styles
 	Header (.fls-banner) specific styles
@@ -103,6 +104,49 @@ img,embed,object,video{
 	height:auto;
 }
 
+/* :link, :hover link, :active link and :focus link styles
+----------------------------------------- */
+.fls-theme a{
+	color:#09C;
+}
+.single.fls-theme a{
+	display:inline-block;
+}
+.fls-theme a:hover{
+	color:#CC0;
+}
+.fls-theme a:focus{
+	color:#09c;
+	outline:2px solid #f00;
+}
+.fls-theme a.fls-noLinkFocus:focus{
+	outline:0;
+}
+.fls-theme a:focus img{
+	outline:2px solid #f00;
+}
+.fls-theme a:focus img.wp-caption{
+	outline:0;
+}
+.fls-post-thumbnail a:focus{
+	outline:none 0;
+}
+.fls-theme button.fl-toggleButton:hover{
+	background-color:#cc0;
+}
+.fls-theme .fls-logo a:hover{
+	background-image:url("images/logo-fluidSTUDIOS-green.png");
+}
+.fls-theme .fls-loginout-link a:hover,
+.fls-theme .fl-toggleButton a:hover{
+	background-color: #cc0;
+	color:transparent;
+}
+.fls-theme .fls-back-link a:hover{
+	background-image:url("images/icon-back-green.png");
+	color:#CC0;
+}
+
 /* Fluid-Studios theme specific styles
 --------------------------------------------------------------------------- */
 html,body,.fls-wrapper{
@@ -129,19 +173,6 @@ body>.fls-wrapper{
 }
 .fls-wrapper{
 	background-color:#fff;
-}
-.fls-theme a{
-	color:#09C;
-}
-.fls-theme a:hover{
-	color:#CC0;
-}
-.fls-theme a:active{
-	outline:none 0;
-}
-.fls-theme a:focus{
-	color:#cc0;
-	outline:2px solid #f00;
 }
 h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	margin-bottom:1em;
@@ -189,10 +220,6 @@ h1.fls-logo{
 .fls-theme .fls-logo a {
 	background-image:url("images/logo-fluidSTUDIOS.png");
 }
-.fls-theme .fls-logo a:hover,
-.fls-theme .fls-logo a:focus{
-	background-image:url("images/logo-fluidSTUDIOS-green.png");
-}
 
 /* Navigation (.fls-access) specific styles
 ----------------------------------------- */
@@ -221,17 +248,6 @@ h1.fls-logo{
 	background-image:url("images/icon-uio.png");
 	float:right;
 }
-.fls-theme .fls-loginout-link a:hover,
-.fls-theme .fls-loginout-link a:focus,
-.fls-theme .fl-toggleButton a:hover,
-.fls-theme .fl-toggleButton a:focus{
-	background-color: #cc0;
-	color:transparent;
-}
-.fls-theme .fls-loginout-link a:focus,
-.fls-theme .fl-toggleButton a:focus{
-	outline:2px solid #f00;
-}
 .fls-back-link a{
 	background:#fff;
 	background-image:url("images/icon-back.png");
@@ -245,11 +261,6 @@ h1.fls-logo{
 	padding:0.2em 0.5em 0.2em 1.25em;
 	position:relative;
 	text-transform:uppercase;
-}
-.fls-theme .fls-back-link a:hover,
-.fls-theme .fls-back-link a:focus{
-	background-image:url("images/icon-back-green.png");
-	color:#CC0;
 }
 .fls-back-link a .fls-back-link-text{
 	font-style:italic;
@@ -291,12 +302,6 @@ h1.entry-title{
 h2.entry-title,h1.archive-title{
 	font-size:1.25em;
 }
-.fls-post-thumbnail a:focus{
-	outline:none 0;
-}
-.fls-post-thumbnail a:focus img{
-	outline:2px solid #f00;
-}
 .entry-meta{
 	font-family:Arial, sans-serif;
 	font-style:italic;
@@ -336,9 +341,6 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	max-width:15em;
 	padding:0 0.5em 1.25em;
 }
-.fl-grid li img{
-	display:inline;
-}
 
 /* Single page styles for the base mobile theme
 ----------------------------------------- */
@@ -363,13 +365,8 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	max-width:60em;
 	padding-top:1em;
 }
-.single img{
-	display:block;
-	margin:0 auto;
-}
 .single .entry-content,
 .error404 .entry-content{
-	font-size:1.2em;
 	line-height:1.4;
 }
 .single .entry-content{
@@ -406,6 +403,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 /* uiOptions black on white theme specific styles
 ----------------------------------------- */
 .fl-theme-uio-bw  a:focus {outline:2px solid #000;}
+.single.fl-theme-uio-bw  a{display:inline-block;}
 .fl-theme-uio-bw  .fls-loginout-link, .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {background-color: #000000 !important;}
 .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {color: #FFFFFF !important;}
 .fl-theme-uio-bw  button.fl-toggleButton:focus{ background-color:#fff !important; background-image:url("images/icon-uio-black.png"); color:#000 !important; outline:2px solid #000;}
@@ -420,11 +418,12 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-bw  .fl-toggleButton a{ background-color:#000 !important; background-image: url("images/icon-uio.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-bw  .fl-toggleButton a:focus{ background-color:#fff !important; background-image:url("images/icon-uio-black.png"); color:transparent; outline:2px solid #000;}
 .fl-theme-uio-bw  .fls-post-thumbnail a:focus {outline:none 0;}
-.fl-theme-uio-bw  .fls-post-thumbnail a:focus img{outline:2px solid #000;}
+.fl-theme-uio-bw  .fls-post-thumbnail a:focus img{outline:2px solid #000 !important;}
 
 /* uiOptions white on black theme specific styles
 ----------------------------------------- */
 .fl-theme-uio-wb  a:focus {outline:2px solid #fff;}
+.single.fl-theme-uio-wb  a{display:inline-block;}
 .fl-theme-uio-wb  .fls-loginout-link, .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { background-color: #FFFFFF !important;}
 .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { color: #000 !important;}
 .fl-theme-uio-wb  button.fl-toggleButton{ background-image:url("images/icon-uio-black.png"); }
@@ -440,11 +439,12 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-wb  .fl-toggleButton a{ background-color:#fff !important; background-image: url("images/icon-uio-black.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-wb  .fl-toggleButton a:focus{ background-color:#000 !important; background-image:url("images/icon-uio.png"); color:transparent; outline:2px solid #fff;}
 .fl-theme-uio-wb  .fls-post-thumbnail a:focus {outline:none 0;}
-.fl-theme-uio-wb  .fls-post-thumbnail a:focus img{outline:2px solid #fff;}
+.fl-theme-uio-wb  .fls-post-thumbnail a:focus img{outline:2px solid #fff !important;}
 
 /* uiOptions black on yellow theme specific styles
 ----------------------------------------- */
 .fl-theme-uio-by  a:focus {outline:2px solid #000;}
+.single.fl-theme-uio-by  a{display:inline-block;}
 .fl-theme-uio-by  .fls-loginout-link, .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { background-color: #000000 !important;}
 .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { color: #FFFF00 !important;}
 .fl-theme-uio-by  button.fl-toggleButton{ background-image:url("images/icon-uio-yellow.png"); }
@@ -460,11 +460,12 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-by  .fl-toggleButton a{ background-color:#000 !important; background-image: url("images/icon-uio-yellow.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-by  .fl-toggleButton a:focus{ background-color:#ff0 !important; background-image:url("images/icon-uio-black.png"); color:transparent; outline:2px solid #000;}
 .fl-theme-uio-by  .fls-post-thumbnail a:focus {outline:none 0;}
-.fl-theme-uio-by  .fls-post-thumbnail a:focus img{outline:2px solid #000;}
+.fl-theme-uio-by  .fls-post-thumbnail a:focus img{outline:2px solid #000 !important;}
 
 /* uiOptions yellow on black theme specific styles
 ----------------------------------------- */
 .fl-theme-uio-yb  a:focus {outline:2px solid #ff0;}
+.single.fl-theme-uio-yb  a{display:inline-block;}
 .fl-theme-uio-yb  .fls-loginout-link, .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { background-color: #FFFF00 !important;}
 .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { color: #000000 !important;}
 .fl-theme-uio-yb  button.fl-toggleButton{ background-image:url("images/icon-uio-black.png"); }
@@ -480,7 +481,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-yb  .fl-toggleButton a{ background-color:#ff0 !important; background-image: url("images/icon-uio-black.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-yb  .fl-toggleButton a:focus{ background-color:#000 !important; background-image:url("images/icon-uio-yellow.png"); color:transparent; outline:2px solid #ff0;}
 .fl-theme-uio-yb  .fls-post-thumbnail a:focus {outline:none 0;}
-.fl-theme-uio-yb  .fls-post-thumbnail a:focus img{outline:2px solid #ff0;}
+.fl-theme-uio-yb  .fls-post-thumbnail a:focus img{outline:2px solid #ff0 !important;}
 
 /* Responsive media queries
 --------------------------------------------------------------------------- */
@@ -548,10 +549,6 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		width:auto;
 		z-index:999999;
 	}
-	.fls-theme button.fl-toggleButton:hover,
-	.fls-theme button.fl-toggleButton:focus{
-		background-color: #cc0;
-	}
 	.fls-theme button.fl-toggleButton:focus{
 		outline:2px solid #f00;
 	}
@@ -587,13 +584,13 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		background-position:0.5em center;
 		color:#fff !important;
 		font-family:Arial,sans-serif;
-		font-weight:bold;
 		line-height:150%;
-		padding:0.2em 0.5em 0.2em 1.5em;
+		padding:0.2em 0.75em 0.2em 1.5em;
 		position:relative;
 		margin:0 auto;
 		text-transform:lowercase;
 		width:auto;
+		white-space:nowrap;
 	}
 	.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link{
 		float:none;
@@ -657,6 +654,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	}
 	.single .fls-main,.error404 .fls-main{
 		padding-right:10% !important;
+	}
+	.single .fls-main{
+		font-size:1.2em;
 	}
 	.fl-grid li{
 		display:inline-block;
