@@ -13,7 +13,6 @@ Version:2
 Additional Resets:HTML5
 Additional "restart" styles
 	Flexible width media
-	:link, :hover link, :active link and :focus link styles
 Fluid Studios theme specific styles
 	Basic uiOptions fat panel styles
 	Header (.fls-banner) specific styles
@@ -163,7 +162,6 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 }
 .fls-theme button.fl-toggleButton:hover{
 	background-color:#cc0;
-	color:transparent;
 }
 .fls-theme .fl-toggleButton a:focus{
 	color:transparent;
@@ -336,6 +334,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	max-width:15em;
 	padding:0 0.5em 1.25em;
 }
+.fls-theme .fls-post-thumbnail a:focus{
+	outline:0;
+}
 .fls-theme .fls-post-thumbnail a:focus img{
 	outline:2px solid #f00;
 }
@@ -400,6 +401,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 /* uiOptions black on white theme specific styles
 ----------------------------------------- */
+.fl-theme-uio-bw  a:hover {text-decoration:underline;}
 .fl-theme-uio-bw  a:focus {outline:2px solid #000;}
 .single.fl-theme-uio-bw  a{display:inline-block;}
 .fl-theme-uio-bw  .fls-loginout-link, .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {background-color: #000000 !important;}
@@ -415,11 +417,13 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-bw  .fls-back-link a:focus span{ color:#000 !important; }
 .fl-theme-uio-bw  .fl-toggleButton a{ background-color:#000 !important; background-image: url("images/icon-uio.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-bw  .fl-toggleButton a:focus{ background-color:#fff !important; background-image:url("images/icon-uio-black.png"); color:transparent; outline:2px solid #000;}
+.fl-theme-uio-bw  .post *{background:transparent !important;}
 .fl-theme-uio-bw  .fls-post-thumbnail a:focus {outline:none 0;}
 .fl-theme-uio-bw  .fls-post-thumbnail a:focus img{outline:2px solid #000 !important;}
 
 /* uiOptions white on black theme specific styles
 ----------------------------------------- */
+.fl-theme-uio-wb  a:hover {text-decoration:underline;}
 .fl-theme-uio-wb  a:focus {outline:2px solid #fff;}
 .single.fl-theme-uio-wb  a{display:inline-block;}
 .fl-theme-uio-wb  .fls-loginout-link, .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { background-color: #FFFFFF !important;}
@@ -436,11 +440,13 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-wb  .fls-back-link a:focus span{ color:#fff !important; }
 .fl-theme-uio-wb  .fl-toggleButton a{ background-color:#fff !important; background-image: url("images/icon-uio-black.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-wb  .fl-toggleButton a:focus{ background-color:#000 !important; background-image:url("images/icon-uio.png"); color:transparent; outline:2px solid #fff;}
+.fl-theme-uio-wb  .post *{background:transparent !important;}
 .fl-theme-uio-wb  .fls-post-thumbnail a:focus {outline:none 0;}
 .fl-theme-uio-wb  .fls-post-thumbnail a:focus img{outline:2px solid #fff !important;}
 
 /* uiOptions black on yellow theme specific styles
 ----------------------------------------- */
+.fl-theme-uio-by  a:hover {text-decoration:underline;}
 .fl-theme-uio-by  a:focus {outline:2px solid #000;}
 .single.fl-theme-uio-by  a{display:inline-block;}
 .fl-theme-uio-by  .fls-loginout-link, .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { background-color: #000000 !important;}
@@ -457,11 +463,13 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-by  .fls-back-link a:focus span{ color:#000 !important; }
 .fl-theme-uio-by  .fl-toggleButton a{ background-color:#000 !important; background-image: url("images/icon-uio-yellow.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-by  .fl-toggleButton a:focus{ background-color:#ff0 !important; background-image:url("images/icon-uio-black.png"); color:transparent; outline:2px solid #000;}
+.fl-theme-uio-by  .post *{background:transparent !important;}
 .fl-theme-uio-by  .fls-post-thumbnail a:focus {outline:none 0;}
 .fl-theme-uio-by  .fls-post-thumbnail a:focus img{outline:2px solid #000 !important;}
 
 /* uiOptions yellow on black theme specific styles
 ----------------------------------------- */
+.fl-theme-uio-yb  a:hover {text-decoration:underline;}
 .fl-theme-uio-yb  a:focus {outline:2px solid #ff0;}
 .single.fl-theme-uio-yb  a{display:inline-block;}
 .fl-theme-uio-yb  .fls-loginout-link, .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { background-color: #FFFF00 !important;}
@@ -478,6 +486,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-yb  .fls-back-link a:focus span{ color:#ff0 !important; }
 .fl-theme-uio-yb  .fl-toggleButton a{ background-color:#ff0 !important; background-image: url("images/icon-uio-black.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-yb  .fl-toggleButton a:focus{ background-color:#000 !important; background-image:url("images/icon-uio-yellow.png"); color:transparent; outline:2px solid #ff0;}
+.fl-theme-uio-yb  .post *{background:transparent !important;}
 .fl-theme-uio-yb  .fls-post-thumbnail a:focus {outline:none 0;}
 .fl-theme-uio-yb  .fls-post-thumbnail a:focus img{outline:2px solid #ff0 !important;}
 
