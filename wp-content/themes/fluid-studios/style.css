@@ -141,6 +141,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 }
 .fls-theme a:hover{
 	color:#CC0;
+	text-decoration:underline;
 }
 .fls-theme a:focus{
 	color:#09c;
@@ -401,7 +402,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 /* uiOptions black on white theme specific styles
 ----------------------------------------- */
-.fl-theme-uio-bw  a:hover {text-decoration:underline;}
+.fl-theme-uio-bw button:hover,.fl-theme-uio-bw  a:hover {text-decoration:underline;}
 .fl-theme-uio-bw  a:focus {outline:2px solid #000;}
 .single.fl-theme-uio-bw  a{display:inline-block;}
 .fl-theme-uio-bw  .fls-loginout-link, .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {background-color: #000000 !important;}
@@ -423,7 +424,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 /* uiOptions white on black theme specific styles
 ----------------------------------------- */
-.fl-theme-uio-wb  a:hover {text-decoration:underline;}
+.fl-theme-uio-wb button:hover,.fl-theme-uio-wb  a:hover {text-decoration:underline;}
 .fl-theme-uio-wb  a:focus {outline:2px solid #fff;}
 .single.fl-theme-uio-wb  a{display:inline-block;}
 .fl-theme-uio-wb  .fls-loginout-link, .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { background-color: #FFFFFF !important;}
@@ -446,7 +447,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 /* uiOptions black on yellow theme specific styles
 ----------------------------------------- */
-.fl-theme-uio-by  a:hover {text-decoration:underline;}
+.fl-theme-uio-by button:hover,.fl-theme-uio-by  a:hover {text-decoration:underline;}
 .fl-theme-uio-by  a:focus {outline:2px solid #000;}
 .single.fl-theme-uio-by  a{display:inline-block;}
 .fl-theme-uio-by  .fls-loginout-link, .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { background-color: #000000 !important;}
@@ -469,7 +470,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 /* uiOptions yellow on black theme specific styles
 ----------------------------------------- */
-.fl-theme-uio-yb  a:hover {text-decoration:underline;}
+.fl-theme-uio-yb button:hover,.fl-theme-uio-yb  a:hover {text-decoration:underline;}
 .fl-theme-uio-yb  a:focus {outline:2px solid #ff0;}
 .single.fl-theme-uio-yb  a{display:inline-block;}
 .fl-theme-uio-yb  .fls-loginout-link, .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { background-color: #FFFF00 !important;}
@@ -555,6 +556,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		text-transform:lowercase;
 		width:auto;
 		z-index:999999;
+	}
+	.fls-theme button.fl-toggleButton:hover{
+		text-decoration:underline;
 	}
 	.fls-theme button.fl-toggleButton:focus{
 		outline:2px solid #f00;
