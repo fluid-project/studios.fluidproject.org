@@ -223,7 +223,8 @@ h1.fls-logo{
 	overflow:hidden;
 	width:1.5625em; /* 25 / 16 */
 }
-.fls-theme .fls-loginout-link a:hover{
+.fls-theme .fls-loginout-link a:hover,
+.fls-theme .fl-toggleButton a:hover{
 	background-color: #cc0;
 	color:transparent;
 }
@@ -600,7 +601,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		position:relative;
 		margin:0 auto;
 		text-transform:lowercase;
-		width:auto;
+		width:2.4em;
 		white-space:nowrap;
 	}
 	.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link{
