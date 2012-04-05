@@ -221,7 +221,12 @@ h1.fls-logo{
 	height:1.5625em; /* 25 / 16 */
 	margin-bottom:-0.75em;
 	overflow:hidden;
+	position:relative;
 	width:1.5625em; /* 25 / 16 */
+}
+.single .fls-loginout-link a,
+.single .fl-toggleButton a{
+	margin-bottom:0;
 }
 .fls-theme .fls-loginout-link a:hover,
 .fls-theme .fl-toggleButton a:hover{
