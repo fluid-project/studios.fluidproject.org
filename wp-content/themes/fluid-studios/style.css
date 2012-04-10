@@ -179,7 +179,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	padding:0;
 }
 .fls-logo {
-	margin:1.25em auto; /* 20px / 16px */
+	margin:1em auto;
 	width:99px;
 }
 h1.fls-logo{
@@ -204,7 +204,7 @@ h1.fls-logo{
 ----------------------------------------- */
 .fls-access ul{
 	margin:0 auto;
-	width:3.75em;
+	width:4.25em;
 }
 .fls-access ul li{
 	list-style:none;
@@ -354,18 +354,18 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	display:none;
 }
 .single .fls-access ul{
-	padding:0.5em 0;
+	padding:0.37em 0;
 	padding-right:4%;
 	width:auto;
 }
 .single .fls-access ul li.fls-loginout-link,
 .single .fls-access ul li.fl-toggleButton{
 	float:right;
-	margin-left:0.5em;
+	margin:0.37em 0 0.37em 0.5em;
 }
 .single .fls-access ul li.fls-back-link{
 	float:left;
-	margin:0;
+	margin:0.37em 0;
 }
 .single .fls-main{
 	max-width:60em;
@@ -525,7 +525,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	}
 	.home .fls-access ul,.archive .fls-access ul{
 		margin:0 auto;
-		width:3.75em;
+		width:4.25em;
 	}
 	.home .fls-main,.archive .fls-main{
 		padding:1.625em 0 0 40.666667%; /* margin-top: 26 / 16, margin-left: 200 / 480 */
