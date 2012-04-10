@@ -72,7 +72,7 @@
   	</div>
   </div>	
 
-	<script>
+	<script type="text/javascript">
 		// Instantiate the UI Enhancer component, specifying the table of contents' template URL
 		fluid.pageEnhancer({
 			tocTemplate: "<?php echo $template_url; ?>/infusion/components/tableOfContents/html/TableOfContents.html",
@@ -116,7 +116,7 @@
 						<a href="#" id="flsc-go-back-link" title="Go Back">Back<span class="fls-back-link-text"> to <span class="fls-back-link-text fluid">fluid</span><span class="fls-back-link-text studios">STUDIOS</span></span></a></li>'); ?>
 
 					</ul>
-					<script>
+					<script type="text/javascript">
 						$("#uioProxyButton").click(function () {
 						uio.slidingPanel.togglePanel();
 						});
