@@ -42,7 +42,7 @@ header,hgroup,menu,nav,section{
 /* Additional "restart" styles
 --------------------------------------------------------------------------- */
 h1,h2,h3,h4,h5,h6{
-	font-size:1.75rem;
+	font-size:1.75em;
 	font-weight:bold;
 	line-height:1.2;
 }
@@ -133,6 +133,7 @@ body>.fls-wrapper{
 h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	margin-bottom:1em;
 }
+
 .fls-theme a{
 	color:#09C;
 }
@@ -179,12 +180,9 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	padding:0;
 }
 .fls-logo {
+	font-size:1em;
 	margin:1em auto;
 	width:99px;
-}
-h1.fls-logo{
-	font-size:16px;
-	font-size:1rem;
 }
 .fls-logo a {
 	background-repeat:no-repeat;
@@ -223,10 +221,6 @@ h1.fls-logo{
 	overflow:hidden;
 	position:relative;
 	width:1.5625em; /* 25 / 16 */
-}
-.single .fls-loginout-link a,
-.single .fl-toggleButton a{
-	margin-bottom:0;
 }
 .fls-theme .fls-loginout-link a:hover,
 .fls-theme .fl-toggleButton a:hover{
@@ -278,6 +272,10 @@ h1.fls-logo{
 .fls-main{
 	margin:0 auto;
 	padding:2em 4%;
+}
+.flc-toc-tocContainer{
+	font-size:1.2em;
+	line-height:120%;
 }
 .home,.archive{
 	color: #666666;
@@ -354,14 +352,12 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	display:none;
 }
 .single .fls-access ul{
-	padding:0.37em 0;
 	padding-right:4%;
 	width:auto;
 }
 .single .fls-access ul li.fls-loginout-link,
 .single .fls-access ul li.fl-toggleButton{
 	float:right;
-	margin:0.37em 0 0.37em 0.5em;
 }
 .single .fls-access ul li.fls-back-link{
 	float:left;
@@ -526,6 +522,18 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	.home .fls-access ul,.archive .fls-access ul{
 		margin:0 auto;
 		width:4.25em;
+	}
+	.fls-access ul{
+		padding:0.37em 0;
+	}
+	.fls-access ul li.fls-loginout-link,
+	.fls-access ul li.fl-toggleButton{
+		float:right;
+		margin:0.37em 0 0.37em 0.5em;
+	}
+	.single .fls-loginout-link a,
+	.single .fl-toggleButton a{
+		margin-bottom:0;
 	}
 	.home .fls-main,.archive .fls-main{
 		padding:1.625em 0 0 40.666667%; /* margin-top: 26 / 16, margin-left: 200 / 480 */
