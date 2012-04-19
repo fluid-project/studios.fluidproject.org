@@ -186,7 +186,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 }
 .fls-logo a {
 	background-repeat:no-repeat;
-	display:block;
+	display:inline-block;
 	height:95px;
 	margin:0 auto;
 	width:99px;
@@ -202,10 +202,21 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 ----------------------------------------- */
 .fls-access ul{
 	margin:0 auto;
+	padding:0.37em 0;
 	width:4.25em;
 }
 .fls-access ul li{
 	list-style:none;
+}
+.fls-access ul li.fls-loginout-link,
+.fls-access ul li.fl-toggleButton{
+	float:right;
+	margin:0.37em 0;
+	text-align:center;
+}
+.fls-access ul li.fls-loginout-link{
+	float:left;
+	margin-left:0;
 }
 .fls-loginout-link a,
 .fl-toggleButton a{
@@ -217,7 +228,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	color:transparent;
 	float:left;
 	height:1.5625em; /* 25 / 16 */
-	margin-bottom:-0.75em;
+	margin-bottom:-1.4em;
 	overflow:hidden;
 	position:relative;
 	width:1.5625em; /* 25 / 16 */
@@ -244,6 +255,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	float:left;
 	font-family:Arial,sans-serif;
 	font-weight:bold;
+	line-height:1.2em;
 	padding:0.2em 0.5em 0.2em 1.25em;
 	position:relative;
 	text-transform:uppercase;
@@ -275,7 +287,10 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 }
 .flc-toc-tocContainer{
 	font-size:1.2em;
-	line-height:120%;
+	line-height:140%;
+}
+.flc-toc-tocContainer a{
+	display:inline-block;
 }
 .home,.archive{
 	color: #666666;
@@ -284,7 +299,6 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 .archive-title{
 	border:0;
 	font-family:Arial, sans-serif;
-	word-wrap:break-word;
 }
 .fls-theme .entry-title,
 .fls-theme .archive-title{
@@ -338,6 +352,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	margin:0 auto;
 	max-width:15em;
 	padding:0 0.5em 1.25em;
+	word-wrap:break-word;
 }
 .fls-theme .fls-post-thumbnail a:focus{
 	outline:0;
@@ -358,9 +373,16 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .single .fls-access ul li.fls-loginout-link,
 .single .fls-access ul li.fl-toggleButton{
 	float:right;
+	margin-left:0.5em;
 }
 .single .fls-access ul li.fls-back-link{
 	float:left;
+}
+.single .fls-access ul li.fls-loginout-link a,
+.single .fls-access ul li.fl-toggleButton a{
+	margin-bottom:0;
+}
+.single .fls-access ul li.fls-back-link a{
 	margin:0.37em 0;
 }
 .single .fls-main{
@@ -414,12 +436,14 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-bw  .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
 .fl-theme-uio-bw  .fls-loginout-link a{ background-image: url("images/icon-login.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-bw  .fls-loginout-link a:focus{ background-color:#fff !important; background-image:url("images/icon-login-black.png"); color:transparent !important; outline:2px solid #000; }
+.fl-theme-uio-bw  .fls-loginout-link,.fl-theme-uio-bw  .fls-back-link{ background:transparent !important;}
 .fl-theme-uio-bw  .fls-back-link a{ background-image: url("images/icon-back-white.png"); border-radius:0 !important; }
 .fl-theme-uio-bw  .fls-back-link a span{background-color: transparent !important; color:#fff !important;}
 .fl-theme-uio-bw  .fls-back-link a:focus{ background-color:#fff !important; background-image: url("images/icon-back-black.png"); color:#000 !important; }
 .fl-theme-uio-bw  .fls-back-link a:focus span{ color:#000 !important; }
 .fl-theme-uio-bw  .fl-toggleButton a{ background-color:#000 !important; background-image: url("images/icon-uio.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-bw  .fl-toggleButton a:focus{ background-color:#fff !important; background-image:url("images/icon-uio-black.png"); color:transparent; outline:2px solid #000;}
+.fl-theme-uio-bw  .flc-toc-tocContainer a{ background:transparent !important;}
 .fl-theme-uio-bw  .post *{background:transparent !important;}
 .fl-theme-uio-bw  .fls-post-thumbnail a:focus {outline:none 0;}
 .fl-theme-uio-bw  .fls-post-thumbnail a:focus img{outline:2px solid #000 !important;}
@@ -437,12 +461,14 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-wb  .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-white.png");}
 .fl-theme-uio-wb  .fls-loginout-link a{ background-image: url("images/icon-login-black.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-wb  .fls-loginout-link a:focus{ background-color:#000 !important; background-image:url("images/icon-login.png"); color:transparent !important; outline:2px solid #fff; }
+.fl-theme-uio-wb  .fls-loginout-link,.fl-theme-uio-wb  .fls-back-link{ background:transparent !important;}
 .fl-theme-uio-wb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); border-radius:0 !important; }
 .fl-theme-uio-wb  .fls-back-link a span{ background-color: transparent !important; color:#000 !important;}
 .fl-theme-uio-wb  .fls-back-link a:focus{ background-color:#000 !important; background-image: url("images/icon-back-white.png"); color:#fff !important; }
 .fl-theme-uio-wb  .fls-back-link a:focus span{ color:#fff !important; }
 .fl-theme-uio-wb  .fl-toggleButton a{ background-color:#fff !important; background-image: url("images/icon-uio-black.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-wb  .fl-toggleButton a:focus{ background-color:#000 !important; background-image:url("images/icon-uio.png"); color:transparent; outline:2px solid #fff;}
+.fl-theme-uio-wb  .flc-toc-tocContainer a{ background:transparent !important;}
 .fl-theme-uio-wb  .post *{background:transparent !important;}
 .fl-theme-uio-wb  .fls-post-thumbnail a:focus {outline:none 0;}
 .fl-theme-uio-wb  .fls-post-thumbnail a:focus img{outline:2px solid #fff !important;}
@@ -460,12 +486,14 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-by  .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
 .fl-theme-uio-by  .fls-loginout-link a{background-image: url("images/icon-login-yellow.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-by  .fls-loginout-link a:focus{ background-color:#ff0 !important; background-image:url("images/icon-login-black.png"); color:transparent !important; outline:2px solid #000; }
+.fl-theme-uio-by  .fls-loginout-link,.fl-theme-uio-by  .fls-back-link{ background:transparent !important;}
 .fl-theme-uio-by  .fls-back-link a{ background-image: url("images/icon-back-yellow.png"); border-radius:0 !important; }
 .fl-theme-uio-by  .fls-back-link a span{background-color: transparent !important; color:#ff0 !important;}
 .fl-theme-uio-by  .fls-back-link a:focus{ background-color:#ff0 !important; background-image: url("images/icon-back-black.png"); color:#000 !important; }
 .fl-theme-uio-by  .fls-back-link a:focus span{ color:#000 !important; }
 .fl-theme-uio-by  .fl-toggleButton a{ background-color:#000 !important; background-image: url("images/icon-uio-yellow.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-by  .fl-toggleButton a:focus{ background-color:#ff0 !important; background-image:url("images/icon-uio-black.png"); color:transparent; outline:2px solid #000;}
+.fl-theme-uio-by  .flc-toc-tocContainer a{ background:transparent !important;}
 .fl-theme-uio-by  .post *{background:transparent !important;}
 .fl-theme-uio-by  .fls-post-thumbnail a:focus {outline:none 0;}
 .fl-theme-uio-by  .fls-post-thumbnail a:focus img{outline:2px solid #000 !important;}
@@ -483,12 +511,14 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 .fl-theme-uio-yb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-yellow.png");}
 .fl-theme-uio-yb  .fls-loginout-link a{background-image: url("images/icon-login-black.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-yb  .fls-loginout-link a:focus{ background-color:#000 !important; background-image:url("images/icon-login-yellow.png"); color:transparent !important; outline:2px solid #ff0; }
+.fl-theme-uio-yb  .fls-loginout-link,.fl-theme-uio-yb  .fls-back-link{ background:transparent !important;}
 .fl-theme-uio-yb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); border-radius:0 !important; }
 .fl-theme-uio-yb  .fls-back-link a span{background-color: transparent !important; color:#000 !important;}
 .fl-theme-uio-yb  .fls-back-link a:focus{ background-color:#000 !important; background-image: url("images/icon-back-yellow.png"); color:#ff0 !important; }
 .fl-theme-uio-yb  .fls-back-link a:focus span{ color:#ff0 !important; }
 .fl-theme-uio-yb  .fl-toggleButton a{ background-color:#ff0 !important; background-image: url("images/icon-uio-black.png"); border-radius:0 !important; color:transparent !important;}
 .fl-theme-uio-yb  .fl-toggleButton a:focus{ background-color:#000 !important; background-image:url("images/icon-uio-yellow.png"); color:transparent; outline:2px solid #ff0;}
+.fl-theme-uio-yb  .flc-toc-tocContainer a{ background:transparent !important;}
 .fl-theme-uio-yb  .post *{background:transparent !important;}
 .fl-theme-uio-yb  .fls-post-thumbnail a:focus {outline:none 0;}
 .fl-theme-uio-yb  .fls-post-thumbnail a:focus img{outline:2px solid #ff0 !important;}
@@ -519,21 +549,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	.home .fls-logo,.archive .fls-logo{
 		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
 	}
-	.home .fls-access ul,.archive .fls-access ul{
-		margin:0 auto;
-		width:4.25em;
-	}
-	.fls-access ul{
-		padding:0.37em 0;
-	}
-	.fls-access ul li.fls-loginout-link,
-	.fls-access ul li.fl-toggleButton{
-		float:right;
-		margin:0.37em 0 0.37em 0.5em;
-	}
-	.single .fls-loginout-link a,
-	.single .fl-toggleButton a{
-		margin-bottom:0;
+	.fls-access ul li.fls-loginout-link{
+		float:left;
+		margin-left:0;
 	}
 	.home .fls-main,.archive .fls-main{
 		padding:1.625em 0 0 40.666667%; /* margin-top: 26 / 16, margin-left: 200 / 480 */
@@ -601,26 +619,28 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
 	}
 	.fls-access ul,.home .fls-access ul,.single .fls-access ul,.archive .fls-access ul{
-		margin:0 auto;
 		padding:0;
-		width:4.85em;
+		width:auto;
 	}
 	.fls-loginout-link a{
 		background-position:0.5em center;
 		color:#fff !important;
+		display:inline-block;
+		float:none;
 		font-family:Arial,sans-serif;
 		line-height:150%;
+		margin:0;
+		overflow:visible;
 		padding:0.2em 0.75em 0.2em 1.5em;
 		position:relative;
-		margin:0 auto;
 		text-transform:lowercase;
-		width:2.4em;
 		white-space:nowrap;
+		width:auto;
 	}
 	.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link{
 		float:none;
-		margin-left:0;
-		padding:none;
+		margin:0;
+		padding:0;
 	}
 	.fls-back-link a{
 		border-radius:5px 0 0 5px;
