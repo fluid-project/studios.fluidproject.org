@@ -1,5 +1,8 @@
 <?php
 
+// remove WordPress version number from head
+remove_action('wp_head', 'wp_generator');
+
 /**********************************
  *  Studios Constants
  **********************************/
@@ -50,7 +53,7 @@ add_filter('admin_footer_text', 'fl_admin_footer');
 
 // Customize the WP admin interface styles.
 function fl_custom_admin_css() {
-	echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo( 'template_url', 'display' ) . '/style-admin.css" media="all" />
+	echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo( 'template_url', 'display' ) . '/css/style-admin.css" media="all" />
 ';
 }
 add_action('admin_head', 'fl_custom_admin_css');
@@ -86,7 +89,7 @@ function fl_tags_summary($tagList) {
 				break;
 			}
 		}
-		
+
 		$html .= '</div>';
 	}
 	return $html;
