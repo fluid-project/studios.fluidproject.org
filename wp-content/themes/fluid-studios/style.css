@@ -1,316 +1,745 @@
 /*
-Theme Name:     Fluid Studios
-Author: The Fluid Project
+Theme Name:Fluid-Studios
+Theme URI:http://studios.fluidproject.org/wp-content/themes/fluid-studios/
+Description:Usability and fls-accessibility on the open web...
+Author:The Fluid Project
+Author URI:http://fluidproject.org
+Version:2
 */
 
-/* Theme specific container and body styles
+/* Style sheet contents
 --------------------------------------------------------------------------- */
+/*
+Additional Resets:HTML5
+Additional "restart" styles
+	Flexible width media
+Fluid Studios theme specific styles
+	Basic uiOptions fat panel styles
+	Header (.fls-banner) specific styles
+		Navigation (.fls-access) specific styles
+	Main content (.fls-main) styles
+		Styles for the index page grid (Overriding FSS styles)
+		Single page styles for the base mobile theme
+		Wordpress alignment styles
+	Footer (.fls-contentinfo) specific styles
+	uiOptions colour, contrast, font theme specific styles
+		uiOptions black on white theme specific styles
+		uiOptions white on black theme specific styles
+		uiOptions black on yellow theme specific styles
+		uiOptions yellow on black theme specific styles
+Responsive media queries	
+*/
 
-html {
-	height: 100%;
-	background-image: url("images/bg.jpg");
-	background-repeat: repeat;
+@import url("http://fonts.googleapis.com/css?family=Neuton:400,300,700,400italic");
+
+/* Additional resets:HTML5; display role reset for older browsers
+--------------------------------------------------------------------------- */
+article,aside,details,figcaption,figure,footer,
+header,hgroup,menu,nav,section{
+	display:block;
 }
-html.fs-no-background {
-	background-image: none;
+
+/* Additional "restart" styles
+--------------------------------------------------------------------------- */
+h1,h2,h3,h4,h5,h6{
+	font-size:1.75em;
+	font-weight:bold;
+	line-height:1.2;
 }
-body {
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+strong,b,mark{
+	font-weight:bold;
+	font-style:inherit;
+}
+em,i,cite,q,address,dfn,var{
+	font-style:italic;
+	font-weight:inherit;
+}
+abbr[title],dfn[title]{
+	cursor:help;
+	border-bottom:1px dotted;
+}
+ins{
+	border-bottom:1px solid;
+}
+a,u,ins{
+	text-decoration:none;
+}
+del,s{
+	text-decoration:line-through;
+}
+pre,code,samp,kbd{
+	font-family:monospace;
+}
+small{
+	font-size:0.75em;
+}
+img{
+	color:#09c;
+	font-style:italic;
+}
+input,
+select,option,optgroup,
+textarea{
+	font:inherit;
+}
+ol,ul,dl{
+	margin-left:2em;
+}
+ol li{
+	list-style:decimal outside;
+}
+ul li{
+	list-style:disc outside;
+}
+
+/* Flexible width media
+----------------------------------------- */
+img,embed,object,video{
+	max-width: 100%;
+	height:auto;
+}
+
+/* Fluid-Studios theme specific styles
+--------------------------------------------------------------------------- */
+html,body,.fls-wrapper{
+	height:100%;
+}
+html{
+	background-image:url("images/bg.jpg");
+	background-repeat:repeat;
+	font-family:"Neuton", "Times New Roman", Times, serif;
+}
+body{
+	background:#fff;
+	color: #333;
 	font-family: "Neuton", "Times New Roman", Times, serif;
+	font-size:100%;
 	font-weight: 300;
-	max-width: 1200px;
-	position: relative;
-	height: 100%;
+	position:relative;
 }
-.fls-theme {
-	color: #333333;
-	background:#ffffff;
-	z-index: -1;
+body>.fls-wrapper{
+	background-color:#fff;
+	height:auto;
+	min-height:100%;
+	position:relative;
 }
-.home.fls-theme, .archive.fls-theme {color: #666666;}
-#content-container {
-	height: auto;
-	min-height: 100%;
-	width: 100%;
-	position: relative;
-	overflow: visible;
+.fls-wrapper{
+	background-color:#fff;
+}
+h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
+	margin-bottom:1em;
 }
 
-/* Text styles
---------------------------------------------------------------------------- */
-.fls-theme a {
-	text-decoration: none;
-	color: #0099CC;
+.fls-theme a{
+	color:#09C;
 }
-.fls-theme a:hover, .fls-theme a:focus {color: #CCCC00;}
+.single.fls-theme a{
+	display:inline-block;
+}
+.fls-theme a:hover{
+	color:#CC0;
+	text-decoration:underline;
+}
+.fls-theme a:focus{
+	color:#09c;
+	outline:2px solid #f00;
+}
 
-/* STUDIO-24: These styles were borrowed from fluid-base-global.css. TODO: Can we use that file instead?
+/* Basic uiOptions fat panel styles
 --------------------------------------------------------------------------- */
-ol,ul,dl{margin-left:2em;}
-ol li{list-style:decimal outside;}
-ul li{list-style:disc outside;}
+.no-js #myUIOptions,
+.no-js .fl-uiOptions-fatPanel .fl-panelBar,
+.flc-slidingPanel-toggleButton.fl-toggleButton,
+.no-js #uioProxyButton{
+	display:none;
+}
+.fl-uiOptions-fatPanel .fl-panelBar{
+	height:0;
+	position:relative;
+	z-index:999999;
+}
+.fls-theme button.fl-toggleButton:hover{
+	background-color:#cc0;
+}
+.fls-theme .fl-toggleButton a:focus{
+	color:transparent;
+}
 
-/* FSS Column style overrides
+/* Header (.fls-banner) specific styles
 --------------------------------------------------------------------------- */
-.fl-col-mixed2 .fl-col-side {
-	width: 20%;
-	min-width: 8.125em; /* 130 / 16 */
-	padding-right: 0;
+.fls-banner{
+	border-bottom:1px solid #fff;
+	background-image: url("images/bg.jpg");
 }
-.fl-col-mixed2 .fl-col-main {
-	margin-left: 20%;
-	padding-top: 2.5em; /* 40 / 16 */
-	padding-bottom: 4em;
-	padding-left: 3%;
-	height: 100%;
-}
-.fls-theme .fl-col-mixed2 .fl-col-main {
-	background-color: #FFFFFF;
-}
-/* Content styles
---------------------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6 {
-	font-size: 1.75em;
-	font-weight: bold;
-	line-height: 1.2em;
-	margin-bottom: .5em;
-	margin-top: .25em;
-}
-.entry-title {
-	font-family: Arial, sans-serif;
-	border:0;
-}
-.fls-theme .entry-title {color: #CCCC00;}
-[id="404"] {
-	width: 50%;
-	margin-top: 10%;
-	font-size: 120%;
-}
-h1.entry-title {
-	font-size: 2em;
-}
-h2.entry-title {
-    font-size: 1.1em;
-    margin-bottom: 0em;
-}
-.entry-meta {
-	font-family: Arial, sans-serif;
-}
-.fls-theme.home .entry-meta, .fls-theme.archive .entry-meta {
-    color: #999999;
-}
-.home .entry-meta, .archive .entry-meta {
-    font-size: .9em;
-}
-.single .entry-meta {
-	font-style: italic;
-	border-bottom: 1px solid #666666;
-}
-.entry-meta time, .entry-meta .fls-meta-author {
-	font-style: normal;
-	font-weight: bold;
-}
-.single .entry-content {
-    padding-top: 1em;
-    font-size: 1.2em;
-    line-height: 1.4em;
-}
-.single .entry-content strong {
-    font-weight: 700;
-}
-.fls-tags {font-style: italic;}
-.fls-theme .fls-tags {color: #0099CC;}
-p, ul, ol, blockquote, figure { margin-bottom: 1em;}
-p.entry-meta, .home .entry-content p, .archive .entry-content p {margin-bottom: 0;}
-
-/* Sidebar styles
---------------------------------------------------------------------------- */
-#sidebar {
-	height: 100%;
-}
-.fls-theme .sidebarback {background-image: url("images/bg.jpg");}
-.sidebarback {
-	background-repeat: repeat;
-	position: absolute;
-	bottom: 0;
-	top: 0;
-	min-width: 8.125em;
-	padding-right: 0;
-	width: 20%;
-	float: right;
-	overflow: hidden;
-	z-index: -1;
-}
-.fls-loginout-link {
-	background-position: 0.35em center;
-	background-repeat: no-repeat;
-	border-radius: 5px;
-	cursor: pointer;
-	padding-right: 0.33em;
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-	padding-left: 1.5em;
-	line-height: 150%;
-	float:right;
-	margin-top: 2em;
-	margin-right: 22%;
-}
-.fls-theme  .fls-loginout-link {
-	background-image: url("images/icon-login.png");
-	background-color: #0099CC;
-}
-.fls-theme  .fls-loginout-link:hover, .fls-theme  .fls-loginout-link a:focus {background-color: #CCCC00;}
-.fls-loginout-link a {
-	font-family: Arial,sans-serif;
-	text-transform: lowercase;
-}
-.fls-theme .fls-loginout-link a {color: #FFFFFF;}
-.fls-back-link {
-	background-position: 0.4375em center;  /* 7 / 16 */
-	background-repeat: no-repeat;
-	background-color: white;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	padding: 0.3125em;  /* 5 / 16 */
-	padding-left: 1.5625em; /* 25 / 16 */
-	margin-top: 12em;
-	width: 4em;
-	float: right;
-	position: relative;
-	font-family: Arial,sans-serif;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-.fls-theme .fls-back-link {
-	background-image: url("images/icon-back.png");
-	color: #0099CC;
-}
-.fls-theme .fls-back-link:hover, .fls-theme .fls-back-link:focus  {
-	background-image: url("images/icon-back-green.png");
-	color: #CCCC00;
+.fls-masthead{
+	margin:0 auto;
+	padding:0;
 }
 .fls-logo {
-	text-align: right;
-	margin-right: 15%;
-	float: right;
-	margin-top: 8em;  /* 128 / 16 */
-	position: relative;
+	font-size:1em;
+	margin:1em auto;
+	width:99px;
 }
 .fls-logo a {
-	display:block;
+	background-repeat:no-repeat;
+	display:inline-block;
 	height:95px;
+	margin:0 auto;
 	width:99px;
-	background-repeat: no-repeat;
 }
-.fls-theme .fls-logo a {background-image: url("images/logo-fluidSTUDIOS.png");}
-.fls-theme .fls-logo a:hover, .fls-theme .fls-logo a:focus {background-image: url("images/logo-fluidSTUDIOS-green.png");}
-
-/* Footer styles
---------------------------------------------------------------------------- */
-.footer {
-	position: absolute;
-	bottom: 1.5em;
-	margin-left: 20%;
-	padding-left: 3%;
+.fls-theme .fls-logo a {
+	background-image:url("images/logo-fluidSTUDIOS.png");
+}
+.fls-theme .fls-logo a:hover{
+	background-image:url("images/logo-fluidSTUDIOS-green.png");
 }
 
-/* Styles for the title page grid (Overriding FSS styles)
+/* Navigation (.fls-access) specific styles
+----------------------------------------- */
+.fls-access ul{
+	margin:0 auto;
+	padding:0.37em 0;
+	width:4.25em;
+}
+.fls-access ul li{
+	list-style:none;
+}
+.fls-access ul li.fls-loginout-link,
+.fls-access ul li.fl-toggleButton{
+	float:right;
+	margin:0.37em 0;
+	text-align:center;
+}
+.fls-access ul li.fls-loginout-link{
+	float:left;
+	margin-left:0;
+}
+.fls-loginout-link a,
+.fl-toggleButton a{
+	background-color:#09c;
+	background-image:url("images/icon-login.png");
+	background-position:center center;
+	background-repeat:no-repeat;
+	border-radius:5px;
+	color:transparent;
+	float:left;
+	height:1.5625em; /* 25 / 16 */
+	margin-bottom:-1.4em;
+	overflow:hidden;
+	position:relative;
+	width:1.5625em; /* 25 / 16 */
+}
+.fls-theme .fls-loginout-link a:hover,
+.fls-theme .fl-toggleButton a:hover{
+	background-color: #cc0;
+	color:transparent;
+}
+.fls-theme .fls-loginout-link a:focus{
+	color:transparent;
+}
+.fl-toggleButton a{
+	background-image:url("images/icon-uio.png");
+	float:right;
+}
+.fls-back-link a{
+	background:#fff;
+	background-image:url("images/icon-back.png");
+	background-position:0.35em center;
+	background-repeat:no-repeat;
+	color:#09C;
+	border-radius:0 5px 5px 0;
+	float:left;
+	font-family:Arial,sans-serif;
+	font-weight:bold;
+	line-height:1.2em;
+	padding:0.2em 0.5em 0.2em 1.25em;
+	position:relative;
+	text-transform:uppercase;
+}
+.fls-theme .fls-back-link a:hover{
+	background-image:url("images/icon-back-green.png");
+	color:#CC0;
+}
+.fls-back-link a .fls-back-link-text{
+	font-style:italic;
+	text-transform:lowercase;
+	font-weight:normal;
+}
+.fls-back-link a .fls-back-link-text.fluid{
+	font-style:normal;
+	font-weight:bold;
+}
+.fls-back-link a .fls-back-link-text.studios{
+	font-style:normal;
+	font-weight:normal;
+	text-transform:uppercase;
+}
+
+/* Main content (.fls-main) styles
 --------------------------------------------------------------------------- */
-.fl-grid li {
-	width: 15em; /* 240 / 16 */
-	height: 34.375em; /* 550 / 16 */
-	height: 26em;
-	margin: 0;
-	margin-right: 5%;
-	margin-left: 2%;
+.fls-main{
+	margin:0 auto;
+	padding:2em 4%;
+}
+.flc-toc-tocContainer{
+	font-size:1.2em;
+	line-height:140%;
+}
+.flc-toc-tocContainer a{
+	display:inline-block;
+}
+.home,.archive{
+	color: #666666;
+}
+.entry-title,
+.archive-title{
+	border:0;
+	font-family:Arial, sans-serif;
+}
+.fls-theme .entry-title,
+.fls-theme .archive-title{
+	color:#CCCC00;
+}
+h1.entry-title{
+	font-size:2em;
+	margin-bottom:0.25em;
+}
+h2.entry-title,h1.archive-title{
+	font-size:1.25em;
+}
+.entry-meta{
+	font-family:Arial, sans-serif;
+	font-style:italic;
+	border-bottom:1px solid #666666;
+}
+.entry-meta time, .entry-meta .fls-meta-author{
+	font-style:normal;
+	font-weight:bold;
+}
+.home .entry-content,
+.archive .entry-content{
+	margin-bottom:0.5em;
+}
+.fls-tags{
+	font-style: italic;
+}
+.fls-theme .fls-tags{
+	color: #0099CC;
+}
+p.entry-meta,.home .entry-content p,.archive .entry-content p{
+	margin-bottom:0;
+}
+.home .entry-title,
+.archive .entry-title{
+	margin:0;
+}
+.fls-theme a:focus img.wp-caption{
+	outline:0;
+}
+
+/* Styles for the index page grid (Overriding FSS styles)
+----------------------------------------- */
+.fl-grid li{
+	float:none;
+	height:auto;
+	margin:0 auto;
+}
+.fl-grid li .fls-index-summary{
+	margin:0 auto;
+	max-width:15em;
+	padding:0 0.5em 1.25em;
+	word-wrap:break-word;
+}
+.fls-theme .fls-post-thumbnail a:focus{
+	outline:0;
+}
+.fls-theme .fls-post-thumbnail a:focus img{
+	outline:2px solid #f00;
+}
+
+/* Single page styles for the base mobile theme
+----------------------------------------- */
+.single .fls-logo{
+	display:none;
+}
+.single .fls-access ul{
+	padding-right:4%;
+	width:auto;
+}
+.single .fls-access ul li.fls-loginout-link,
+.single .fls-access ul li.fl-toggleButton{
+	float:right;
+	margin-left:0.5em;
+}
+.single .fls-access ul li.fls-back-link{
+	float:left;
+}
+.single .fls-access ul li.fls-loginout-link a,
+.single .fls-access ul li.fl-toggleButton a{
+	margin-bottom:0;
+}
+.single .fls-access ul li.fls-back-link a{
+	margin:0.37em 0;
+}
+.single .fls-main{
+	max-width:60em;
+	padding-top:1em;
+}
+.single .entry-content,
+.error404 .entry-content{
+	line-height:1.4;
+}
+.single .entry-content{
+	padding-top:1em;
 }
 
 /* Wordpress alignment styles
---------------------------------------------------------------------------- */
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.625em;
+----------------------------------------- */
+.alignright{
+	display:inline;
+	float:right;
 }
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.625em;
+.alignleft{
+	display:inline;
+	float:left;
 }
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.aligncenter{
+	clear:both;
+	display:block;
+	margin:0 auto;
 }
 
-/* uiOptions fat panel specific styles
+/* Footer (.fls-contentinfo) specific styles
 --------------------------------------------------------------------------- */
-.fl-uiOptions-fatPanel .fl-panelBar {
-	position: relative;
-	height: 0;
+.fls-contentinfo{
+	background:#fff;
+	padding:2em 0;
+	text-align:center;
 }
-.fl-uiOptions-fatPanel .fl-toggleButton{
-	background-position: 0.3125em center;  /* 5 / 16 */
-	background-repeat: no-repeat;
-	padding: 0.3125em;  /* 5 / 16 */
-	padding-top: 0.2em;
-	padding-bottom: 0.1em;
-	padding-left: 1.5625em; /* 25 / 16 */
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border: 0;
-	line-height: 150%;
-	font-family: Arial,sans-serif;
-	font-weight: normal;
-	text-transform: lowercase;
-	position:absolute;
-	right: 0;
-	margin-right: 0;
-	top: -1px;  /* STUDIO-20: Get rid of the white line above the prefs button. */
-	z-index: 999999;
-}
-.fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton {
-	background-image: url("images/icon-uio.png");
-	background-color: #0099CC;
-	color: #FFFFFF;
-}
-.fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:hover, .fls-theme  .fl-uiOptions-fatPanel .fl-toggleButton:focus {background-color: #CCCC00;}
-.fs-uiOptions-panel {border-bottom: 2px solid #0099CC;	}
+
+/* uiOptions colour and contrast theme specific styles
+--------------------------------------------------------------------------- */
 
 /* uiOptions black on white theme specific styles
---------------------------------------------------------------------------- */
+----------------------------------------- */
+.fl-theme-uio-bw button:hover,.fl-theme-uio-bw  a:hover {text-decoration:underline;}
+.fl-theme-uio-bw  a:focus {outline:2px solid #000;}
+.single.fl-theme-uio-bw  a{display:inline-block;}
 .fl-theme-uio-bw  .fls-loginout-link, .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {background-color: #000000 !important;}
 .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {color: #FFFFFF !important;}
-.fl-theme-uio-bw  .fls-loginout-link { background-image: url("images/icon-login.png");}
-.fl-theme-uio-bw  .fls-back-link { background-image: url("images/icon-back-white.png");}
-.fl-theme-uio-bw  .fl-toggleButton { background-image: url("images/icon-uio.png");}
-.fl-theme-uio-bw .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
+.fl-theme-uio-bw  button.fl-toggleButton:focus{ background-color:#fff !important; background-image:url("images/icon-uio-black.png"); color:#000 !important; outline:2px solid #000;}
+.fl-theme-uio-bw  .fls-banner { background-image: none; }
+.fl-theme-uio-bw  .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
+.fl-theme-uio-bw  .fls-loginout-link a{ background-image: url("images/icon-login.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-bw  .fls-loginout-link a:focus{ background-color:#fff !important; background-image:url("images/icon-login-black.png"); color:transparent !important; outline:2px solid #000; }
+.fl-theme-uio-bw  .fls-loginout-link,.fl-theme-uio-bw  .fls-back-link{ background:transparent !important;}
+.fl-theme-uio-bw  .fls-back-link a{ background-image: url("images/icon-back-white.png"); border-radius:0 !important; }
+.fl-theme-uio-bw  .fls-back-link a span{background-color: transparent !important; color:#fff !important;}
+.fl-theme-uio-bw  .fls-back-link a:focus{ background-color:#fff !important; background-image: url("images/icon-back-black.png"); color:#000 !important; }
+.fl-theme-uio-bw  .fls-back-link a:focus span{ color:#000 !important; }
+.fl-theme-uio-bw  .fl-toggleButton a{ background-color:#000 !important; background-image: url("images/icon-uio.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-bw  .fl-toggleButton a:focus{ background-color:#fff !important; background-image:url("images/icon-uio-black.png"); color:transparent; outline:2px solid #000;}
+.fl-theme-uio-bw  .flc-toc-tocContainer a{ background:transparent !important;}
+.fl-theme-uio-bw  .post *{background:transparent !important;}
+.fl-theme-uio-bw  .fls-post-thumbnail a:focus {outline:none 0;}
+.fl-theme-uio-bw  .fls-post-thumbnail a:focus img{outline:2px solid #000 !important;}
 
 /* uiOptions white on black theme specific styles
---------------------------------------------------------------------------- */
+----------------------------------------- */
+.fl-theme-uio-wb button:hover,.fl-theme-uio-wb  a:hover {text-decoration:underline;}
+.fl-theme-uio-wb  a:focus {outline:2px solid #fff;}
+.single.fl-theme-uio-wb  a{display:inline-block;}
 .fl-theme-uio-wb  .fls-loginout-link, .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { background-color: #FFFFFF !important;}
-.fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { color: #000000 !important;}
-.fl-theme-uio-wb  .fls-loginout-link { background-image: url("images/icon-login-black.png");}
-.fl-theme-uio-wb  .fls-back-link { background-image: url("images/icon-back-black.png");}
-.fl-theme-uio-wb  .fl-toggleButton { background-image: url("images/icon-uio-black.png");}
-.fl-theme-uio-wb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-white.png");}
+.fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { color: #000 !important;}
+.fl-theme-uio-wb  button.fl-toggleButton{ background-image:url("images/icon-uio-black.png"); }
+.fl-theme-uio-wb  button.fl-toggleButton:focus{ background-color:#000 !important; background-image:url("images/icon-uio.png"); color:#fff !important; outline:2px solid #fff;}
+.fl-theme-uio-wb  .fls-banner { background-image: none; }
+.fl-theme-uio-wb  .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-white.png");}
+.fl-theme-uio-wb  .fls-loginout-link a{ background-image: url("images/icon-login-black.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-wb  .fls-loginout-link a:focus{ background-color:#000 !important; background-image:url("images/icon-login.png"); color:transparent !important; outline:2px solid #fff; }
+.fl-theme-uio-wb  .fls-loginout-link,.fl-theme-uio-wb  .fls-back-link{ background:transparent !important;}
+.fl-theme-uio-wb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); border-radius:0 !important; }
+.fl-theme-uio-wb  .fls-back-link a span{ background-color: transparent !important; color:#000 !important;}
+.fl-theme-uio-wb  .fls-back-link a:focus{ background-color:#000 !important; background-image: url("images/icon-back-white.png"); color:#fff !important; }
+.fl-theme-uio-wb  .fls-back-link a:focus span{ color:#fff !important; }
+.fl-theme-uio-wb  .fl-toggleButton a{ background-color:#fff !important; background-image: url("images/icon-uio-black.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-wb  .fl-toggleButton a:focus{ background-color:#000 !important; background-image:url("images/icon-uio.png"); color:transparent; outline:2px solid #fff;}
+.fl-theme-uio-wb  .flc-toc-tocContainer a{ background:transparent !important;}
+.fl-theme-uio-wb  .post *{background:transparent !important;}
+.fl-theme-uio-wb  .fls-post-thumbnail a:focus {outline:none 0;}
+.fl-theme-uio-wb  .fls-post-thumbnail a:focus img{outline:2px solid #fff !important;}
 
 /* uiOptions black on yellow theme specific styles
---------------------------------------------------------------------------- */
+----------------------------------------- */
+.fl-theme-uio-by button:hover,.fl-theme-uio-by  a:hover {text-decoration:underline;}
+.fl-theme-uio-by  a:focus {outline:2px solid #000;}
+.single.fl-theme-uio-by  a{display:inline-block;}
 .fl-theme-uio-by  .fls-loginout-link, .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { background-color: #000000 !important;}
 .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { color: #FFFF00 !important;}
-.fl-theme-uio-by  .fls-loginout-link { background-image: url("images/icon-login-yellow.png");}
-.fl-theme-uio-by  .fls-back-link { background-image: url("images/icon-back-yellow.png");}
-.fl-theme-uio-by  .fl-toggleButton { background-image: url("images/icon-uio-yellow.png");}
-.fl-theme-uio-by .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
+.fl-theme-uio-by  button.fl-toggleButton{ background-image:url("images/icon-uio-yellow.png"); }
+.fl-theme-uio-by  button.fl-toggleButton:focus{ background-color:#ff0 !important; background-image:url("images/icon-uio-black.png"); color:#000 !important; outline:2px solid #000;}
+.fl-theme-uio-by  .fls-banner { background-image: none; }
+.fl-theme-uio-by  .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-black.png");}
+.fl-theme-uio-by  .fls-loginout-link a{background-image: url("images/icon-login-yellow.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-by  .fls-loginout-link a:focus{ background-color:#ff0 !important; background-image:url("images/icon-login-black.png"); color:transparent !important; outline:2px solid #000; }
+.fl-theme-uio-by  .fls-loginout-link,.fl-theme-uio-by  .fls-back-link{ background:transparent !important;}
+.fl-theme-uio-by  .fls-back-link a{ background-image: url("images/icon-back-yellow.png"); border-radius:0 !important; }
+.fl-theme-uio-by  .fls-back-link a span{background-color: transparent !important; color:#ff0 !important;}
+.fl-theme-uio-by  .fls-back-link a:focus{ background-color:#ff0 !important; background-image: url("images/icon-back-black.png"); color:#000 !important; }
+.fl-theme-uio-by  .fls-back-link a:focus span{ color:#000 !important; }
+.fl-theme-uio-by  .fl-toggleButton a{ background-color:#000 !important; background-image: url("images/icon-uio-yellow.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-by  .fl-toggleButton a:focus{ background-color:#ff0 !important; background-image:url("images/icon-uio-black.png"); color:transparent; outline:2px solid #000;}
+.fl-theme-uio-by  .flc-toc-tocContainer a{ background:transparent !important;}
+.fl-theme-uio-by  .post *{background:transparent !important;}
+.fl-theme-uio-by  .fls-post-thumbnail a:focus {outline:none 0;}
+.fl-theme-uio-by  .fls-post-thumbnail a:focus img{outline:2px solid #000 !important;}
 
 /* uiOptions yellow on black theme specific styles
---------------------------------------------------------------------------- */
+----------------------------------------- */
+.fl-theme-uio-yb button:hover,.fl-theme-uio-yb  a:hover {text-decoration:underline;}
+.fl-theme-uio-yb  a:focus {outline:2px solid #ff0;}
+.single.fl-theme-uio-yb  a{display:inline-block;}
 .fl-theme-uio-yb  .fls-loginout-link, .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { background-color: #FFFF00 !important;}
 .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { color: #000000 !important;}
-.fl-theme-uio-yb  .fls-loginout-link { background-image: url("images/icon-login-black.png");}
-.fl-theme-uio-yb  .fls-back-link { background-image: url("images/icon-back-black.png");}
-.fl-theme-uio-yb  .fl-toggleButton { background-image: url("images/icon-uio-black.png");}
+.fl-theme-uio-yb  button.fl-toggleButton{ background-image:url("images/icon-uio-black.png"); }
+.fl-theme-uio-yb  button.fl-toggleButton:focus{ background-color:#000 !important; background-image:url("images/icon-uio-yellow.png"); color:#ff0 !important; outline:2px solid #ff0;}
+.fl-theme-uio-yb  .fls-banner { background-image: none; }
 .fl-theme-uio-yb .fls-logo a { background-image: url("images/logo-fluidSTUDIOS-yellow.png");}
+.fl-theme-uio-yb  .fls-loginout-link a{background-image: url("images/icon-login-black.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-yb  .fls-loginout-link a:focus{ background-color:#000 !important; background-image:url("images/icon-login-yellow.png"); color:transparent !important; outline:2px solid #ff0; }
+.fl-theme-uio-yb  .fls-loginout-link,.fl-theme-uio-yb  .fls-back-link{ background:transparent !important;}
+.fl-theme-uio-yb  .fls-back-link a{ background-image: url("images/icon-back-black.png"); border-radius:0 !important; }
+.fl-theme-uio-yb  .fls-back-link a span{background-color: transparent !important; color:#000 !important;}
+.fl-theme-uio-yb  .fls-back-link a:focus{ background-color:#000 !important; background-image: url("images/icon-back-yellow.png"); color:#ff0 !important; }
+.fl-theme-uio-yb  .fls-back-link a:focus span{ color:#ff0 !important; }
+.fl-theme-uio-yb  .fl-toggleButton a{ background-color:#ff0 !important; background-image: url("images/icon-uio-black.png"); border-radius:0 !important; color:transparent !important;}
+.fl-theme-uio-yb  .fl-toggleButton a:focus{ background-color:#000 !important; background-image:url("images/icon-uio-yellow.png"); color:transparent; outline:2px solid #ff0;}
+.fl-theme-uio-yb  .flc-toc-tocContainer a{ background:transparent !important;}
+.fl-theme-uio-yb  .post *{background:transparent !important;}
+.fl-theme-uio-yb  .fls-post-thumbnail a:focus {outline:none 0;}
+.fl-theme-uio-yb  .fls-post-thumbnail a:focus img{outline:2px solid #ff0 !important;}
+
+/* Responsive media queries
+--------------------------------------------------------------------------- */
+@media screen and (min-width:480px){
+	body,body.home{
+		max-width:70.625em; /* 1130 / 16 */
+		position:relative;
+	}
+	.home .fls-banner,.archive .fls-banner{
+		border-bottom:0 !important;
+		border-right:2px solid #fff;
+		margin:0;
+		min-height:100%;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		padding-right:0;
+		width:35%; /* 168 / 480 */
+	}
+	.home .fls-masthead,.archive .fls-masthead{
+		padding:0 20%; /* padding-right/left 34 / 170 */
+		float:right;
+	}
+	.home .fls-logo,.archive .fls-logo{
+		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
+	}
+	.fls-access ul li.fls-loginout-link{
+		float:left;
+		margin-left:0;
+	}
+	.home .fls-main,.archive .fls-main{
+		padding:1.625em 0 0 40.666667%; /* margin-top: 26 / 16, margin-left: 200 / 480 */
+	}
+	.fl-grid li .fls-index-summary{
+		margin:0;
+		padding:0 1.5% 1.25em;
+	}
+	.home .fls-contentinfo,.archive .fls-contentinfo{
+		padding-left:41.666667%; /* 190 / 480 */
+		text-align:left;
+	}
+}
+
+@media screen and (min-width:620px){
+	.flc-slidingPanel-toggleButton.fl-toggleButton{
+		background-color:#09c;
+		background-image:url("images/icon-uio.png");
+		background-position: 0.4375em center;
+		background-repeat:no-repeat;
+		border:0 none;
+		border-radius:0 0 5px 5px;
+		color:#fff;
+		cursor:pointer;
+		display:block;
+		float:right;
+		font-family:Arial,sans-serif;
+		font-weight:normal;
+		line-height:150%;
+		margin-top:0;
+		margin-right:8.4%;
+		padding:0.15em 0.5em 0.15em 1.7em;
+		position:relative;
+		text-transform:lowercase;
+		width:auto;
+		z-index:999999;
+	}
+	.fls-theme button.fl-toggleButton:hover{
+		text-decoration:underline;
+	}
+	.fls-theme button.fl-toggleButton:focus{
+		outline:2px solid #f00;
+	}
+	.fls-banner,.home .fls-banner,.single .fls-banner,.archive .fls-banner{
+		border-bottom:0 !important;
+		border-right:2px solid #fff;
+		margin:0;
+		min-height:100%;
+		padding:0;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		width:23.5% /* a greater width allows for more room left on the fls-masthead as the veiwport narrows */
+	}
+	.home .fls-masthead,.single .fls-masthead{
+		padding:0 11.038961%; /* padding-right/left 34 / 308 */
+	}
+	.single .fls-masthead,.archive .fls-masthead,.error404 .fls-masthead{
+		padding:0 11.038961%; /* padding-right/left 34 / 308 */
+		float:right;
+	}
+	.fls-logo,.single .fls-logo{
+		display:block;
+		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
+	}
+	.fls-access ul,.home .fls-access ul,.single .fls-access ul,.archive .fls-access ul{
+		padding:0;
+		width:auto;
+	}
+	.fls-loginout-link a{
+		background-position:0.5em center;
+		color:#fff !important;
+		display:inline-block;
+		float:none;
+		font-family:Arial,sans-serif;
+		line-height:150%;
+		margin:0;
+		overflow:visible;
+		padding:0.2em 0.75em 0.2em 1.5em;
+		position:relative;
+		text-transform:lowercase;
+		white-space:nowrap;
+		width:auto;
+	}
+	.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link{
+		float:none;
+		margin:0;
+		padding:0;
+	}
+	.fls-back-link a{
+		border-radius:5px 0 0 5px;
+		position:absolute;
+		top:22.8125em; /* 365 /16 */
+		right:0;
+	}
+	.fls-back-link a span{
+		display:none;
+	}
+	#uioProxyButton{
+		display:none;
+	}
+
+	.fl-theme-uio-bw .fl-toggleButton,.fl-theme-uio-wb .fl-toggleButton,.fl-theme-uio-by .fl-toggleButton,.fl-theme-uio-yb .fl-toggleButton{
+		background-position: 0.4375em center; border-radius:0;
+	}
+	.fl-theme-uio-bw  .fls-loginout-link a,.fl-theme-uio-wb  .fls-loginout-link a,.fl-theme-uio-by  .fls-loginout-link a,.fl-theme-uio-yb  .fls-loginout-link a{
+		background-position:0.6em center;
+	}
+
+	.fl-theme-uio-bw .fls-loginout-link a{
+		color:#fff !important;
+	}
+	.fl-theme-uio-bw .fls-loginout-link a:focus{
+		color:#000 !important;
+	}
+
+	.fl-theme-uio-wb .fls-loginout-link a{
+		color:#000 !important;
+	}
+	.fl-theme-uio-wb .fls-loginout-link a:focus{
+		color:#fff !important;
+	}
+
+	.fl-theme-uio-by .fls-loginout-link a{
+		color:#ff0 !important;
+	}
+	.fl-theme-uio-by .fls-loginout-link a:focus{
+		color:#000 !important;
+	}
+
+	.fl-theme-uio-yb .fls-loginout-link a{
+		color:#000 !important;
+	}
+	.fl-theme-uio-yb .fls-loginout-link a:focus{
+		color:#ff0 !important;
+	}
+	
+
+	.fls-main,.home .fls-main,.single .fls-main,.archive .fls-main{
+		padding-left:27.25%; /* eyeballed */
+	}
+	.archive .fls-main,.single .fls-main{
+		padding-top:2.4375em;
+	}
+	.single .fls-main,.error404 .fls-main{
+		padding-right:10% !important;
+	}
+	.single .fls-main{
+		font-size:1.2em;
+	}
+	.fl-grid li{
+		display:inline-block;
+		padding:0 1.50000000%; /* left and right padding 12 / 800 */
+		vertical-align:top;
+		width: 42.253521%; /* 240 / 568 */
+	}
+	.fls-contentinfo,.home .fls-contentinfo,.archive .fls-contentinfo{
+		padding-left:27.5%; /* 220 / 800 */
+		text-align:left;
+	}
+	.home .fls-contentinfo,.archive .fls-contentinfo{
+		padding-left:28.55%;
+	}
+}
+
+@media screen and (min-width:800px){
+	.flc-slidingPanel-toggleButton.fl-toggleButton{
+		margin-right:2%;
+	}
+	.fls-banner,.home .fls-banner,.single .fls-banner,.archive .fls-banner{
+		width:27.256637%; /* 308 / 1130 */
+	}
+	.fls-main,.home .fls-main,.single .fls-main,.archive .fls-main,.error404 .fls-main{
+		padding-right:0;
+		padding-left:29.675153%; /* 338 / 1139 */
+	}
+	.fl-grid li{
+		padding:0 1%;
+		width:30.5%;
+	}
+	.single .fls-main{
+		padding-right:2% !important;
+	}
+	.home .fls-contentinfo,.archive .fls-contentinfo{
+		padding-left:30.553116%; /* 348 / 1139 */
+	}
+	.single .fls-contentinfo,.error404 .fls-contentinfo{
+		padding-left:29.675153%; /* 338 / 1139 */
+	}
+}
