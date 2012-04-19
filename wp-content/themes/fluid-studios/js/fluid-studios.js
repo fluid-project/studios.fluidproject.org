@@ -20,11 +20,11 @@ https://github.com/fluid-project/infusion/raw/master/Infusion-LICENSE.txt
 		history.back(-1);
 		return false;
 	};
-	
+
 	$(document).ready(function() {
 		$("#flsc-go-back-link").click(fls_go_back);
 	});
-	
+
     
     fls_hide_background = function (newModel, oldModel, changeRequest) {
         if (newModel.theme !== oldModel.theme) {
@@ -37,3 +37,4 @@ https://github.com/fluid-project/infusion/raw/master/Infusion-LICENSE.txt
     };
 
 })(jQuery);
+
