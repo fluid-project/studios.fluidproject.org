@@ -1,10 +1,10 @@
 /*
 Theme Name:Fluid-Studios
 Theme URI:http://studios.fluidproject.org/wp-content/themes/fluid-studios/
-Description:Usability and fls-accessibility on the open web...
+Description:Usability and accessibility on the open web...
 Author:The Fluid Project
 Author URI:http://fluidproject.org
-Version:2
+Version:2.0.2
 */
 
 /* Style sheet contents
@@ -236,7 +236,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 .fls-theme .fls-loginout-link a:hover,
 .fls-theme .fl-toggleButton a:hover{
 	background-color: #cc0;
-	color:transparent;
+	padding-left:1.5625em;
 }
 .fls-theme .fls-loginout-link a:focus{
 	color:transparent;

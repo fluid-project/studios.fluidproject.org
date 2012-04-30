@@ -38,6 +38,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo $template_url; ?>/infusion/components/uiOptions/css/FatPanelUIOptions.css" media="all" />
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="all" />
+<!--[if IE 8]><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie8.css" type="text/css" media="screen" /><![endif]-->
 
 <script src="<?php echo $template_url; ?>/infusion/MyInfusion.js"></script>
 <script src="<?php echo $template_url; ?>/js/fluid-studios.js"></script>
