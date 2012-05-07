@@ -1,0 +1,19 @@
+/* IE7 specific styles
+--------------------------------------------------------------------------- */
+.flc-slidingPanel-toggleButton.fl-toggleButton{
+	width:14em;
+	margin-right:3%;
+}
+.fls-masthead{
+	width:7em;
+}
+.fls-logo a,.single .fls-logo a{
+	display:block;
+}
+.home .fls-main,.archive .fls-main{
+	padding-top:2.5em;
+}
+.fl-grid li{
+	float:left;
+	height:20em;
+}

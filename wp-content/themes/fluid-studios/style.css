@@ -343,6 +343,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 /* Styles for the index page grid (Overriding FSS styles)
 ----------------------------------------- */
+ul.fl-grid{
+	overflow:visible;
+}
 .fl-grid li{
 	float:none;
 	height:auto;
