@@ -1,8 +1,5 @@
 /* IE7 specific styles
 --------------------------------------------------------------------------- */
-a:focus{
-	color:#f00;
-}
 .flc-slidingPanel-toggleButton.fl-toggleButton{
 	font-size:1em;
 	margin-right:3%;
