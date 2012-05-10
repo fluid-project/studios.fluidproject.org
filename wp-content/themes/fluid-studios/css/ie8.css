@@ -34,7 +34,7 @@ body{
 	outline:2px solid #f00;
 }
 .fls-banner{
-	border-bottom:0 !important;
+	border-bottom:0 ;
 	border-right:2px solid #fff;
 	margin:0;
 	min-height:100%;
@@ -64,7 +64,7 @@ body{
 }
 .fls-loginout-link a{
 	background-position:0.5em center;
-	color:#fff !important;
+	color:#fff ;
 	display:inline-block;
 	float:none;
 	font-family:Arial,sans-serif;
@@ -99,7 +99,7 @@ body{
 }
 .single .fls-main{
 	font-size:1.2em;
-	padding-right:2% !important;
+	padding-right:2% ;
 }
 .fls-main,.home .fls-main,.single .fls-main,.archive .fls-main{
 	padding-left:27.25%; /* eyeballed */
@@ -143,30 +143,30 @@ ul.fl-grid{
 }
 
 .fl-theme-uio-bw .fls-loginout-link a{
-	color:#fff !important;
+	color:#fff ;
 }
 .fl-theme-uio-bw .fls-loginout-link a:focus{
-	color:#000 !important;
+	color:#000 ;
 }
 
 .fl-theme-uio-wb .fls-loginout-link a{
-	color:#000 !important;
+	color:#000 ;
 }
 .fl-theme-uio-wb .fls-loginout-link a:focus{
-	color:#fff !important;
+	color:#fff ;
 }
 
 .fl-theme-uio-by .fls-loginout-link a{
-	color:#ff0 !important;
+	color:#ff0 ;
 }
 .fl-theme-uio-by .fls-loginout-link a:focus{
-	color:#000 !important;
+	color:#000 ;
 }
 
 .fl-theme-uio-yb .fls-loginout-link a{
-	color:#000 !important;
+	color:#000 ;
 }
 .fl-theme-uio-yb .fls-loginout-link a:focus{
-	color:#ff0 !important;
+	color:#ff0 ;
 }
 
