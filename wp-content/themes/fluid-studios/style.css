@@ -106,7 +106,7 @@ img,embed,object,video{
 /* Fluid-Studios theme specific styles
 --------------------------------------------------------------------------- */
 html,body,.fls-wrapper{
-	height:99.9999%; /* A hack to prevent page level scroll-bars from showing cos 100% is too much for some reason. Go figure. */
+	height:99.9999%; /* A hack to prevent page level scroll-bars from showing cos, of course, 100% is too much, but 99.9999 is just right. Go figure. */
 }
 html{
 	background-image:url("images/bg.jpg");

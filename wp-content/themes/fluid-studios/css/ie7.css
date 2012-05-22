@@ -1,9 +1,28 @@
 /* IE7 specific styles
 --------------------------------------------------------------------------- */
+html{
+	overflow:auto;
+}
+html,body,.fls-wrapper{
+	height:99.9%;
+}
+.fls-post-thumbnail a:active{
+	border:0;
+}
+a:active,
+a:active img{
+	border:2px solid #f00;
+}
 .flc-slidingPanel-toggleButton.fl-toggleButton{
 	font-size:1em;
 	margin-right:3%;
 	width:14em;
+}
+button:focus{
+	border:8px solid #f00;
+}
+.flc-slidingPanel-toggleButton.fl-toggleButton:focus{
+	border:2px solid #f00;
 }
 .fls-masthead{
 	width:7em;
@@ -17,4 +36,7 @@
 .fl-grid li{
 	float:left;
 	min-height:20em;
+}
+.fl-grid li .fls-index-summary{
+	overflow:visible;
 }
