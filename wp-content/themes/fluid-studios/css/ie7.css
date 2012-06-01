@@ -10,19 +10,19 @@ html,body,.fls-wrapper{
 	border:0;
 }
 a:active,
-a:active img{
+a:active img,
+button:active {
 	border:2px solid #f00;
 }
-.flc-slidingPanel-toggleButton.fl-toggleButton{
+.fl-panelBar .fl-toggleButton{
 	font-size:1em;
 	margin-right:3%;
 	width:14em;
 }
-button:focus{
-	border:8px solid #f00;
-}
-.flc-slidingPanel-toggleButton.fl-toggleButton:focus{
-	border:2px solid #f00;
+.fl-toggleButton.focus{
+	border-right:2px solid #f00;
+	border-bottom:2px solid #f00;
+	border-left:2px solid #f00;
 }
 .fls-masthead{
 	width:7em;

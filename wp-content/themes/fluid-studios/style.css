@@ -153,7 +153,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 --------------------------------------------------------------------------- */
 .no-js #myUIOptions,
 .no-js .fl-uiOptions-fatPanel .fl-panelBar,
-.flc-slidingPanel-toggleButton.fl-toggleButton,
+.fl-panelBar .fl-toggleButton,
 .no-js #uioProxyButton{
 	display:none;
 }
@@ -570,7 +570,7 @@ ul.fl-grid{
 }
 
 @media screen and (min-width:620px){
-	.flc-slidingPanel-toggleButton.fl-toggleButton{
+	.fl-panelBar .fl-toggleButton{
 		background-color:#09c;
 		background-image:url("images/icon-uio.png");
 		background-position: 0.4375em center;
@@ -722,8 +722,8 @@ ul.fl-grid{
 }
 
 @media screen and (min-width:800px){
-	.flc-slidingPanel-toggleButton.fl-toggleButton{
-		margin-right:3%;
+	.fl-panelBar .fl-toggleButton{
+		margin-right:2.75%;
 	}
 	.fls-banner,.home .fls-banner,.single .fls-banner,.archive .fls-banner{
 		width:27.256637%; /* 308 / 1130 */
