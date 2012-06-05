@@ -25,7 +25,7 @@ var fs = fs || {};
     // new final init function to add the focus styling in IE7 to the toggle button
     fs.ie7.slidingPanel.finalInit = function (that) {
 
-				var toggleButton = that.locate("toggleButton");
+        var toggleButton = that.locate("toggleButton");
         
         // add the ie7Focus style on focus of the toggle button
         toggleButton.focus(function () {
@@ -38,7 +38,7 @@ var fs = fs || {};
         });
         
         // call the components default final init function
-        fluid.slidingPanel.finalInit(that);
+//        fluid.slidingPanel.finalInit(that);
     };
     
     // demands block to add the ie7Focus style and override the finalInitFunction
