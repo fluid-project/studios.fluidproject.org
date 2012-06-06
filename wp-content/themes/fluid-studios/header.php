@@ -74,7 +74,7 @@
   	</div>
   </div>
 
-<script type="text/javascript" src="<?php echo $template_url; ?>/js/iebuttonfocus.js"></script>
+	<!--[if lte IE 7]><script type="text/javascript" src="<?php echo $template_url; ?>/js/iebuttonfocus.js"></script><![endif]-->
 
 	<script type="text/javascript">
 		// Instantiate the UI Enhancer component, specifying the table of contents' template URL

@@ -36,9 +36,6 @@ var fs = fs || {};
         toggleButton.blur(function () {
             toggleButton.removeClass(that.options.styles.ie7Focus);
         });
-        
-        // call the components default final init function
-//        fluid.slidingPanel.finalInit(that);
     };
     
     // demands block to add the ie7Focus style and override the finalInitFunction

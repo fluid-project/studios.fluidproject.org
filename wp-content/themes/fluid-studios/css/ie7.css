@@ -6,6 +6,23 @@ html{
 html,body,.fls-wrapper{
 	height:99.9%;
 }
+
+.fl-theme-uio-bw button.fl-toggleButton.focus{ background-color:#fff !important; background-image:url("../images/icon-uio-black.png"); color:#000 !important;}
+.fl-theme-uio-bw .fls-loginout-link a:active{ background-color:#fff !important; background-image:url("../images/icon-login-black.png"); color:#000 !important;}
+.fl-theme-uio-bw  .fls-back-link a:active{ background-color:#fff !important; background-image: url("../images/icon-back-black.png"); color:#000 !important;}
+
+.fl-theme-uio-wb button.fl-toggleButton.focus{ background-color:#000 !important; background-image:url("../images/icon-uio.png"); color:#fff !important;}
+.fl-theme-uio-wb .fls-loginout-link a:active{ background-color:#000 !important; background-image:url("../images/icon-login.png"); color:#fff !important;}
+.fl-theme-uio-wb  .fls-back-link a:active{ background-color:#000 !important; background-image: url("../images/icon-back-white.png"); color:#fff !important;}
+
+.fl-theme-uio-by button.fl-toggleButton.focus{ background-color:#ff0 !important; background-image:url("../images/icon-uio-black.png"); color:#000 !important;}
+.fl-theme-uio-by .fls-loginout-link a:active{ background-color:#ff0 !important; background-image:url("../images/icon-login-black.png"); color:#000 !important;}
+.fl-theme-uio-by  .fls-back-link a:active{ background-color:#ff0 !important; background-image: url("../images/icon-back-black.png"); color:#000 !important;}
+
+.fl-theme-uio-yb button.fl-toggleButton.focus{ background-color:#000 !important; background-image:url("../images/icon-uio-yellow.png"); color:#ff0 !important;}
+.fl-theme-uio-yb .fls-loginout-link a:active{ background-color:#000 !important; background-image:url("../images/icon-login-yellow.png"); color:#ff0 !important;}
+.fl-theme-uio-yb  .fls-back-link a:active{ background-color:#000 !important; background-image: url("../images/icon-back-yellow.png"); color:#ff0 !important;}
+
 .fls-post-thumbnail a:active{
 	border:0;
 }
