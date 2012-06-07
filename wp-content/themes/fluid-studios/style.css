@@ -108,13 +108,10 @@ img,embed,object,video{
 html,body,.fls-wrapper{
 	height:99.9999%; /* A hack to prevent page level scroll-bars from showing cos, of course, 100% is too much, but 99.9999 is just right. Go figure. */
 }
-html{
-	background-image:url("images/bg.jpg");
-	background-repeat:repeat;
-	font-family:"Neuton", "Times New Roman", Times, serif;
-}
 body{
 	background:#fff;
+	background-image:url("images/bg.jpg");
+	background-repeat:repeat;
 	color: #333;
 	font-family: "Neuton", "Times New Roman", Times, serif;
 	font-size:100%;
@@ -167,6 +164,9 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 }
 .fls-theme .fl-toggleButton a:focus{
 	color:transparent;
+}
+.toc ul li a{
+	display:block;
 }
 
 /* Header (.fls-banner) specific styles
@@ -236,7 +236,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 .fls-theme .fls-loginout-link a:hover,
 .fls-theme .fl-toggleButton a:hover{
 	background-color: #cc0;
-	padding-left:1.5625em;
+	color:transparent;
 }
 .fls-theme .fls-loginout-link a:focus{
 	color:transparent;
