@@ -6,8 +6,8 @@ html{
 html,body,.fls-wrapper{
 	height:99.9%;
 }
-.toc{
-	line-height:160%;
+body{
+	line-height:180%;
 }
 
 .fl-theme-uio-bw button.fl-toggleButton.focus{ background-color:#fff !important; background-image:url("../images/icon-uio-black.png"); color:#000 !important;}
@@ -55,7 +55,7 @@ button:active {
 }
 .fl-grid li{
 	float:left;
-	min-height:20em;
+	min-height:21em;
 }
 .fl-grid li .fls-index-summary{
 	overflow:visible;
