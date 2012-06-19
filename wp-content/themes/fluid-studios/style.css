@@ -135,7 +135,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	color:#09C;
 }
 .single.fls-theme a{
-	display:inline-block;
+	display:inline;
 }
 .fls-theme a:hover{
 	color:#CC0;
