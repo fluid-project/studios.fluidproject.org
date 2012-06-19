@@ -176,12 +176,13 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	margin:0 auto;
 	padding:0;
 }
-.fls-logo {
+.fls-logo{
 	font-size:1em;
 	margin:1em auto;
 	width:99px;
 }
-.fls-logo a {
+.fls-logo a,
+.single .fls-logo a{
 	background-repeat:no-repeat;
 	display:inline-block;
 	height:95px;
