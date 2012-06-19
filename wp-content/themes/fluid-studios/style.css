@@ -1,10 +1,10 @@
 /*
 Theme Name:Fluid-Studios
 Theme URI:http://studios.fluidproject.org/wp-content/themes/fluid-studios/
-Description:Usability and fls-accessibility on the open web...
+Description:Usability and accessibility on the open web...
 Author:The Fluid Project
 Author URI:http://fluidproject.org
-Version:2
+Version:2.0.2
 */
 
 /* Style sheet contents
@@ -106,15 +106,12 @@ img,embed,object,video{
 /* Fluid-Studios theme specific styles
 --------------------------------------------------------------------------- */
 html,body,.fls-wrapper{
-	height:100%;
-}
-html{
-	background-image:url("images/bg.jpg");
-	background-repeat:repeat;
-	font-family:"Neuton", "Times New Roman", Times, serif;
+	height:99.9999%; /* A hack to prevent page level scroll-bars from showing cos, of course, 100% is too much, but 99.9999 is just right. Go figure. */
 }
 body{
 	background:#fff;
+	background-image:url("images/bg.jpg");
+	background-repeat:repeat;
 	color: #333;
 	font-family: "Neuton", "Times New Roman", Times, serif;
 	font-size:100%;
@@ -138,7 +135,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	color:#09C;
 }
 .single.fls-theme a{
-	display:inline-block;
+	display:inline;
 }
 .fls-theme a:hover{
 	color:#CC0;
@@ -153,7 +150,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 --------------------------------------------------------------------------- */
 .no-js #myUIOptions,
 .no-js .fl-uiOptions-fatPanel .fl-panelBar,
-.flc-slidingPanel-toggleButton.fl-toggleButton,
+.fl-panelBar .fl-toggleButton,
 .no-js #uioProxyButton{
 	display:none;
 }
@@ -179,12 +176,13 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	margin:0 auto;
 	padding:0;
 }
-.fls-logo {
+.fls-logo{
 	font-size:1em;
 	margin:1em auto;
 	width:99px;
 }
-.fls-logo a {
+.fls-logo a,
+.single .fls-logo a{
 	background-repeat:no-repeat;
 	display:inline-block;
 	height:95px;
@@ -285,12 +283,8 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	margin:0 auto;
 	padding:2em 4%;
 }
-.flc-toc-tocContainer{
+.toc{
 	font-size:1.2em;
-	line-height:140%;
-}
-.flc-toc-tocContainer a{
-	display:inline-block;
 }
 .home,.archive{
 	color: #666666;
@@ -343,6 +337,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 /* Styles for the index page grid (Overriding FSS styles)
 ----------------------------------------- */
+ul.fl-grid{
+	overflow:visible;
+}
 .fl-grid li{
 	float:none;
 	height:auto;
@@ -567,7 +564,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 }
 
 @media screen and (min-width:620px){
-	.flc-slidingPanel-toggleButton.fl-toggleButton{
+	.fl-panelBar .fl-toggleButton{
 		background-color:#09c;
 		background-image:url("images/icon-uio.png");
 		background-position: 0.4375em center;
@@ -719,8 +716,8 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 }
 
 @media screen and (min-width:800px){
-	.flc-slidingPanel-toggleButton.fl-toggleButton{
-		margin-right:2%;
+	.fl-panelBar .fl-toggleButton{
+		margin-right:2.75%;
 	}
 	.fls-banner,.home .fls-banner,.single .fls-banner,.archive .fls-banner{
 		width:27.256637%; /* 308 / 1130 */
@@ -734,7 +731,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		width:30.5%;
 	}
 	.single .fls-main{
-		padding-right:2% !important;
+		padding-right:3% !important;
 	}
 	.home .fls-contentinfo,.archive .fls-contentinfo{
 		padding-left:30.553116%; /* 348 / 1139 */
