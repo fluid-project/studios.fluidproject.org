@@ -52,7 +52,7 @@ button:active {
 }
 .fl-grid li{
 	float:left;
-	min-height:21em;
+	min-height:22em;
 }
 .fl-grid li .fls-index-summary{
 	overflow:visible;

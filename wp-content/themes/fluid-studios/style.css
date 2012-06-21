@@ -360,26 +360,34 @@ ul.fl-grid{
 
 /* Single page styles for the base mobile theme
 ----------------------------------------- */
-.single .fls-logo{
+.single .fls-logo,
+.archive .fls-logo{
 	display:none;
 }
-.single .fls-access ul{
+.single .fls-access ul,
+.archive .fls-access ul{
 	padding-right:4%;
 	width:auto;
 }
 .single .fls-access ul li.fls-loginout-link,
-.single .fls-access ul li.fl-toggleButton{
+.single .fls-access ul li.fl-toggleButton,
+.archive .fls-access ul li.fls-loginout-link,
+.archive .fls-access ul li.fl-toggleButton{
 	float:right;
 	margin-left:0.5em;
 }
-.single .fls-access ul li.fls-back-link{
+.single .fls-access ul li.fls-back-link,
+.archive .fls-access ul li.fls-back-link{
 	float:left;
 }
 .single .fls-access ul li.fls-loginout-link a,
-.single .fls-access ul li.fl-toggleButton a{
+.single .fls-access ul li.fl-toggleButton a,
+.archive .fls-access ul li.fls-loginout-link a,
+.archive .fls-access ul li.fl-toggleButton a{
 	margin-bottom:0;
 }
-.single .fls-access ul li.fls-back-link a{
+.single .fls-access ul li.fls-back-link a,
+.archive .fls-access ul li.fls-back-link a{
 	margin:0.37em 0;
 }
 .single .fls-main{
@@ -524,10 +532,9 @@ ul.fl-grid{
 --------------------------------------------------------------------------- */
 @media screen and (min-width:480px){
 	body,body.home{
-		max-width:70.625em; /* 1130 / 16 */
 		position:relative;
 	}
-	.home .fls-banner,.archive .fls-banner{
+	.home .fls-banner{
 		border-bottom:0 !important;
 		border-right:2px solid #fff;
 		margin:0;
@@ -539,31 +546,34 @@ ul.fl-grid{
 		padding-right:0;
 		width:35%; /* 168 / 480 */
 	}
-	.home .fls-masthead,.archive .fls-masthead{
+	.home .fls-masthead{
 		padding:0 20%; /* padding-right/left 34 / 170 */
 		float:right;
 	}
-	.home .fls-logo,.archive .fls-logo{
+	.home .fls-logo{
 		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
 	}
 	.fls-access ul li.fls-loginout-link{
 		float:left;
 		margin-left:0;
 	}
-	.home .fls-main,.archive .fls-main{
+	.home .fls-main{
 		padding:1.625em 0 0 40.666667%; /* margin-top: 26 / 16, margin-left: 200 / 480 */
 	}
-	.fl-grid li .fls-index-summary{
+	.home .fl-grid li .fls-index-summary{
 		margin:0;
 		padding:0 1.5% 1.25em;
 	}
-	.home .fls-contentinfo,.archive .fls-contentinfo{
+	.home .fls-contentinfo{
 		padding-left:41.666667%; /* 190 / 480 */
 		text-align:left;
 	}
 }
 
 @media screen and (min-width:620px){
+	body,body.home{
+		max-width:70.625em; /* 1130 / 16 */
+	}
 	.fl-panelBar .fl-toggleButton{
 		background-color:#09c;
 		background-image:url("images/icon-uio.png");
@@ -611,7 +621,7 @@ ul.fl-grid{
 		padding:0 11.038961%; /* padding-right/left 34 / 308 */
 		float:right;
 	}
-	.fls-logo,.single .fls-logo{
+	.fls-logo,.single .fls-logo,.archive .fls-logo{
 		display:block;
 		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
 	}
@@ -622,7 +632,7 @@ ul.fl-grid{
 	.fls-loginout-link a{
 		background-position:0.5em center;
 		color:#fff !important;
-		display:inline-block;
+		display:inline-block !important;
 		float:none;
 		font-family:Arial,sans-serif;
 		line-height:150%;
@@ -634,7 +644,7 @@ ul.fl-grid{
 		white-space:nowrap;
 		width:auto;
 	}
-	.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link{
+	.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link,.archive .fls-access ul li.fls-loginout-link{
 		float:none;
 		margin:0;
 		padding:0;

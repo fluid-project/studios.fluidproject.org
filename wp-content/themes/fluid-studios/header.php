@@ -114,10 +114,10 @@
 				</<?php echo $heading_tag; ?>>
 				<nav class="fls-access">
 					<ul class="fl-clearfix">
-						<li id="uioProxyButton" class="fl-toggleButton"><a href="#">Show display preferences</a></li>
+						<li id="uioProxyButton" class="fl-toggleButton"><a href="#nav:page-top" title="Show display preferences">Show display preferences</a></li>
 						<li class="fls-loginout-link"><?php wp_loginout(); ?></li>
-						<?php if(is_single()) echo('<li class="fls-back-link"><!-- Note: The id "flsc-go-back-link" is used @ js/fluid-studios.js. Synchronizing both is the key to have "back" link work. -->
-						<a href="#" id="flsc-go-back-link" title="Go Back">Back<span class="fls-back-link-text"> to <span class="fls-back-link-text fluid">fluid</span><span class="fls-back-link-text studios">STUDIOS</span></span></a></li>'); ?>
+						<?php if(is_single() || is_archive()) echo('<li class="fls-back-link"><!-- Note: The id "flsc-go-back-link" is used @ js/fluid-studios.js. Synchronizing both is the key to have "back" link work. -->
+						<a href="#nav:page-top" id="flsc-go-back-link" title="Go Back">Back<span class="fls-back-link-text"> to <span class="fls-back-link-text fluid">fluid</span><span class="fls-back-link-text studios">STUDIOS</span></span></a></li>'); ?>
 
 					</ul>
 					<script type="text/javascript">
