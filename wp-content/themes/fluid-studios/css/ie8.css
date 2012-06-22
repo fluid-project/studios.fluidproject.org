@@ -65,7 +65,7 @@ body{
 .fls-loginout-link a{
 	background-position:0.5em center;
 	color:#fff !important;
-	display:inline-block;
+	display:inline-block !important;
 	float:none;
 	font-family:Arial,sans-serif;
 	line-height:150%;
