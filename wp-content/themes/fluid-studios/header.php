@@ -101,7 +101,7 @@
 				<<?php echo $heading_tag; ?> class="fls-logo">
 					<a href="<?php echo esc_url(get_home_url()); ?>" title="Fluid Studios Home" class="fl-hidden-replace" rel="home">Fluid Studios</a>
 				</<?php echo $heading_tag; ?>>
-				<nav class="fls-access"role="navigation" aria-labelledby="main-menu-navigation">
+				<nav class="fls-access" role="navigation" aria-labelledby="main-menu-navigation">
 					<ul id="main-menu-navigation" class="fl-clearfix">
 						<li id="uioProxyButton" class="fl-toggleButton"><a href="#nav:page-top" title="Show display preferences">Show display preferences</a></li>
 						<li class="fls-loginout-link"><?php wp_loginout(); ?></li>
