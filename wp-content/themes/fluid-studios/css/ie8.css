@@ -53,7 +53,7 @@ body{
 	display:block;
 	margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
 }
-.fls-access ul,.single .fls-access ul{
+.fls-access ul,.single .fls-access ul,.archive .fls-access ul{
 	margin:0;
 	padding:0;
 	width:auto;
@@ -65,7 +65,7 @@ body{
 .fls-loginout-link a{
 	background-position:0.5em center;
 	color:#fff !important;
-	display:inline-block !important;
+	display:inline-block;
 	float:none;
 	font-family:Arial,sans-serif;
 	line-height:150%;
