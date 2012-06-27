@@ -62,7 +62,7 @@ body{
 	float:left;
 	margin-left:0;
 }
-.fls-loginout-link a{
+.fls-loginout-link a,.single .fls-loginout-link a{
 	background-position:0.5em center;
 	color:#fff !important;
 	display:inline-block;
