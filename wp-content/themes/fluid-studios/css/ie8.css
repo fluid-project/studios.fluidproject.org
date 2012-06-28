@@ -49,11 +49,11 @@ body{
 	float:right;
 	padding:0 11.038961%; /* padding-right/left 34 / 308 */
 }
-.fls-logo,.single .fls-logo{
+.fls-logo,.single .fls-logo,.archive .fls-logo{
 	display:block;
 	margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
 }
-.fls-access ul,.single .fls-access ul{
+.fls-access ul,.single .fls-access ul,.archive .fls-access ul{
 	margin:0;
 	padding:0;
 	width:auto;
@@ -62,7 +62,7 @@ body{
 	float:left;
 	margin-left:0;
 }
-.fls-loginout-link a{
+.fls-loginout-link a,.single .fls-loginout-link a{
 	background-position:0.5em center;
 	color:#fff !important;
 	display:inline-block;
@@ -77,7 +77,7 @@ body{
 	white-space:nowrap;
 	width:auto;
 }
-.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link{
+.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link,.archive .fls-access ul li.fls-loginout-link{
 	float:none;
 	margin:0;
 	padding:0;
