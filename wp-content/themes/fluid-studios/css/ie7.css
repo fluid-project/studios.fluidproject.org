@@ -34,7 +34,7 @@ button:active {
 .fl-panelBar .fl-toggleButton{
 	font-size:1em;
 	margin-right:3%;
-	width:14em;
+	width:15em;
 }
 .fl-toggleButton.focus{
 	border-right:2px solid #f00;

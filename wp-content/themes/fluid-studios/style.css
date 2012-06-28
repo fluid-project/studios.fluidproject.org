@@ -434,6 +434,7 @@ ul.fl-grid{
 .fl-theme-uio-bw button:hover,.fl-theme-uio-bw  a:hover {text-decoration:underline;}
 .fl-theme-uio-bw  a:focus {outline:2px solid #000;}
 .single.fl-theme-uio-bw  a{display:inline-block;}
+.single.fl-theme-uio-bw .toc a{display:inline}
 .fl-theme-uio-bw  .fls-loginout-link, .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {background-color: #000000 !important;}
 .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {color: #FFFFFF !important;}
 .fl-theme-uio-bw  button.fl-toggleButton:focus{ background-color:#fff !important; background-image:url("images/icon-uio-black.png"); color:#000 !important; outline:2px solid #000;}
@@ -458,6 +459,7 @@ ul.fl-grid{
 .fl-theme-uio-wb button:hover,.fl-theme-uio-wb  a:hover {text-decoration:underline;}
 .fl-theme-uio-wb  a:focus {outline:2px solid #fff;}
 .single.fl-theme-uio-wb  a{display:inline-block;}
+.single.fl-theme-uio-wb .toc a{display:inline}
 .fl-theme-uio-wb  .fls-loginout-link, .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { background-color: #FFFFFF !important;}
 .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { color: #000 !important;}
 .fl-theme-uio-wb  button.fl-toggleButton{ background-image:url("images/icon-uio-black.png"); }
@@ -483,6 +485,7 @@ ul.fl-grid{
 .fl-theme-uio-by button:hover,.fl-theme-uio-by  a:hover {text-decoration:underline;}
 .fl-theme-uio-by  a:focus {outline:2px solid #000;}
 .single.fl-theme-uio-by  a{display:inline-block;}
+.single.fl-theme-uio-by .toc a{display:inline}
 .fl-theme-uio-by  .fls-loginout-link, .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { background-color: #000000 !important;}
 .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { color: #FFFF00 !important;}
 .fl-theme-uio-by  button.fl-toggleButton{ background-image:url("images/icon-uio-yellow.png"); }
@@ -508,6 +511,7 @@ ul.fl-grid{
 .fl-theme-uio-yb button:hover,.fl-theme-uio-yb  a:hover {text-decoration:underline;}
 .fl-theme-uio-yb  a:focus {outline:2px solid #ff0;}
 .single.fl-theme-uio-yb  a{display:inline-block;}
+.single.fl-theme-uio-yb .toc a{display:inline}
 .fl-theme-uio-yb  .fls-loginout-link, .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { background-color: #FFFF00 !important;}
 .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { color: #000000 !important;}
 .fl-theme-uio-yb  button.fl-toggleButton{ background-image:url("images/icon-uio-black.png"); }
