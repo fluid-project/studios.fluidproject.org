@@ -1,0 +1,171 @@
+/* IE8 specific styles
+--------------------------------------------------------------------------- */
+body{
+	max-width:70.625em; /* 1130 / 16 */
+	min-width:50em;
+	position:relative;
+}
+.flc-slidingPanel-toggleButton.fl-toggleButton{
+	background-color:#09c;
+	background-image:url("../images/icon-uio.png");
+	background-position: 0.4375em center;
+	background-repeat:no-repeat;
+	border:0 none;
+	border-radius:0 0 5px 5px;
+	color:#fff;
+	cursor:pointer;
+	display:block;
+	float:right;
+	font-family:Arial,sans-serif;
+	font-weight:normal;
+	line-height:150%;
+	margin-top:0;
+	margin-right:2%;
+	padding:0.15em 0.5em 0.15em 1.7em;
+	position:relative;
+	text-transform:lowercase;
+	width:auto;
+	z-index:999999;
+}
+.fls-theme button.fl-toggleButton:hover{
+	text-decoration:underline;
+}
+.fls-theme button.fl-toggleButton:focus{
+	outline:2px solid #f00;
+}
+.fls-banner{
+	border-bottom:0;
+	border-right:2px solid #fff;
+	margin:0;
+	min-height:100%;
+	padding:0;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	width:27.256637%; /* 308 / 1130 */
+}
+.fls-masthead{
+	float:right;
+	padding:0 11.038961%; /* padding-right/left 34 / 308 */
+}
+.fls-logo,.single .fls-logo,.archive .fls-logo{
+	display:block;
+	margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
+}
+.fls-access ul,.single .fls-access ul,.archive .fls-access ul{
+	margin:0;
+	padding:0;
+	width:auto;
+}
+.fls-access ul li.fls-loginout-link{
+	float:left;
+	margin-left:0;
+}
+.fls-loginout-link a,.single .fls-loginout-link a{
+	background-position:0.5em center;
+	color:#fff !important;
+	display:inline-block;
+	float:none;
+	font-family:Arial,sans-serif;
+	line-height:150%;
+	margin:0;
+	overflow:visible;
+	padding:0.2em 0.75em 0.2em 1.5em;
+	position:relative;
+	text-transform:lowercase;
+	white-space:nowrap;
+	width:auto;
+}
+.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link,.archive .fls-access ul li.fls-loginout-link{
+	float:none;
+	margin:0;
+	padding:0;
+}
+.fls-back-link a{
+	border-radius:5px 0 0 5px;
+	position:absolute;
+	top:22.8125em; /* 365 /16 */
+	right:0;
+}
+.fls-back-link a span{
+	display:none;
+}
+#uioProxyButton{
+	display:none;
+}
+.fls-main{
+	padding:1.625em 0 0 40.666667%; /* margin-top: 26 / 16, margin-left: 200 / 480 */
+}
+.single .fls-main{
+	font-size:1.2em;
+	padding-right:2%;
+}
+.fls-main,.home .fls-main,.single .fls-main,.archive .fls-main{
+	padding-left:27.25%; /* eyeballed */
+}
+.archive .fls-main,.single .fls-main{
+	padding-top:2.4375em;
+}
+.fls-main,.home .fls-main,.single .fls-main,.archive .fls-main,.error404 .fls-main{
+	padding-left:29.675153%; /* 338 / 1139 */
+}
+ul.fl-grid{
+	overflow:visible;
+}
+.fl-grid li{
+	display:inline-block;
+	padding:0 1%;
+	vertical-align:top;
+	width:30.5%;
+}
+.fl-grid li .fls-index-summary{
+	margin:0;
+	padding:0 1.5% 1.25em;
+}
+.fls-contentinfo{
+	text-align:left;
+}
+.home .fls-contentinfo,.archive .fls-contentinfo{
+	padding-left:30.553116%; /* 348 / 1139 */
+}
+.single .fls-contentinfo,.error404 .fls-contentinfo{
+	padding-left:29.675153%; /* 338 / 1139 */
+}
+
+
+
+.fl-theme-uio-bw .fl-toggleButton,.fl-theme-uio-wb .fl-toggleButton,.fl-theme-uio-by .fl-toggleButton,.fl-theme-uio-yb .fl-toggleButton{
+	background-position: 0.4375em center; border-radius:0;
+}
+.fl-theme-uio-bw  .fls-loginout-link a,.fl-theme-uio-wb  .fls-loginout-link a,.fl-theme-uio-by  .fls-loginout-link a,.fl-theme-uio-yb  .fls-loginout-link a{
+	background-position:0.6em center;
+}
+
+.fl-theme-uio-bw .fls-loginout-link a{
+	color:#fff !important;
+}
+.fl-theme-uio-bw .fls-loginout-link a:focus{
+	color:#000 !important;
+}
+
+.fl-theme-uio-wb .fls-loginout-link a{
+	color:#000 !important;
+}
+.fl-theme-uio-wb .fls-loginout-link a:focus{
+	color:#fff !important;
+}
+
+.fl-theme-uio-by .fls-loginout-link a{
+	color:#ff0 !important;
+}
+.fl-theme-uio-by .fls-loginout-link a:focus{
+	color:#000 !important;
+}
+
+.fl-theme-uio-yb .fls-loginout-link a{
+	color:#000 !important;
+}
+.fl-theme-uio-yb .fls-loginout-link a:focus{
+	color:#ff0 !important;
+}

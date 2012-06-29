@@ -1,10 +1,10 @@
 /*
 Theme Name:Fluid-Studios
 Theme URI:http://studios.fluidproject.org/wp-content/themes/fluid-studios/
-Description:Usability and fls-accessibility on the open web...
+Description:Usability and accessibility on the open web...
 Author:The Fluid Project
 Author URI:http://fluidproject.org
-Version:2
+Version:2.0.2
 */
 
 /* Style sheet contents
@@ -106,15 +106,12 @@ img,embed,object,video{
 /* Fluid-Studios theme specific styles
 --------------------------------------------------------------------------- */
 html,body,.fls-wrapper{
-	height:100%;
-}
-html{
-	background-image:url("images/bg.jpg");
-	background-repeat:repeat;
-	font-family:"Neuton", "Times New Roman", Times, serif;
+	height:99.9999%; /* A hack to prevent page level scroll-bars from showing cos, of course, 100% is too much, but 99.9999 is just right. Go figure. */
 }
 body{
 	background:#fff;
+	background-image:url("images/bg.jpg");
+	background-repeat:repeat;
 	color: #333;
 	font-family: "Neuton", "Times New Roman", Times, serif;
 	font-size:100%;
@@ -138,7 +135,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	color:#09C;
 }
 .single.fls-theme a{
-	display:inline-block;
+	display:inline;
 }
 .fls-theme a:hover{
 	color:#CC0;
@@ -153,7 +150,7 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 --------------------------------------------------------------------------- */
 .no-js #myUIOptions,
 .no-js .fl-uiOptions-fatPanel .fl-panelBar,
-.flc-slidingPanel-toggleButton.fl-toggleButton,
+.fl-panelBar .fl-toggleButton,
 .no-js #uioProxyButton{
 	display:none;
 }
@@ -179,12 +176,13 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	margin:0 auto;
 	padding:0;
 }
-.fls-logo {
+.fls-logo{
 	font-size:1em;
 	margin:1em auto;
 	width:99px;
 }
-.fls-logo a {
+.fls-logo a,
+.single .fls-logo a{
 	background-repeat:no-repeat;
 	display:inline-block;
 	height:95px;
@@ -285,11 +283,10 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,table,form,pre,figure{
 	margin:0 auto;
 	padding:2em 4%;
 }
-.flc-toc-tocContainer{
+.toc{
 	font-size:1.2em;
-	line-height:140%;
 }
-.flc-toc-tocContainer a{
+.single .entry-content a{
 	display:inline-block;
 }
 .home,.archive{
@@ -343,6 +340,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 /* Styles for the index page grid (Overriding FSS styles)
 ----------------------------------------- */
+ul.fl-grid{
+	overflow:visible;
+}
 .fl-grid li{
 	float:none;
 	height:auto;
@@ -363,26 +363,34 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 
 /* Single page styles for the base mobile theme
 ----------------------------------------- */
-.single .fls-logo{
+.single .fls-logo,
+.archive .fls-logo{
 	display:none;
 }
-.single .fls-access ul{
+.single .fls-access ul,
+.archive .fls-access ul{
 	padding-right:4%;
 	width:auto;
 }
 .single .fls-access ul li.fls-loginout-link,
-.single .fls-access ul li.fl-toggleButton{
+.single .fls-access ul li.fl-toggleButton,
+.archive .fls-access ul li.fls-loginout-link,
+.archive .fls-access ul li.fl-toggleButton{
 	float:right;
 	margin-left:0.5em;
 }
-.single .fls-access ul li.fls-back-link{
+.single .fls-access ul li.fls-back-link,
+.archive .fls-access ul li.fls-back-link{
 	float:left;
 }
 .single .fls-access ul li.fls-loginout-link a,
-.single .fls-access ul li.fl-toggleButton a{
+.single .fls-access ul li.fl-toggleButton a,
+.archive .fls-access ul li.fls-loginout-link a,
+.archive .fls-access ul li.fl-toggleButton a{
 	margin-bottom:0;
 }
-.single .fls-access ul li.fls-back-link a{
+.single .fls-access ul li.fls-back-link a,
+.archive .fls-access ul li.fls-back-link a{
 	margin:0.37em 0;
 }
 .single .fls-main{
@@ -428,7 +436,6 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 ----------------------------------------- */
 .fl-theme-uio-bw button:hover,.fl-theme-uio-bw  a:hover {text-decoration:underline;}
 .fl-theme-uio-bw  a:focus {outline:2px solid #000;}
-.single.fl-theme-uio-bw  a{display:inline-block;}
 .fl-theme-uio-bw  .fls-loginout-link, .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {background-color: #000000 !important;}
 .fl-theme-uio-bw  .fls-loginout-link a, .fl-theme-uio-bw  .fls-back-link a, .fl-theme-uio-bw .fl-toggleButton {color: #FFFFFF !important;}
 .fl-theme-uio-bw  button.fl-toggleButton:focus{ background-color:#fff !important; background-image:url("images/icon-uio-black.png"); color:#000 !important; outline:2px solid #000;}
@@ -452,7 +459,6 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 ----------------------------------------- */
 .fl-theme-uio-wb button:hover,.fl-theme-uio-wb  a:hover {text-decoration:underline;}
 .fl-theme-uio-wb  a:focus {outline:2px solid #fff;}
-.single.fl-theme-uio-wb  a{display:inline-block;}
 .fl-theme-uio-wb  .fls-loginout-link, .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { background-color: #FFFFFF !important;}
 .fl-theme-uio-wb  .fls-loginout-link a, .fl-theme-uio-wb  .fls-back-link a, .fl-theme-uio-wb .fl-toggleButton { color: #000 !important;}
 .fl-theme-uio-wb  button.fl-toggleButton{ background-image:url("images/icon-uio-black.png"); }
@@ -477,7 +483,6 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 ----------------------------------------- */
 .fl-theme-uio-by button:hover,.fl-theme-uio-by  a:hover {text-decoration:underline;}
 .fl-theme-uio-by  a:focus {outline:2px solid #000;}
-.single.fl-theme-uio-by  a{display:inline-block;}
 .fl-theme-uio-by  .fls-loginout-link, .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { background-color: #000000 !important;}
 .fl-theme-uio-by  .fls-loginout-link a, .fl-theme-uio-by  .fls-back-link a, .fl-theme-uio-by  .fl-toggleButton { color: #FFFF00 !important;}
 .fl-theme-uio-by  button.fl-toggleButton{ background-image:url("images/icon-uio-yellow.png"); }
@@ -502,7 +507,6 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 ----------------------------------------- */
 .fl-theme-uio-yb button:hover,.fl-theme-uio-yb  a:hover {text-decoration:underline;}
 .fl-theme-uio-yb  a:focus {outline:2px solid #ff0;}
-.single.fl-theme-uio-yb  a{display:inline-block;}
 .fl-theme-uio-yb  .fls-loginout-link, .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { background-color: #FFFF00 !important;}
 .fl-theme-uio-yb  .fls-loginout-link a, .fl-theme-uio-yb  .fls-back-link a, .fl-theme-uio-yb  .fl-toggleButton { color: #000000 !important;}
 .fl-theme-uio-yb  button.fl-toggleButton{ background-image:url("images/icon-uio-black.png"); }
@@ -527,10 +531,9 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 --------------------------------------------------------------------------- */
 @media screen and (min-width:480px){
 	body,body.home{
-		max-width:70.625em; /* 1130 / 16 */
 		position:relative;
 	}
-	.home .fls-banner,.archive .fls-banner{
+	.home .fls-banner{
 		border-bottom:0 !important;
 		border-right:2px solid #fff;
 		margin:0;
@@ -542,32 +545,35 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		padding-right:0;
 		width:35%; /* 168 / 480 */
 	}
-	.home .fls-masthead,.archive .fls-masthead{
+	.home .fls-masthead{
 		padding:0 20%; /* padding-right/left 34 / 170 */
 		float:right;
 	}
-	.home .fls-logo,.archive .fls-logo{
+	.home .fls-logo{
 		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
 	}
 	.fls-access ul li.fls-loginout-link{
 		float:left;
 		margin-left:0;
 	}
-	.home .fls-main,.archive .fls-main{
+	.home .fls-main{
 		padding:1.625em 0 0 40.666667%; /* margin-top: 26 / 16, margin-left: 200 / 480 */
 	}
-	.fl-grid li .fls-index-summary{
+	.home .fl-grid li .fls-index-summary{
 		margin:0;
 		padding:0 1.5% 1.25em;
 	}
-	.home .fls-contentinfo,.archive .fls-contentinfo{
+	.home .fls-contentinfo{
 		padding-left:41.666667%; /* 190 / 480 */
 		text-align:left;
 	}
 }
 
 @media screen and (min-width:620px){
-	.flc-slidingPanel-toggleButton.fl-toggleButton{
+	body,body.home{
+		max-width:70.625em; /* 1130 / 16 */
+	}
+	.fl-panelBar .fl-toggleButton{
 		background-color:#09c;
 		background-image:url("images/icon-uio.png");
 		background-position: 0.4375em center;
@@ -614,7 +620,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		padding:0 11.038961%; /* padding-right/left 34 / 308 */
 		float:right;
 	}
-	.fls-logo,.single .fls-logo{
+	.fls-logo,.single .fls-logo,.archive .fls-logo{
 		display:block;
 		margin:6em auto 1.25em; /*marging-top: 96 / 16, margin-bottom: 20 / 16 */
 	}
@@ -625,7 +631,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 	.fls-loginout-link a{
 		background-position:0.5em center;
 		color:#fff !important;
-		display:inline-block;
+		display:inline-block !important;
 		float:none;
 		font-family:Arial,sans-serif;
 		line-height:150%;
@@ -637,7 +643,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		white-space:nowrap;
 		width:auto;
 	}
-	.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link{
+	.fls-access ul li.fls-loginout-link,.single .fls-access ul li.fls-loginout-link,.archive .fls-access ul li.fls-loginout-link{
 		float:none;
 		margin:0;
 		padding:0;
@@ -719,8 +725,8 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 }
 
 @media screen and (min-width:800px){
-	.flc-slidingPanel-toggleButton.fl-toggleButton{
-		margin-right:2%;
+	.fl-panelBar .fl-toggleButton{
+		margin-right:2.75%;
 	}
 	.fls-banner,.home .fls-banner,.single .fls-banner,.archive .fls-banner{
 		width:27.256637%; /* 308 / 1130 */
@@ -734,7 +740,7 @@ p.entry-meta,.home .entry-content p,.archive .entry-content p{
 		width:30.5%;
 	}
 	.single .fls-main{
-		padding-right:2% !important;
+		padding-right:3% !important;
 	}
 	.home .fls-contentinfo,.archive .fls-contentinfo{
 		padding-left:30.553116%; /* 348 / 1139 */
